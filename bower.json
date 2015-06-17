@@ -1,0 +1,21 @@
+{
+  "name": "polymer-jekyll-from-scratch",
+  "version": "0.0.0",
+  "authors": [
+    "Julia Ebert <ebertjulia@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "juliaebert.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-elements": "polymerelements/iron-elements#~1.0.0",
+    "paper-elements": "polymerelements/paper-elements#~1.0.1"
+  }
+}

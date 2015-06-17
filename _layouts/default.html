@@ -1,0 +1,74 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <div drawer>
+
+      <!-- Drawer Toolbar -->
+      <nav-image src="/images/material-bg-1.png" id="menu-img"></nav-image>
+
+      <!-- Drawer Content -->
+      <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
+        <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+        <a href="/about"><iron-icon icon="info"></iron-icon><span>About</span></a>
+        <a data-route="contact" href="/contact"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+      </paper-menu>
+
+      <my-nav-subheader>Subhead</my-nav-subheader>
+
+      <paper-menu class="list" on-iron-select="onMenuSelect">
+        <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+        <a href="/about/"><iron-icon icon="info"></iron-icon><span>About</span></a>
+        <a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+      </paper-menu>
+
+    </div>
+    <paper-header-panel main mode="waterfall-tall">
+
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+        <span class="flex"></span>
+
+        <!-- Toolbar icons -->
+        <!-- TODO: Implement this functionality
+        <paper-icon-button icon="refresh"></paper-icon-button>
+        <paper-icon-button icon="search"></paper-icon-button>
+        -->
+
+        <!-- Application name -->
+        <div class="middle paper-font-display2 app-name">{{ site.title }}</div>
+
+      </paper-toolbar>
+
+      <!-- Main Content -->
+
+        {{ content }}
+
+    </paper-header-panel>
+  </paper-drawer-panel>
+
+</template>
+
+<!-- build:js scripts/app.js -->
+<script src="/scripts/app.js"></script>
+<!-- endbuild-->
+</body>
+
+</html>

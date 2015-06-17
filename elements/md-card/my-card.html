@@ -1,0 +1,31 @@
+<dom-module id="my-card">
+
+    <style>
+        #md-card {
+            width: 700px;
+            max-width: calc(100% - 32px);
+            padding: 0;
+            position: relative;
+            margin: 16px auto;
+            background: #ffffff;
+        }
+    </style>
+
+    <template>
+        <paper-material id="md-card" elevation="{{elevation}}" class="paper-font-body1">
+            <content></content>
+        </paper-material>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-card',
+
+            properties: {
+                elevation: String
+            }
+        });
+    </script>
+
+</dom-module>

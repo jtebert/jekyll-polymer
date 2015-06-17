@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<my-card>
+  {% if post.image %}
+  <card-image src="{{ '/images/posts/' | prepend: site.baseurl | append: post.image }}"></card-image>
+    <div class="card-image">
+      <my-card-title title="{{ post.title }}" subtitle="{{ post.date | date: '%Y %B %-d' }}"></my-card-title>
+    </div>
+  {% else %}
+    <my-card-colorbar>{{ post.title }}</my-card-colorbar>
+    <my-card-title subtitle="{{ post.date | date: '%Y %B %-d' }}"></my-card-title>
+  {% endif %}
+  <card-content>{{ post.excerpt }}</card-content>
+  <my-card-more href="{{ post.url }}">Read More</my-card-more>
+</my-card>
+{% endfor %}
+
+<!-- Page navigation links -->
+{% if paginator.total_pages > 1 %}
+<my-pagination>
+  <!-- Left Arrow -->
+  {% if paginator.previous_page %}
+  <my-page-link href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">
+    <iron-icon icon="chevron-left"></iron-icon>
+  </my-page-link>
+  {% else %}
+  <my-page-link disabled><iron-icon icon="chevron-left"></iron-icon></my-page-link>
+  {% endif %}
+
+  <!-- Page Numbers -->
+  {% for page in (1..paginator.total_pages) %}
+  {% if page == paginator.page %}
+  <my-page-link active>{{ page }}</my-page-link>
+  {% elsif page == 1 %}
+  <my-page-link href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</my-page-link>
+  {% else %}
+  <my-page-link href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</my-page-link>
+  {% endif %}
+  {% endfor %}
+
+  <!-- Right Arrow -->
+  {% if paginator.next_page %}
+  <my-page-link href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  {% else %}
+  <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  {% endif %}
+</my-pagination>
+{% endif %}

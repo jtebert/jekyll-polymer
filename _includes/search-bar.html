@@ -1,0 +1,46 @@
+<div id="search" class="row" >
+    <div class="container">
+        <input class="form-control" id="search-input" type="text" placeholder="Search Posts ..." autocomplete="off"/>
+        <div class="collection empty-collection" id="results-container">
+        </div>
+    </div>
+</div>
+
+<script src="/scripts/jekyll-search.js" type="text/javascript"></script>
+
+<script>
+    // Toggle search visibility
+    $('a#toggle-search').click(function()
+    {
+        var search = $('div#search');
+        search.is(":visible") ? search.slideUp() : search.slideDown(function()
+        {
+            search.find('input').focus();
+        });
+        return false;
+    });
+
+    // Hide the search results box if empty
+    function changeSearchResults(){
+        // Make empty collection invisible
+        if ( !$.trim( $('#results-container').html() ).length ) {
+            $('#results-container').addClass('empty-collection');
+        }
+        else {
+            $('#results-container').removeClass('empty-collection');
+        }
+    }
+    // Listen DOM changes
+    $('#results-container').bind("DOMSubtreeModified", changeSearchResults);
+
+    // Do search with json file and make results appear
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<a href="{url}" class="collection-item"><span class="title">{title}</span><p>{date}</p></a>',
+        noResultsText: '<a class="collection-item"><p>No posts found</p></a>',
+        limit: 10,
+        fuzzy: false
+    })
+</script>
