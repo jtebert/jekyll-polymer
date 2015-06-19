@@ -17,5 +17,3 @@ excerpt_separator: <!--more-->
 # Build settings
 markdown: kramdown
 exclude: [dist/, manifest.json, package.json, README.md, bower.json, gulp.js]
-source: app/
-destination: dist/_site/
