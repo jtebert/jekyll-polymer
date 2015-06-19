@@ -1,0 +1,39 @@
+<dom-module id="my-pagination">
+
+    <style>
+
+        ul {
+            text-align: center;
+            padding: 0;
+        }
+
+    </style>
+
+    <template>
+        <ul><content></content></ul>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-pagination',
+
+            properties: {
+                href: {
+                    type: String,
+                    value: "#!"
+                },
+                disabled: {
+                    type: Boolean,
+                    value: false
+                },
+                active: {
+                    type: Boolean,
+                    value: false
+                }
+            }
+        });
+
+    </script>
+
+</dom-module>

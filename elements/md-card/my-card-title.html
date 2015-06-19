@@ -1,0 +1,44 @@
+<dom-module id="my-card-title">
+
+    <style>
+
+        #card-title {
+            padding: 16px;
+            overflow: auto;
+        }
+
+        :host([title]) #card-title {
+            padding-top: 24px;
+        }
+
+        #card-title > h1 {
+            margin: 0;
+        }
+
+        #card-title > h2 {
+            color: var(--secondary-text-color, #727272);
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+
+    <template>
+        <div id="card-title">
+            <h1 class="paper-font-headline">{{title}}</h1>
+            <h2 class="paper-font-subhead">{{subtitle}}</h2>
+        </div>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-card-title',
+
+            properties: {
+                title: String
+            }
+        });
+
+    </script>
+
+</dom-module>

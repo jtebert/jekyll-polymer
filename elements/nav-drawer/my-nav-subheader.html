@@ -1,0 +1,33 @@
+<dom-module id="my-nav-subheader">
+
+    <style>
+
+        #nav-subheader {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid var(--divider-color, #b6b6b6);
+            padding: 12px 16px;
+            margin-top: 8px;
+            color: var(--secondary-text-color, #727272);
+        }
+
+    </style>
+
+    <template>
+        <div id="nav-subheader" class="paper-font-body2"><content></content></div>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-nav-subheader',
+
+            properties: {
+                src: String
+            }
+        });
+
+    </script>
+
+</dom-module>

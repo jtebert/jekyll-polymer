@@ -1,0 +1,49 @@
+<dom-module id="card-image">
+
+    <style>
+
+        #card-image {
+            border-radius: 2px 2px 0 0;
+            position: relative;
+            height: 0;
+            padding-bottom: calc(100% * 9 / 16); /* Set 16x9 ratio for full-width image */
+            /*max-height: 300px;*/
+            overflow: hidden;
+        }
+
+        .card-image > img {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /*#child-element {
+            background: yellow;
+        }
+        /* styling elements distributed to content (via ::content) requires */
+        /* selecting the parent of the <content> element for compatibility with */
+        /* shady DOM . This can be :host or a wrapper element. */
+        /*.content-wrapper > ::content {
+            background: orange;
+        }*/
+    </style>
+
+    <template>
+        <div id="card-image"><img src="{{src}}"></div>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'card-image',
+
+            properties: {
+                src: String
+            }
+        });
+
+    </script>
+
+</dom-module>
