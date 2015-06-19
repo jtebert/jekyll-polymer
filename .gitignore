@@ -1,4 +1,5 @@
 _site
+dist
 .sass-cache
 bower_components
 *~

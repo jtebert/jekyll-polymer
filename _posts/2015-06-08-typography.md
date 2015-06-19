@@ -86,21 +86,36 @@ Code embedded in a paragraph looks like `this is code`. Code can also be in bloc
 
 Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just `linenos` instead of `linenos=table`, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)
 
-{% highlight ruby %}
-  def print_hi(name)
-    puts "Hi, #{name}"
-  end
-  print_hi('Tom')
-  #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+With line numbers (as table):
 
 {% highlight ruby linenos=table %}
   def print_hi(name)
     puts "Hi, #{name}"
   end
   print_hi('Tom')
-  #=> prints 'Hi, Tom' to STDOUT.
+  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
 {% endhighlight %}
+
+Without line numbers:
+
+{% highlight ruby %}
+  def print_hi(name)
+    puts "Hi, #{name}"
+  end
+  print_hi('Tom')
+  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
+{% endhighlight %}
+
+With line numbers (inline):
+
+{% highlight ruby linenos %}
+  def print_hi(name)
+    puts "Hi, #{name}"
+  end
+  print_hi('Tom')
+  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
+{% endhighlight %}
+
 
 # Definition Lists
 

@@ -1,0 +1,55 @@
+.highlight .hll { background-color: #49483e }
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+
+.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+
+.highlight .c, .highlight .cm, .highlight .cp, .highlight .c1, .highlight .cs {
+    color: #8a8a8a } /* Comment */
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .no {
+    color: #d61a7f} /* Keyword */
+.highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .p {
+    color: #7986cb } /* Name */
+.highlight .o, .highlight .ow, .highlight .nt, .highlight .kn {
+    color: #5c6bc0 } /* Operator */
+.highlight .l, .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .se, .highlight .il {
+    color: #ae81ff } /* Literal ???? */
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .ld {
+    color: #ff4081} /* Literal.String */
+.highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nx {
+    color: #6b499f } /* Name.Attribute */
+
+.highlight, .highlighttable {
+    /*white-space: pre;
+    word-wrap: normal;*/
+    background-color: #fafafa;
+    padding: 16px;
+    line-height: 24px;
+    display: block;
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+.highlighttable .highlight {
+    margin: 0;
+}
+
+.highlight pre, .highlighttable pre {
+    margin: 0;
+}
+
+.highlighttable {
+    padding: 0;
+}
+
+.highlighttable tr {
+    border-top: hidden;
+}
+
+.highlighttable td.code {
+    padding: 0 !important;
+}
+
+.highlighttable td.linenos {
+    padding-left: 16px !important;
+}

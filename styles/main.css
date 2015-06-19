@@ -31,3 +31,7 @@ paper-menu a span{
 paper-menu {
     padding: 0;
 }
+
+#middleBar.paper-toolbar {
+    z-index: 0 !important;
+}

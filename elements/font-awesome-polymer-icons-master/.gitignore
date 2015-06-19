@@ -1,0 +1,11 @@
+# Vendor modules & components
+bower_components
+node_modules
+
+# Log files
+logs
+*.log
+
+# Operative System cache files (Windows, Mac)
+thumbs.db
+.DS_Store

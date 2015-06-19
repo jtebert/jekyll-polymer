@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Markdown Formatting (from the StackEdit)"
+title:  "Markdown Formatting (from StackEdit) with a Really Long Title to Test Wrapping"
 date:   2015-06-08 21:27:27
 ---
 

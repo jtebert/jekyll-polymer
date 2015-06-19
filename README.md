@@ -10,30 +10,44 @@ There are a few custom web components included (mostly for the cards and navigat
 - Generate the static site for production by running `gulp`.
   **Note:** This vulcanizes and minimizes the code, so I highly recommend using this output instead of the automatically generated `_site` folder or (if you're using Github Pages) letting it generate the static code.
 
+## Features
+
+- Full-text searching with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
+- Paginated home page
+- Support for images in posts' YAML frontmatter (appears on cards in previews)
+- Support for threaded comments with Disqus
+
+
 ## Future Improvements:
 
-- Search functionality with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search).
-- Pagination on home page. (Need to make material-looking pagination navigation.)
+- When fontawesome-icons updated to 4.3 in Bower, switch to that
+- Figure out using font awesome icons in iron-icons
+- Icons for sharing on social media (need to figure out fontawesome icons first)
+- Fix title text over search bar
+- Search
+    - Ripple effect in search results on click (needs set height)
+    - Escape toggles search show
+    - arrow keys/tab moves focus on search results
+    - better animation for search bar leaving/entering
+    - Figure out why search back button is too far to the right
+- Navigation drawer
+    - Add copyright info to bottom
+    - Change hover effect on drawer items (see Google Music)
+    - Make selected/active items in drawer colored
 - Page transition animations
-- Header image in menu.
-- Change hover effect on drawer items (see Google Music)
-- Make "selected" items in drawer colored
 - Give option of setting card-colorbar color (see paper-drawer-panel drawerWidth for example)
 - Add ripple effect to nav drawer menu items
 - Pagination:
-    - Prevent ripple on disabled links
+    - Maybe replace with actual buttons
+    - Prevent ripple on disabled links (`page-link[disabled] paper-ripple {display: none;}`)
     - hover effects like buttons?
     - Handle if it gets too wide for screen? (limit number of page links)
-- Get code highlighting CSS from Polymer docs
 - Markdown/post formatting for (see StackEdit):
     - tables
     - lists
     - headings
     - blockquote
     - inline code
-    - divider (`<hr/>`) (color)
-    - bold font-weight?
-    - definitions
     - MathJax (add JS - see materialize-blog)
     - footnotes / footnote links
 - Add material box or lightbox for images

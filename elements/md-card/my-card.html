@@ -8,6 +8,7 @@
             position: relative;
             margin: 16px auto;
             background: #ffffff;
+            overflow: auto;
         }
     </style>
 
@@ -22,8 +23,19 @@
         Polymer({
             is: 'my-card',
 
+            behaviors: [
+                Polymer.NeonAnimationRunnerBehavior
+            ],
+
             properties: {
                 elevation: String
+            },
+
+            entryAnimation: {
+                value: 'scale-up-animation'
+            },
+            exitAnimation: {
+                value: 'fade-out-animation'
             }
         });
     </script>

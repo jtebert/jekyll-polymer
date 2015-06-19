@@ -4,9 +4,10 @@
         <div class="collection empty-collection" id="results-container">
         </div>
     </div>
+    <a id="toggle-search" href="#!">
+        <paper-icon-button icon="search"></paper-icon-button>
+    </a>
 </div>
-
-<script src="/scripts/jekyll-search.js" type="text/javascript"></script>
 
 <script>
     // Toggle search visibility
@@ -38,7 +39,14 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '/search.json',
-        searchResultTemplate: '<a href="{url}" class="collection-item"><span class="title">{title}</span><p>{date}</p></a>',
+
+        searchResultTemplate:
+            '<a href="{url}"><paper-item> \
+                <paper-item-body two-line> \
+                    <div>{title}</div> \
+                    <div secondary>{date}</div> \
+                </paper-item-body> \
+            </paper-item></a>',
         noResultsText: '<a class="collection-item"><p>No posts found</p></a>',
         limit: 10,
         fuzzy: false

@@ -22,16 +22,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Application theme */
 
   :root {
-    --dark-primary-color: #00796b;
-    --default-primary-color: #009688;
+    --dark-primary-color: #616161;
+    --default-primary-color: #9E9E9E;
     --light-primary-color: #CFD8DC;
     --text-primary-color: #FFFFFF; /*text/icons*/
-    --accent-color: #9c27b0;
-    --primary-background-color: #c5cae9;
+    --accent-color: #03A9F4;
+    --primary-background-color: #ececec;
     --primary-text-color: #212121;
     --secondary-text-color: #727272;
     --disabled-text-color: #bdbdbd;
-    --divider-color: #B6B6B6;
+    --divider-color: #E0E0E0;
+    --code-text-color: #9f499b;
 
 
     /* Components */
@@ -48,17 +49,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   /* General styles */
 
-  body {
-    background-color: #e5e5e5;
-    color: var(--primary-text-color);
-    font-family: serif;
+  html, body {
+    height: 100%;
   }
 
-  #drawerToolbar {
+  body {
+    background-color: var(--primary-background-color, #e5e5e5);
+    color: var(--primary-text-color);
+    @apply(--paper-font-body1);
+  }
+
+  code, pre {
+    color: var(--code-text-color);
+  }
+
+  /* This stuff is because it won't apply in-element styling to content dynamically added to the element */
+  my-search-bar p {
+    text-align: center;
+    @apply(--paper-font-subhead);
     color: var(--secondary-text-color);
-    background-color: var(--drawer-menu-color);
-    border-bottom: var(--drawer-toolbar-border-color);
-    height: 64px;
+    font-style: italic;
+  }
+  paper-item {
+    position: relative;
+    background-color: #fff;
+  }
+  a paper-item {
+    color: var(--primary-text-color);
+  }
+
+  blockquote {
+    padding: 0 0 0 15px;
+    margin: 0 0 20px;
+    border-left: 5px solid var(--light-primary-color);
+  }
+
+  hr {
+    display: block;
+    background-color: var(--divider-color);
+    height: 1px;
+    border: 0;
+    margin: 0;
   }
 
   a {
@@ -70,11 +101,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     text-decoration: underline;
   }
 
+
+
+/* Footer */
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -49px;
+}
+
+#copyright-info, .push {
+    height: 49px;
+}
+  #copyright-info {
+    @apply(--paper-font-body1);
+    color: var(--secondary-text-color);
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-top: 1px solid var(--divider-color);
+    line-height: 24px;
+  }
+
   #post {
     padding: 24px 64px;
     max-width: 912px;
     transition: padding 0.2s linear;
-    /*@apply(--paper-font-body2);*/
   }
 
   @media only screen and (max-width: 850px) {
@@ -84,14 +137,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   }
 
+  /** Content of posts **/
+
   #post img {
     max-width: 100%;
   }
 
-  /** Content of posts **/
-
   #post-content {
     @apply(--paper-font-body1);
+    font-size: 16px;
   }
 
   dt {
@@ -99,7 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   #post-content ul {
-    padding-left: 32px;
+    list-style-type: disc;
   }
 
   #post-content h1 {

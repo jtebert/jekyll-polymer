@@ -25,8 +25,12 @@
             font-weight: 500;
         }
 
-        :host([disabled]) a {
+        :host[disabled] a {
             color: var(--disabled-text-color);
+        }
+
+        :host[disabled] paper-ripple {
+            visibility: hidden;
         }
 
         :host([active]) {

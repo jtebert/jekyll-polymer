@@ -1,0 +1,53 @@
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #3387CC; } /* literal - blue */
+pre .pun, code .pun { color: #fff; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+    background-color: #333;
+    /*border-radius: 8px;*/
+    color: white;
+}
+
+pre {
+    /*margin: 1em auto;
+    padding: 1em;*/
+    white-space: pre-wrap;
+}
+
+pre,.prettyprint {
+    background-color: #fafafa;
+    padding: 16px;
+    margin: 30px 0
+}
+pre .typ,pre .inline,.prettyprint .typ,.prettyprint .inline {
+    color: #6b499f
+}
+pre .pun,.prettyprint .pun {
+    color: #5c6bc0
+}
+pre .str,pre .string,.prettyprint .str,.prettyprint .string {
+    color: #ff4081
+}
+pre .pln,.prettyprint .pln {
+    color: #7986cb
+}
+pre .kwd,.prettyprint .kwd {
+    color: #d61a7f
+}
+pre .atn,pre .attribute-name,.prettyprint .atn,.prettyprint .attribute-name {
+    color: #6b499f
+}
+pre .atv,pre .attribute-value,.prettyprint .atv,.prettyprint .attribute-value {
+    color: #7986cb
+}
+pre .com,pre .comment,.prettyprint .com,.prettyprint .comment {
+    color: #8a8a8a
+}
