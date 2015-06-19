@@ -1,0 +1,55 @@
+<dom-module id="my-card-colorbar-link">
+
+    <style>
+
+        :host {
+            display: block;
+            border-radius: 2px 2px 0 0;
+            background-color: var(--accent-color);
+            padding: 16px;
+            padding-top: 24px;
+            color: #fff;
+            position: relative;
+        }
+
+        #wrapper:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #icon {
+            position: absolute;
+            top: 20px;
+            left: 16px;
+        }
+
+        #content {
+            display: block;
+            float: left;
+            margin-left: 48px;
+            top: 24px;
+        }
+
+    </style>
+
+    <template>
+        <div class="paper-font-headline" id="wrapper">
+            <div id="icon"><iron-icon icon="arrow-forward"></iron-icon></div>
+            <div id="content"><content></content></div>
+        </div>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-card-colorbar-link',
+
+            properties: {
+                color: String
+            }
+        });
+
+    </script>
+
+</dom-module>

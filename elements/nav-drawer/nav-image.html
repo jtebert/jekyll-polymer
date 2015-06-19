@@ -1,0 +1,45 @@
+<dom-module id="nav-image">
+
+    <style>
+
+        :host {
+            padding-bottom: 8px;
+        }
+        #nav-image {
+            position: relative;
+            height: 0;
+            padding-bottom: calc(100% * 9 / 16); /* Set 16x9 ratio for full-width image */
+            margin-bottom: 16px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #nav-image > img {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+
+    <template>
+        <div id="nav-image"><img src="{{src}}"></div>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'nav-image',
+
+            properties: {
+                src: String,
+                title: String,
+                subtitle: String
+            }
+        });
+
+    </script>
+
+</dom-module>

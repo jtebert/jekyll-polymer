@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your Awesome Title</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 19 Jun 2015 14:29:20 -0400</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2015 14:29:20 -0400</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Post with blocks of text</title>
+        <description>&lt;p&gt;Schlitz YOLO synth sriracha lumbersexual magna, lo-fi leggings nostrud pug Carles XOXO hoodie eiusmod. Ea officia crucifix sunt lumbersexual nesciunt, jean shorts Etsy occupy tousled ennui irony. Adipisicing exercitation bespoke, Pinterest drinking vinegar officia food truck aliquip. Chillwave Intelligentsia four loko flannel cornhole bespoke. Ea chillwave ennui anim commodo. Wayfarers brunch trust fund crucifix, squid kitsch health goth Pitchfork cliche Etsy sustainable iPhone distillery 8-bit. Thundercats non Portland forage minim selfies, food truck irure mustache.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Enim cardigan Tumblr, Thundercats trust fund Godard Austin cliche occaecat literally post-ironic drinking vinegar salvia magna small batch. Brunch lomo chambray delectus narwhal whatever, sriracha Marfa paleo twee. Meditation dreamcatcher tattooed Truffaut ullamco. Try-hard deep v stumptown quis Vice mixtape, ad Etsy odio paleo quinoa. Ennui seitan put a bird on it banjo culpa. Narwhal before they sold out jean shorts ad ullamco, et ennui magna. Kickstarter paleo listicle nulla, occaecat incididunt nesciunt retro salvia.&lt;/p&gt;
+
+&lt;p&gt;Ugh Wes Anderson kogi master cleanse, trust fund leggings sed High Life drinking vinegar. Ad cornhole artisan dreamcatcher YOLO, labore Banksy eiusmod messenger bag enim tofu culpa. High Life qui street art cardigan. Trust fund Banksy keffiyeh pickled, Brooklyn single-origin coffee actually salvia. Sustainable id mlkshk whatever. PBR cillum drinking vinegar swag. Keytar magna cold-pressed brunch.&lt;/p&gt;
+
+&lt;p&gt;Farm-to-table PBR craft beer, cliche commodo food truck before they sold out nostrud adipisicing semiotics. Nesciunt kitsch Carles, typewriter banjo sapiente bitters four dollar toast migas. Umami tousled irony taxidermy, PBR +1 bespoke culpa. Kogi aliqua single-origin coffee, shabby chic nisi trust fund master cleanse mumblecore aute Banksy quinoa. Mlkshk small batch gastropub jean shorts. You probably haven’t heard of them vegan Tumblr, odio Blue Bottle iPhone stumptown freegan ut tempor selvage biodiesel post-ironic nesciunt. Swag culpa bespoke, mixtape Tumblr American Apparel ut Pitchfork.&lt;/p&gt;
+
+&lt;p&gt;Cronut asymmetrical synth, Marfa meditation twee tempor quis Thundercats scenester plaid readymade salvia dolor fugiat. Vice assumenda flannel reprehenderit before they sold out, flexitarian normcore locavore pickled chillwave. Aliqua in wayfarers, cardigan narwhal esse mustache tote bag 8-bit placeat YOLO. Typewriter master cleanse cold-pressed food truck. DIY YOLO gentrify, freegan mustache ethical nesciunt gluten-free small batch tofu. Placeat tempor artisan, delectus ennui duis incididunt irure pariatur skateboard. Narwhal wolf esse leggings, bitters Williamsburg put a bird on it enim swag four dollar toast Vice Schlitz cardigan irony dreamcatcher.&lt;/p&gt;
+
+&lt;p&gt;Occaecat magna Intelligentsia, laborum synth before they sold out Helvetica nulla kale chips eu next level DIY trust fund. Forage pour-over scenester ut meggings. Food truck eu labore 90’s, deserunt messenger bag next level paleo PBR&amp;amp;B pork belly. Jean shorts DIY before they sold out direct trade, vegan tote bag culpa mixtape nesciunt slow-carb listicle ennui put a bird on it Brooklyn. Ut cronut lumbersexual, letterpress stumptown delectus seitan reprehenderit Bushwick messenger bag incididunt street art polaroid lomo hella. Do voluptate pork belly, fanny pack direct trade tote bag nihil. Mumblecore aesthetic Tumblr VHS master cleanse Portland.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 19 Jun 2015 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2015/06/19/hipsum.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/19/hipsum.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>About the Jekyll Polymer Theme</title>
+        <description>&lt;p&gt;This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (See the Github repository for details.)&lt;/p&gt;
+
+&lt;p&gt;I created this theme because I couldn’t figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn’t find any Jekyll blog themes available that used Polymer or followed Google’s material design specifications.&lt;/p&gt;
+
+&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;app/&lt;/code&gt;: Contents of the site, following the Jekyll structure. Put your blog content here.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;elements/&lt;/code&gt;: Custom web components using Polymer&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;scripts/&lt;/code&gt;: Javascript. Will be minimized when built.&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;styles/&lt;/code&gt;: Custom CSS. CSS used here will be minimized when built.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;bower_components&lt;/code&gt;: Content installed via bower goes here&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;node_modules&lt;/code&gt;: Content installed via npm goes here&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;build-instructions&quot;&gt;Build Instructions&lt;/h1&gt;
+
+&lt;p&gt;This part is pretty brutal right now but gets the job done. Hopefully I’ll get better with gulp and clean this up soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;serve&quot;&gt;Serve&lt;/h3&gt;
+
+&lt;p&gt;This used to work. Shit.&lt;/p&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;gulp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Use the output generated in the &lt;code&gt;/_site&lt;/code&gt; directory. You can test that it looking correct by running &lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt; in the &lt;code&gt;_site&lt;/code&gt; directory and checking the output.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Jun 2015 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2015/06/16/about-jekyll-polymer-theme.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/16/about-jekyll-polymer-theme.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Image in front matter (featured image)</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom. You really suck.&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 10 Jun 2015 10:03:06 -0400</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/06/10/featured-image.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/06/10/featured-image.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 08 Jun 2015 17:27:27 -0400</pubDate>
+        <link>http://yourdomain.com/2015/06/08/welcome-to-jekyll4.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/08/welcome-to-jekyll4.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown Formatting (from StackEdit) with a Really Long Title to Test Wrapping</title>
+        <description>&lt;p&gt;&lt;strong&gt;StackEdit&lt;/strong&gt; stores your documents in your browser, which means all your documents are automatically saved locally and are accessible &lt;strong&gt;offline!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;StackEdit is accessible offline after the application has been loaded for the first time.&lt;/li&gt;
+    &lt;li&gt;Your local documents are not shared between different browsers or computers.&lt;/li&gt;
+    &lt;li&gt;Clearing your browser’s data may &lt;strong&gt;delete all your local documents!&lt;/strong&gt; Make sure your documents are backed up using &lt;strong&gt;Google Drive&lt;/strong&gt; or &lt;strong&gt;Dropbox&lt;/strong&gt; synchronization (see &lt;a href=&quot;#synchronization&quot;&gt;&lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; Synchronization&lt;/a&gt; section).&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;!--more--&gt;
+
+&lt;h4 id=&quot;i-classicon-filei-create-a-document&quot;&gt;&lt;i class=&quot;icon-file&quot;&gt;&lt;/i&gt; Create a document&lt;/h4&gt;
+
+&lt;p&gt;You can create a new document by clicking the &lt;i class=&quot;icon-file&quot;&gt;&lt;/i&gt; button in the navigation bar. It will switch from the current document to the new one.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-folder-openi-switch-to-another-document&quot;&gt;&lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt; Switch to another document&lt;/h4&gt;
+
+&lt;p&gt;You can list all your local documents and switch from one to another by clicking the &lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt; button in the navigation bar.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-pencili-rename-a-document&quot;&gt;&lt;i class=&quot;icon-pencil&quot;&gt;&lt;/i&gt; Rename a document&lt;/h4&gt;
+
+&lt;p&gt;You can rename the current document by clicking the document title in the navigation bar.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-trashi-delete-a-document&quot;&gt;&lt;i class=&quot;icon-trash&quot;&gt;&lt;/i&gt; Delete a document&lt;/h4&gt;
+
+&lt;p&gt;You can delete the current document by clicking the &lt;i class=&quot;icon-trash&quot;&gt;&lt;/i&gt; button in the navigation bar.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-hddi-save-a-document&quot;&gt;&lt;i class=&quot;icon-hdd&quot;&gt;&lt;/i&gt; Save a document&lt;/h4&gt;
+
+&lt;p&gt;You can save the current document to a file using the &lt;i class=&quot;icon-hdd&quot;&gt;&lt;/i&gt; &lt;code&gt;Save as...&lt;/code&gt; sub-menu from the &lt;i class=&quot;icon-provider-stackedit&quot;&gt;&lt;/i&gt; menu.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; See &lt;a href=&quot;#publish-a-document&quot;&gt;&lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; Publish a document&lt;/a&gt; section for a description of the different output formats.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;synchronization&quot;&gt;Synchronization&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;StackEdit&lt;/strong&gt; can be combined with &lt;strong&gt;Google Drive&lt;/strong&gt; and &lt;strong&gt;Dropbox&lt;/strong&gt; to have your documents centralized in the &lt;em&gt;Cloud&lt;/em&gt;. The synchronization mechanism will take care of uploading your modifications or downloading the latest version of your documents.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Full access to &lt;strong&gt;Google Drive&lt;/strong&gt; or &lt;strong&gt;Dropbox&lt;/strong&gt; is required to be able to import any document in StackEdit.&lt;/li&gt;
+    &lt;li&gt;Imported documents are downloaded in your browser and are not transmitted to a server.&lt;/li&gt;
+    &lt;li&gt;If you experience problems exporting documents to Google Drive, check and optionally disable browser extensions, such as Disconnect.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;i-classicon-downloadi-import-a-document&quot;&gt;&lt;i class=&quot;icon-download&quot;&gt;&lt;/i&gt; Import a document&lt;/h4&gt;
+
+&lt;p&gt;You can import a document from the &lt;em&gt;Cloud&lt;/em&gt; by going to the &lt;i class=&quot;icon-provider-gdrive&quot;&gt;&lt;/i&gt; &lt;code&gt;Google Drive&lt;/code&gt; or the &lt;i class=&quot;icon-provider-dropbox&quot;&gt;&lt;/i&gt; &lt;code&gt;Dropbox&lt;/code&gt; sub-menu and by clicking &lt;code&gt;Import from...&lt;/code&gt;. Once imported, your document will be automatically synchronized with the &lt;strong&gt;Google Drive&lt;/strong&gt; / &lt;strong&gt;Dropbox&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-uploadi-export-a-document&quot;&gt;&lt;i class=&quot;icon-upload&quot;&gt;&lt;/i&gt; Export a document&lt;/h4&gt;
+
+&lt;p&gt;You can export any document by going to the &lt;i class=&quot;icon-provider-gdrive&quot;&gt;&lt;/i&gt; &lt;code&gt;Google Drive&lt;/code&gt; or the &lt;i class=&quot;icon-provider-dropbox&quot;&gt;&lt;/i&gt; &lt;code&gt;Dropbox&lt;/code&gt; sub-menu and by clicking &lt;code&gt;Export to...&lt;/code&gt;. Even if your document is already synchronized with &lt;strong&gt;Google Drive&lt;/strong&gt; or &lt;strong&gt;Dropbox&lt;/strong&gt;, you can export it to a another location. &lt;strong&gt;StackEdit&lt;/strong&gt; can synchronize one document with multiple locations.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Using &lt;strong&gt;Google Drive&lt;/strong&gt;, you can create collaborative documents to work in real time with other users. Just check the box &lt;code&gt;Create a real time collaborative document&lt;/code&gt; in the dialog options when exporting to Google Drive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;i-classicon-refreshi-synchronize-a-document&quot;&gt;&lt;i class=&quot;icon-refresh&quot;&gt;&lt;/i&gt; Synchronize a document&lt;/h4&gt;
+
+&lt;p&gt;Once your document is linked to a &lt;strong&gt;Google Drive&lt;/strong&gt; or a &lt;strong&gt;Dropbox&lt;/strong&gt; file, &lt;strong&gt;StackEdit&lt;/strong&gt; will periodically (every 3 minutes) synchronize it by downloading/uploading any modification. Any conflict will be detected, and a local copy of your document will be created as a backup if necessary.&lt;/p&gt;
+
+&lt;p&gt;If you just have modified your document and you want to force the synchronization, click the &lt;i class=&quot;icon-refresh&quot;&gt;&lt;/i&gt; button in the navigation bar.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The &lt;i class=&quot;icon-refresh&quot;&gt;&lt;/i&gt; button is disabled when you have no document to synchronize.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;i-classicon-refreshi-manage-document-synchronization&quot;&gt;&lt;i class=&quot;icon-refresh&quot;&gt;&lt;/i&gt; Manage document synchronization&lt;/h4&gt;
+
+&lt;p&gt;Since one document can be synchronized with multiple locations, you can list and manage synchronized locations by clicking &lt;i class=&quot;icon-refresh&quot;&gt;&lt;/i&gt; &lt;code&gt;Manage synchronization&lt;/code&gt; in the &lt;i class=&quot;icon-provider-stackedit&quot;&gt;&lt;/i&gt; menu. This will open a dialog box allowing you to add or remove synchronization links that are associated to your document.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; If you delete the file from &lt;strong&gt;Google Drive&lt;/strong&gt; or from &lt;strong&gt;Dropbox&lt;/strong&gt;, the document will no longer be synchronized with that location.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;publication&quot;&gt;Publication&lt;/h2&gt;
+
+&lt;p&gt;Once you are happy with your document, you can publish it on different websites directly from &lt;strong&gt;StackEdit&lt;/strong&gt;. As for now, &lt;strong&gt;StackEdit&lt;/strong&gt; can publish on &lt;strong&gt;Blogger&lt;/strong&gt;, &lt;strong&gt;Dropbox&lt;/strong&gt;, &lt;strong&gt;Gist&lt;/strong&gt;, &lt;strong&gt;GitHub&lt;/strong&gt;, &lt;strong&gt;Google Drive&lt;/strong&gt;, &lt;strong&gt;Tumblr&lt;/strong&gt;, &lt;strong&gt;WordPress&lt;/strong&gt; and on any SSH server.&lt;/p&gt;
+
+&lt;h4 id=&quot;i-classicon-sharei-publish-a-document&quot;&gt;&lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; Publish a document&lt;/h4&gt;
+
+&lt;p&gt;You can publish your document by going to the &lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; &lt;code&gt;Publish on&lt;/code&gt; sub-menu and by choosing a website. In the dialog box, you can choose the publication format:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Markdown, to publish the Markdown text on a website that can interpret it (&lt;strong&gt;GitHub&lt;/strong&gt; for instance),&lt;/li&gt;
+  &lt;li&gt;HTML, to publish the document converted into HTML (on a blog for instance),&lt;/li&gt;
+  &lt;li&gt;Template, to have a full control of the output.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The default template is a simple webpage wrapping your document in HTML format. You can customize it in the &lt;code&gt;Services&lt;/code&gt; tab of the &lt;i class=&quot;icon-cog&quot;&gt;&lt;/i&gt; &lt;code&gt;Settings&lt;/code&gt; dialog.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;i-classicon-sharei-update-a-publication&quot;&gt;&lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; Update a publication&lt;/h4&gt;
+
+&lt;p&gt;After publishing, &lt;strong&gt;StackEdit&lt;/strong&gt; will keep your document linked to that publish location so that you can update it easily. Once you have modified your document and you want to update your publication, click on the &lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; button in the navigation bar.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The &lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; button is disabled when the document has not been published yet.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;i-classicon-sharei-manage-document-publication&quot;&gt;&lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; Manage document publication&lt;/h4&gt;
+
+&lt;p&gt;Since one document can be published on multiple locations, you can list and manage publish locations by clicking &lt;i class=&quot;icon-share&quot;&gt;&lt;/i&gt; &lt;code&gt;Manage publication&lt;/code&gt; in the &lt;i class=&quot;icon-provider-stackedit&quot;&gt;&lt;/i&gt; menu. This will open a dialog box allowing you to remove publication links that are associated to your document.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; In some cases, if the file has been removed from the website or the blog, the document will no longer be published on that location.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;markdown-extra&quot;&gt;Markdown Extra&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;StackEdit&lt;/strong&gt; supports &lt;strong&gt;Markdown Extra&lt;/strong&gt;, which extends &lt;strong&gt;Markdown&lt;/strong&gt; syntax with some nice features.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; You can disable any &lt;strong&gt;Markdown Extra&lt;/strong&gt; feature in the &lt;code&gt;Extensions&lt;/code&gt; tab of the &lt;i class=&quot;icon-cog&quot;&gt;&lt;/i&gt; &lt;code&gt;Settings&lt;/code&gt; dialog.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Markdown Extra&lt;/strong&gt; has a special syntax for tables:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Computer&lt;/td&gt;
+      &lt;td&gt;1600 USD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Phone&lt;/td&gt;
+      &lt;td&gt;12 USD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pipe&lt;/td&gt;
+      &lt;td&gt;1 USD&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You can specify column alignment with one or two colons:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Item&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Value&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Qty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Computer&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1600 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Phone&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pipe&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;234&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;definition-lists&quot;&gt;Definition Lists&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Markdown Extra&lt;/strong&gt; has a special syntax for definition lists too:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Term 1&lt;/dt&gt;
+  &lt;dt&gt;Term 2&lt;/dt&gt;
+  &lt;dd&gt;Definition A&lt;/dd&gt;
+  &lt;dd&gt;Definition B&lt;/dd&gt;
+  &lt;dt&gt;Term 3&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;p&gt;Definition C&lt;/p&gt;
+  &lt;/dd&gt;
+  &lt;dd&gt;
+    &lt;p&gt;Definition D&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;part of definition D&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id=&quot;fenced-code-blocks&quot;&gt;Fenced code blocks&lt;/h3&gt;
+
+&lt;p&gt;GitHub’s fenced code blocks&lt;sup id=&quot;fnref:gfm&quot;&gt;&lt;a href=&quot;#fn:gfm&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; are also supported with &lt;strong&gt;Prettify&lt;/strong&gt; syntax highlighting:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h3&gt;
+
+&lt;p&gt;You can create footnotes like this&lt;sup id=&quot;fnref:footnote&quot;&gt;&lt;a href=&quot;#fn:footnote&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;smartypants&quot;&gt;SmartyPants&lt;/h3&gt;
+
+&lt;p&gt;SmartyPants converts ASCII punctuation characters into “smart” typographic punctuation HTML entities. For example:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;ASCII&lt;/th&gt;
+      &lt;th&gt;HTML&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Single backticks&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&#39;Isn&#39;t this fun?&#39;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;‘Isn’t this fun?’&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Quotes&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;&quot;Isn&#39;t this fun?&quot;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;“Isn’t this fun?”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dashes&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;-- is an en-dash and --- is an em-dash&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;– is an en-dash and — is an em-dash&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+
+&lt;p&gt;Usually, comments in Markdown are just standard HTML comments. &lt;!-- like this --&gt;
+&lt;strong&gt;StackEdit&lt;/strong&gt; extends HTML comments in order to produce useful, highlighted comments in the preview but not in your exported documents. &lt;!--- This is very useful for collecting feedback in a collaborative document. --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mathjax&quot;&gt;MathJax&lt;/h3&gt;
+
+&lt;p&gt;You can render &lt;em&gt;LaTeX&lt;/em&gt; mathematical expressions using &lt;strong&gt;MathJax&lt;/strong&gt;, as on &lt;a href=&quot;http://math.stackexchange.com/&quot;&gt;math.stackexchange.com&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;There are inline equations like \( y = x + 2 \) indicated by &lt;code&gt;\\( ... \\)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also display an equation (not inline displayed) using inline code, like \[ y = x + 4\] which you do with &lt;code&gt;\\[ ... \\]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;Gamma function&lt;/em&gt; satisfying \( \Gamma(n) = (n-1)!\quad\forall
+n\in\mathbb N \) is via the Euler integral&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Make sure you include MathJax into your publications to render mathematical expression correctly. Your page/template should include something like:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; You can find more information:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;about &lt;strong&gt;Markdown&lt;/strong&gt; syntax &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot; title=&quot;Markdown&quot;&gt;here&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;about &lt;strong&gt;Markdown Extra&lt;/strong&gt; extension &lt;a href=&quot;https://github.com/jmcmanus/pagedown-extra&quot; title=&quot;Pagedown Extra&quot;&gt;here&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;about &lt;strong&gt;LaTeX&lt;/strong&gt; mathematical expressions &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;here&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;about &lt;strong&gt;Prettify&lt;/strong&gt; syntax highlighting &lt;a href=&quot;https://code.google.com/p/google-code-prettify/&quot;&gt;here&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;about &lt;strong&gt;Highlight.js&lt;/strong&gt; syntax highlighting &lt;a href=&quot;http://highlightjs.org/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:gfm&quot;&gt;
+      &lt;p&gt;&lt;strong&gt;GitHub Flavored Markdown&lt;/strong&gt; (GFM) is supported by StackEdit. &lt;a href=&quot;#fnref:gfm&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:footnote&quot;&gt;
+      &lt;p&gt;Here is the &lt;em&gt;text&lt;/em&gt; of the &lt;strong&gt;footnote&lt;/strong&gt;. &lt;a href=&quot;#fnref:footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2015 17:27:27 -0400</pubDate>
+        <link>http://yourdomain.com/2015/06/08/markdown-formatting.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/08/markdown-formatting.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Typography</title>
+        <description>&lt;p&gt;Here are the different features and styles available for posts written in Markdown.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;headings&quot;&gt;Headings&lt;/h1&gt;
+
+&lt;h1 id=&quot;heading-1&quot;&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-3&quot;&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-4&quot;&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;heading-5&quot;&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;heading-6&quot;&gt;Heading 6&lt;/h6&gt;
+
+&lt;h1 id=&quot;tables&quot;&gt;Tables&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Markdown Extra&lt;/strong&gt; has a special syntax for tables:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Computer&lt;/td&gt;
+      &lt;td&gt;1600 USD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Phone&lt;/td&gt;
+      &lt;td&gt;12 USD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pipe&lt;/td&gt;
+      &lt;td&gt;1 USD&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You can specify column alignment with one or two colons:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Item&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Value&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Qty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Computer&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1600 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Phone&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Pipe&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;1 USD&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;234&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Subitem 2.1&lt;/li&gt;
+      &lt;li&gt;Subitem 2.2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h1&gt;
+
+&lt;p&gt;You can write block quotes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a block quote.
+It’s split over multiple lines.&lt;/p&gt;
+
+  &lt;p&gt;It can also have multiple paragraphs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;math-with-mathjax&quot;&gt;Math (with MathJax)&lt;/h1&gt;
+
+&lt;p&gt;You can render &lt;em&gt;LaTeX&lt;/em&gt; mathematical expressions using &lt;strong&gt;MathJax&lt;/strong&gt;, as on &lt;a href=&quot;http://math.stackexchange.com/&quot;&gt;math.stackexchange.com&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;There are inline equations like \( y = x + 2 \) indicated by &lt;code&gt;\\( ... \\)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also display an equation (not inline displayed) using inline code, like \[ y = x + 4\] which you do with &lt;code&gt;\\[ ... \\]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Or you can display a block of math by surrounding it with &lt;code&gt;$$ ... $$&lt;/code&gt;. Like this:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Make sure you include MathJax into your publications to render mathematical expression correctly. Your page/template should include something like:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
+
+&lt;h2 id=&quot;inline-code&quot;&gt;Inline code&lt;/h2&gt;
+
+&lt;p&gt;Code embedded in a paragraph looks like &lt;code&gt;this is code&lt;/code&gt;. Code can also be in blocks with or without line numbers.&lt;/p&gt;
+
+&lt;h2 id=&quot;code-blocks-fenced-code&quot;&gt;Code blocks (fenced code)&lt;/h2&gt;
+
+&lt;p&gt;Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just &lt;code&gt;linenos&lt;/code&gt; instead of &lt;code&gt;linenos=table&lt;/code&gt;, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)&lt;/p&gt;
+
+&lt;p&gt;With line numbers (as table):&lt;/p&gt;
+
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;1
+2
+3
+4
+5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Without line numbers:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With line numbers (inline):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;definition-lists&quot;&gt;Definition Lists&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Markdown Extra&lt;/strong&gt; has a special syntax for definition lists too:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Term 1&lt;/dt&gt;
+  &lt;dt&gt;Term 2&lt;/dt&gt;
+  &lt;dd&gt;Definition A&lt;/dd&gt;
+  &lt;dd&gt;Definition B&lt;/dd&gt;
+  &lt;dt&gt;Term 3&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;p&gt;Definition C&lt;/p&gt;
+  &lt;/dd&gt;
+  &lt;dd&gt;
+    &lt;p&gt;Definition D&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;part of definition D&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h1 id=&quot;dividers&quot;&gt;Dividers&lt;/h1&gt;
+
+&lt;p&gt;Divide up sections and stuff with dividers.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;They look like that.&lt;/p&gt;
+
+&lt;h1 id=&quot;font-weights-and-styles&quot;&gt;Font weights and styles&lt;/h1&gt;
+
+&lt;p&gt;This text is &lt;strong&gt;bold text&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is &lt;em&gt;italicized&lt;/em&gt; text.&lt;/p&gt;
+
+&lt;h1 id=&quot;links-and-footnotes&quot;&gt;Links and Footnotes&lt;/h1&gt;
+
+&lt;p&gt;You can create footnotes like this&lt;sup id=&quot;fnref:footnote&quot;&gt;&lt;a href=&quot;#fn:footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can embed links with a direct link, like &lt;a href=&quot;http://www.google.com&quot;&gt;this link to Google&lt;/a&gt;. Links can also be in a separated form like &lt;a href=&quot;http://jekyllrb.com&quot;&gt;this link to the Jekyll documention&lt;/a&gt;. (That’s useful if you want to link to the same website multiple times &lt;a href=&quot;http://jekyllrb.com&quot;&gt;like this&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:footnote&quot;&gt;
+      &lt;p&gt;Here is the &lt;em&gt;text&lt;/em&gt; of the &lt;strong&gt;footnote&lt;/strong&gt;. &lt;a href=&quot;#fnref:footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2015 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2015/06/08/typography.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/08/typography.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Image in excerpt</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://www.google.com/logos/doodles/2015/womens-world-cup-2015-us-first-match-5145027185475584-hp.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 08 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2014/06/08/image-in-excerpt.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/06/08/image-in-excerpt.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;HEY YOU!&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 08 Jun 2011 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2011/06/08/welcome-to-jekyll5.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2011/06/08/welcome-to-jekyll5.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Long code that should scroll but doesn&#39;t always</title>
+        <description>
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;1
+2
+3
+4
+5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom this is a really long line to test wrapping&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Jun 2010 17:27:27 -0400</pubDate>
+        <link>http://yourdomain.com/2010/06/08/long-code.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2010/06/08/long-code.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
