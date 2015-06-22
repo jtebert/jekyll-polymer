@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Jekyll Polymer Theme" />
+
+    <title>HTML meta tags</title>
+    <meta name="description" content="Meta tags in HTML headers never made sense to me.I found that this page provided a nice summary of what they are and why.* Here’s my summary of some of the p...">
+
+    <link rel="canonical" href="http://jtebert.github.io/jekyll-polymer/2014/06/13/html-meta-tags.html">
+    <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://jtebert.github.io/jekyll-polymer/feed.xml' />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Chrome for Android theme color -->
+    <!-- TODO: Change to match final color scheme -->
+    <meta name="theme-color" content="#303F9F">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/jekyll-polymer/manifest.json">
+
+    <!-- Tile color for Win8 -->
+    <meta name="msapplication-TileColor" content="#303F9F">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Jekyll Polymer Theme">
+    <link rel="icon" sizes="192x192" href="/jekyll-polymer/images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Jekyll Polymer Theme">
+    <link rel="apple-touch-icon" href="/jekyll-polymer/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144) -->
+    <meta name="msapplication-TileImage" content="/jekyll-polymer/images/touch/ms-touch-icon-144x144-precomposed.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/jekyll-polymer/styles/main.css">
+    <!-- endbuild-->
+
+    <!-- build:css styles/code-highlight.css -->
+    <link rel="stylesheet" href="/jekyll-polymer/styles/code-highlight.css">
+    <!-- endbuild-->
+
+    <link rel="stylesheet" href="/jekyll-polymer/scripts/lightbox/css/lightbox.css">
+
+    <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+    <script src="/jekyll-polymer/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- endbuild -->
+
+    <!-- will be replaced with elements/elements.vulcanized.html -->
+    <link rel="import" href="/jekyll-polymer/elements/elements.html">
+    <!-- endreplace-->
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+<span id="browser-sync-binding"></span>
+<template is="dom-bind" id="app">
+
+  <paper-drawer-panel id="paperDrawerPanel">
+    <div drawer>
+
+      <div class="wrapper">
+
+        <!-- Drawer Toolbar -->
+        <nav-image src="/jekyll-polymer/images/material-bg-10.png" id="menu-img"></nav-image>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
+          <a href="/jekyll-polymer/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="/jekyll-polymer/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a data-route="contact" href="/jekyll-polymer/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+        </paper-menu>
+
+        <my-nav-subheader>Elsewhere</my-nav-subheader>
+
+        <paper-menu class="list" on-iron-select="onMenuSelect">
+          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
+        </paper-menu>
+
+        <div class="push"></div>
+      </div>
+
+      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+
+    </div>
+
+    <paper-header-panel main mode="waterfall-tall">
+
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar">
+        <!-- Menu toggle -->
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+        <span class="flex"></span>
+        <!-- Search bar -->
+        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <!-- Application name -->
+        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
+    </paper-toolbar>
+
+    <!-- Main Content -->
+    <style>
+  body {
+    background-color: #fff !important;
+  }
+</style>
+
+<div id="post">
+
+  
+
+  <h1 class="paper-font-display1">HTML meta tags</h1>
+  <h2 class="paper-font-subhead">Jun 13, 2014</h2>
+
+  <div id="post-content">
+    <p>Meta tags in HTML headers never made sense to me.</p>
+
+<p>I found that <a href="http://searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags">this page</a> provided a nice summary of what they are and why.* Here’s my summary of some of the purposes of the significant meta tags.</p>
+
+<!--more-->
+
+<p><strong>Description:</strong> This is what will probably show up on search engines. Make it shiny.</p>
+
+<p><strong>Keywords:</strong> This is outdated and no longer used by search engines except to detect spam. Don’t bother with it.</p>
+
+<p><strong>ROBOTS:</strong> Tell search engines to ignore the page. It’s like a Jedi mind trick. Leave it out if you don’t want to change searchability-related topics.</p>
+
+<p><strong>Charset:</strong> Tell the internet you’re using English on your page.Note: That link has an outdated way of telling you to set the character set (from HTML4). For HTML5 (the current version), instead use <meta charset="UTF-8" /></p>
+
+<p><strong>Everything else:</strong> It’s probably outdated and/or ignored and not worth using.</p>
+
+<p>* See the note about character sets, which is outdated on this link.</p>
+
+
+    
+      <a href="/jekyll-polymer/2014/06/08/image-in-excerpt.html"><paper-button raised>
+        <iron-icon icon="arrow-back"></iron-icon> Previous Post
+      </paper-button></a>
+    
+
+    
+      <a href="/jekyll-polymer/2014/07/10/make-your-own-xkcd-style-passwords.html"><paper-button raised>
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+</div>
+
+  
+    <x-card>
+    <my-card-title title="Comments"></my-card-title>
+    <card-content><div id="disqus_thread"></div></card-content>
+</x-card>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'juliaebert';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+    </paper-header-panel>
+  </paper-drawer-panel>
+
+</template>
+
+<script src="/jekyll-polymer/scripts/jekyll-search.min.js" type="text/javascript"></script>
+
+<!-- MathJax -->
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- build:js scripts/app.js -->
+<script src="/jekyll-polymer/scripts/app.js"></script>
+<!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/jekyll-polymer/scripts/g-analyt.js','ga');
+		
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/jekyll-polymer/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jekyll-polymer/scripts/lightbox/js/lightbox.js"></script>
+
+</body>
+
+</html>

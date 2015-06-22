@@ -1,0 +1,148 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+
+<dom-module name="paper-lightbox">
+	<template>
+		<style>
+			.image-thumbnails
+			{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			
+			polyfill-next-selector 
+			{ 
+				content: '.image-thumbnails img'; 
+			}
+			.image-thumbnails ::content img 
+			{
+				border-radius: 2px;
+				margin: 2px;
+				transition: all 0.3s ease;
+				height: 200px;
+				width: 200px;
+			}
+			.image-thumbnails ::content img:hover 
+			{
+				box-shadow: rgba(0, 0, 0, 0.4) 0 7px 25px 0;
+				z-index: 800;
+			}
+			
+			polyfill-next-selector 
+			{ 
+				content: '.image-thumbnails span'; 
+			}
+			.image-thumbnails ::content span 
+			{
+				margin: 0;
+				font-size: 1.1rem;
+				font-weight: 300;
+			}
+			
+			.dimmed-background
+			{
+				background-color: rgba(0, 0, 0, 0.9);
+				visibility: hidden;
+				opacity:0;
+				transition:visibility 0s linear 0.25s,opacity 0.25s linear;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 900;
+			}
+			
+			.dimmed-background-activated
+			{
+				visibility: visible;
+				opacity:1;
+				transition-delay:0s;
+			}
+			
+			.close-button
+			{
+				color: #fff; 
+				z-index: 999; 
+				position: fixed; 
+				top: 10px; 
+				left: 10px;
+				visibility: hidden;
+				opacity:0;
+				transition:visibility 0s linear 0.25s,opacity 0.25s linear;
+			}
+			
+			.close-button-visible
+			{
+				visibility: visible;
+				opacity:1;
+				transition-delay:0s;
+			}
+			
+			.fullsize-image
+			{
+				position: fixed;
+				z-index: 901;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				visibility: hidden;
+				opacity:0;
+				transition:visibility 0s linear 0.25s,opacity 0.25s linear;
+				margin: auto;
+				width: auto; 
+				height: auto; 
+				max-width: 90%; 
+				max-height: 90%;
+			}
+			
+			.fullsize-image-visible
+			{
+				visibility: visible;
+				opacity:1;
+				transition-delay:0s;
+			}
+			
+		</style>
+		
+		<div class="fullimage-container">
+			<img id="fullimage" class="fullsize-image"></img>	
+		</div>	
+		
+		<div id="dimmedbackground" class="dimmed-background"></div>
+		
+		
+		
+		<paper-icon-button id="closebutton" class="close-button" icon="close" on-click="{{closeClick}}"></paper-icon-button>
+		
+		<div class="image-thumbnails" layout horizontal center>
+			<content select="img" on-click="{{imageClick}}"></content>
+			<content select="span"></content>
+		</div>
+		<content></content>
+	
+	</template>
+	<script>
+		Polymer(
+		{
+			is: "paper-lightbox",
+
+			imageClick: function(event, detail, sender) 
+			{ 
+				this.$.dimmedbackground.classList.add('dimmed-background-activated');
+				this.$.closebutton.classList.add('close-button-visible');
+				var fullImageUrl = event.path[[].indexOf.call(event.path, sender) - 1].getAttribute("data-fullimage");
+				this.$.fullimage.src = fullImageUrl;
+				this.$.fullimage.classList.add('fullsize-image-visible');
+			},
+			
+			closeClick: function(event, detail, sender) 
+			{ 
+				this.$.dimmedbackground.classList.remove('dimmed-background-activated');
+				this.$.closebutton.classList.remove('close-button-visible');
+				this.$.fullimage.classList.remove('fullsize-image-visible');
+			}
+		});
+	</script>
+</dom-module>

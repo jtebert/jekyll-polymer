@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Your Awesome Title" />
+    <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>Your Awesome Title</title>
-    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>Jekyll Polymer Theme</title>
+    <meta name="description" content="This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
 ">
 
-    <link rel="canonical" href="http://yourdomain.com/jekyll-polymer/page2/">
-    <link rel="alternate" type="application/rss+xml" title="Your Awesome Title" href='http://yourdomain.com/jekyll-polymer/feed.xml' />
+    <link rel="canonical" href="http://jtebert.github.io/jekyll-polymer/page2/">
+    <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://jtebert.github.io/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Chrome for Android theme color -->
@@ -23,17 +23,17 @@
     <link rel="manifest" href="/jekyll-polymer/manifest.json">
 
     <!-- Tile color for Win8 -->
-    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-TileColor" content="#303F9F">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Polymer Starter Kit">
+    <meta name="application-name" content="Jekyll Polymer Theme">
     <link rel="icon" sizes="192x192" href="/jekyll-polymer/images/touch/chrome-touch-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+    <meta name="apple-mobile-web-app-title" content="Jekyll Polymer Theme">
     <link rel="apple-touch-icon" href="/jekyll-polymer/images/touch/apple-touch-icon.png">
 
     <!-- Tile icon for Win8 (144x144) -->
@@ -46,6 +46,8 @@
     <!-- build:css styles/code-highlight.css -->
     <link rel="stylesheet" href="/jekyll-polymer/styles/code-highlight.css">
     <!-- endbuild-->
+
+    <link rel="stylesheet" href="/jekyll-polymer/scripts/lightbox/css/lightbox.css">
 
     <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
     <script src="/jekyll-polymer/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -66,7 +68,7 @@
       <div class="wrapper">
 
         <!-- Drawer Toolbar -->
-        <nav-image src="/jekyll-polymer/images/material-bg-5.png" id="menu-img"></nav-image>
+        <nav-image src="/jekyll-polymer/images/material-bg-10.png" id="menu-img"></nav-image>
 
         <!-- Drawer Content -->
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
@@ -90,7 +92,7 @@
 
     </div>
 
-    <paper-header-panel main mode="standard">
+    <paper-header-panel main mode="waterfall-tall">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
@@ -100,70 +102,76 @@
         <!-- Search bar -->
         <my-search-bar class="top" id="search-input"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Your Awesome Title</div>
+        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
     </paper-toolbar>
 
     <!-- Main Content -->
     <!-- This loops through the paginated posts -->
 
-<my-card>
+<x-card>
   
-    <my-card-colorbar>Typography</my-card-colorbar>
-    <my-card-title subtitle="2015 June 8"></my-card-title>
+    <my-card-colorbar>Shiny Matlab Figures: Exporting</my-card-colorbar>
+    <my-card-title subtitle="2014 December 15"></my-card-title>
   
-  <card-content><p>Here are the different features and styles available for posts written in Markdown.</p>
+  <card-content><p>So far in our quest to make better Matlab figures, we’ve looked at <a href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-drawing-error-with-patches.html">an alternative way to draw error bars</a> and <a href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-sizing-and-parameters.html">adjusting parameters to make figures more readable</a>. Last (for now) but not least: how to best get those figures out of Matlab and into the real world. There are some built-in methods, but I’ve found they don’t work quite as well as an alternative from the Matlab File Exchange.</p>
 
 </card-content>
-  <my-card-more href="/jekyll-polymer/2015/06/08/typography.html">Read More</my-card-more>
-</my-card>
+  <my-card-more href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-exporting.html">Read More</my-card-more>
+</x-card>
 
-<my-card>
+<x-card>
   
-    <my-card-colorbar>Image in excerpt</my-card-colorbar>
-    <my-card-title subtitle="2014 June 8"></my-card-title>
+    <my-card-colorbar>Shiny Matlab Figures: Sizing and Parameters</my-card-colorbar>
+    <my-card-title subtitle="2014 December 15"></my-card-title>
   
-  <card-content><p><img src="https://www.google.com/logos/doodles/2015/womens-world-cup-2015-us-first-match-5145027185475584-hp.jpg" /></p>
-
-<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  <card-content><p>In my never-ending quest to create decent-looking graphs with Matlab, one challenge is the default parameters for figures, particularly in terms of font size and line thickness. These defaults look alright for looking at the figures yourself to figure out what’s going on. But if you want to export them to use in a presentation, poster, or paper, the lines are too thin and the fonts too small. Using the same data generation as in my previous post, it looks something like this:</p>
 
 </card-content>
-  <my-card-more href="/jekyll-polymer/2014/06/08/image-in-excerpt.html">Read More</my-card-more>
-</my-card>
+  <my-card-more href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-sizing-and-parameters.html">Read More</my-card-more>
+</x-card>
 
-<my-card>
+<x-card>
   
-    <my-card-colorbar>Welcome to Jekyll!</my-card-colorbar>
-    <my-card-title subtitle="2011 June 8"></my-card-title>
+    <my-card-colorbar>Shiny Matlab Figures: Drawing Error with Patches</my-card-colorbar>
+    <my-card-title subtitle="2014 December 15"></my-card-title>
   
-  <card-content><p>HEY YOU!</p>
+  <card-content><p>I make a lot of Matlab figures. That’s an occupational hazard of being the undergraduate in a research lab, I suppose. Over the past few years, though, the graphically-conscious side of me has gotten annoyed at the terrible Matlab figures I’ve seen on posters and even in papers. I have also come up with my own tricks to create really gorgeous Matlab figures. Over the next few posts, I’ll share a couple of them with you, including:</p>
 
-<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<ul>
+  <li>Plotting error with patches instead of error bars</li>
+  <li>Changing default figure drawing parameters and sizing</li>
+  <li>Exporting figures</li>
+</ul>
 
 </card-content>
-  <my-card-more href="/jekyll-polymer/2011/06/08/welcome-to-jekyll5.html">Read More</my-card-more>
-</my-card>
+  <my-card-more href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-drawing-error-with-patches.html">Read More</my-card-more>
+</x-card>
 
-<my-card>
+<x-card>
   
-    <my-card-colorbar>Long code that should scroll but doesn't always</my-card-colorbar>
-    <my-card-title subtitle="2010 June 8"></my-card-title>
+  <card-image src="/jekyll-polymer/images/posts/2014-10-30-google-keep.jpg"></card-image>
+    <div class="card-image">
+      <my-card-title title="An Awesomely Useful Thing: Google Keep" subtitle="2014 October 30"></my-card-title>
+    </div>
   
-  <card-content>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-ruby" data-lang="ruby">1
-2
-3
-4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-<span class="c1">#=&gt; prints &#39;Hi, Tom this is a really long line to test wrapping&#39; to STDOUT.</span>
-</pre></div>
-</td></tr></table>
+  <card-content><p>An Awesomely Useful Thing: Google KeepI am in constant search of something easy to serve as an external memory for everything I have to do and remember. A list on a piece of paper? Great until you misplace or forget the paper. An app? I thought I’d tried them all: ToDoist, Wunderlist, you name it. ToDoist is nice for individual tasks, but groups of things and notes to myself got complicated fast and I found that I wasn’t actually using it. It did have cross-system support, so I could use it in Chrome and on my iPad and Android phone. That was the major shortfall of many other apps I tried: if I don’t have my phone or computer, I still need my external memory.</p>
 
 </card-content>
-  <my-card-more href="/jekyll-polymer/2010/06/08/long-code.html">Read More</my-card-more>
-</my-card>
+  <my-card-more href="/jekyll-polymer/2014/10/30/an-awesomely-useful-thing-google-keep.html">Read More</my-card-more>
+</x-card>
+
+<x-card>
+  
+  <card-image src="/jekyll-polymer/images/posts/2014-09-10-drracket-logo.png"></card-image>
+    <div class="card-image">
+      <my-card-title title="DrRacket Tricks and Customization" subtitle="2014 September 10"></my-card-title>
+    </div>
+  
+  <card-content><p>My first programming class used DrRacket, and I have kept using it for the past three years as a tutor for that class, and now as a TA. Along the way, I’ve learned a bunch of tricks about DrRacket that can make programming in it easier and much more enjoyable.</p>
+
+</card-content>
+  <my-card-more href="/jekyll-polymer/2014/09/10/drracket-tricks-and-customization.html">Read More</my-card-more>
+</x-card>
 
 
 <!-- Page navigation links -->
@@ -186,10 +194,30 @@
   <my-page-link active>2</my-page-link>
   
   
+  
+  <my-page-link href="/jekyll-polymer/page3">3</my-page-link>
+  
+  
+  
+  <my-page-link href="/jekyll-polymer/page4">4</my-page-link>
+  
+  
+  
+  <my-page-link href="/jekyll-polymer/page5">5</my-page-link>
+  
+  
+  
+  <my-page-link href="/jekyll-polymer/page6">6</my-page-link>
+  
+  
+  
+  <my-page-link href="/jekyll-polymer/page7">7</my-page-link>
+  
+  
 
   <!-- Right Arrow -->
   
-  <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  <my-page-link href="/jekyll-polymer/page3"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   
 </my-pagination>
 
@@ -210,6 +238,25 @@
 <!-- build:js scripts/app.js -->
 <script src="/jekyll-polymer/scripts/app.js"></script>
 <!-- endbuild-->
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','/jekyll-polymer/scripts/g-analyt.js','ga');
+		
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+
+<script type="text/javascript" src="/jekyll-polymer/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jekyll-polymer/scripts/lightbox/js/lightbox.js"></script>
+
 </body>
 
 </html>

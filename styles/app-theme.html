@@ -22,17 +22,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Application theme */
 
   :root {
-    --dark-primary-color: #616161;
-    --default-primary-color: #9E9E9E;
+    --dark-primary-color: #D32F2F;
+    --default-primary-color: #607D8B;
     --light-primary-color: #CFD8DC;
     --text-primary-color: #FFFFFF; /*text/icons*/
-    --accent-color: #03A9F4;
+    --accent-color: #FF5722;
     --primary-background-color: #ececec;
     --primary-text-color: #212121;
     --secondary-text-color: #727272;
     --disabled-text-color: #bdbdbd;
     --divider-color: #E0E0E0;
-    --code-text-color: #9f499b;
+    --code-text-color: #3F51B5;
 
 
     /* Components */
@@ -97,7 +97,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     text-decoration: none;
   }
 
-  my-card a:hover {
+  x-card a:hover {
     text-decoration: underline;
   }
 
@@ -126,8 +126,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   #post {
     padding: 24px 64px;
-    max-width: 912px;
+    max-width: 700px;
     transition: padding 0.2s linear;
+  }
+
+  #post img {
+    max-width: 100%;
   }
 
   @media only screen and (max-width: 850px) {
@@ -139,13 +143,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   /** Content of posts **/
 
+  paper-button:not([disabled]) {
+    color: white;
+    background: var(--accent-color);
+  }
+
   #post img {
     max-width: 100%;
   }
 
   #post-content {
     @apply(--paper-font-body1);
-    font-size: 16px;
+    margin-bottom: 32px;
   }
 
   dt {

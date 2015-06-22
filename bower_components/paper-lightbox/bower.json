@@ -1,0 +1,20 @@
+{
+  "name": "paper-lightbox",
+  "version": "1.0.0",
+  "authors": [
+    "Faiz <malkanifaiz@gmail.com>"
+  ],
+  "description": "Lightbox Web Component",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.5.4"
+  }
+}
