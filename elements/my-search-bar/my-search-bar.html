@@ -81,7 +81,7 @@
             top: 64px;
             left: 0;
             margin-left: 0;
-            background-color: var(--light-primary-color);
+            background-color: var(--primary-background-color);
             overflow-y: auto;
         }
 
@@ -99,7 +99,7 @@
         <div id="search" opened$="{{opened}}" on-click="toggleSearch">
             <paper-icon-button icon="arrow-back" id="back-icon"></paper-icon-button>
             <paper-icon-button icon="search" id="search-icon"></paper-icon-button>
-            <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input"autocomplete="off">
+            <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
         </div>
         <div class="list" opened$="{{opened}}" id="results-container"></div>
 

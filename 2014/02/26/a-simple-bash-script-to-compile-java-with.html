@@ -10,8 +10,8 @@
     <title>A simple bash script to compile Java (with packages) (and possibly JUnit)</title>
     <meta name="description" content="Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files t...">
 
-    <link rel="canonical" href="http://jtebert.github.io/2014/02/26/a-simple-bash-script-to-compile-java-with.html">
-    <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://jtebert.github.io/feed.xml' />
+    <link rel="canonical" href="http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html">
+    <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://blog.juliaebert.com/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- Chrome for Android theme color -->
@@ -107,7 +107,7 @@
     <!-- Main Content -->
     <style>
   body {
-    background-color: #fff !important;
+    background-color: #f9f9f9 !important;
   }
 </style>
 
@@ -116,7 +116,7 @@
   
 
   <h1 class="paper-font-display1">A simple bash script to compile Java (with packages) (and possibly JUnit)</h1>
-  <h2 class="paper-font-subhead">Feb 26, 2014</h2>
+  <h4 class="paper-font-subhead" id="date">Feb 26, 2014</h4>
 
   <div id="post-content">
     <p>Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files to compile.</p>
@@ -160,11 +160,30 @@ find -name <span class="s2">&quot;*.class&quot;</span> &gt; old_class.txt
         xargs -a old_class.txt -d<span class="s1">&#39;&#39;</span><span class="se">\n</span><span class="s1">&#39;&#39;</span> rm
 <span class="k">fi</span></code></pre></div>
 
+  </div>
 
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html&title=A simple bash script to compile Java (with packages) (and possibly JUnit)&summary=&source=http://blog.juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html&title=A simple bash script to compile Java (with packages) (and possibly JUnit)" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=A simple bash script to compile Java (with packages) (and possibly JUnit)&url=http://blog.juliaebert.com/2014/02/26/a-simple-bash-script-to-compile-java-with.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
     
-      <a href="/2014/02/26/ssh-ftp-sftp-in-nautilus.html"><paper-button raised>
-        <iron-icon icon="arrow-back"></iron-icon> Previous Post
-      </paper-button></a>
+    <a href="/2014/02/26/ssh-ftp-sftp-in-nautilus.html"><paper-button raised>
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
     
 
     
@@ -173,13 +192,11 @@ find -name <span class="s2">&quot;*.class&quot;</span> &gt; old_class.txt
       </paper-button></a>
     
   </div>
-</div>
 
   
-    <x-card>
-    <my-card-title title="Comments"></my-card-title>
-    <card-content><div id="disqus_thread"></div></card-content>
-</x-card>
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -194,6 +211,9 @@ find -name <span class="s2">&quot;*.class&quot;</span> &gt; old_class.txt
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   
+
+</div>
+
 
     </paper-header-panel>
   </paper-drawer-panel>
