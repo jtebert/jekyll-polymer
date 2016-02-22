@@ -1,8 +1,8 @@
 {
-  "name": "polymer-jekyll-from-scratch",
+  "name": "jekyll-polymer-theme",
   "version": "0.0.0",
   "authors": [
-    "Julia Ebert <ebertjulia@gmail.com>"
+    "Julia Ebert <julia@juliaebert.com>"
   ],
   "license": "MIT",
   "homepage": "juliaebert.com",
@@ -14,8 +14,9 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "iron-elements": "polymerelements/iron-elements#~1.0.0",
-    "paper-elements": "polymerelements/paper-elements#~1.0.1"
+    "polymer": "Polymer/polymer#^1.2.4",
+    "fontawesome-iconset": "diego-d5000/fontawesome-iconset#~4.3.0",
+    "iron-elements": "polymerelements/iron-elements#^1.0.8",
+    "paper-elements": "polymerelements/paper-elements#^1.0.7"
   }
 }

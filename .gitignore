@@ -6,3 +6,7 @@ bower_components
 node_modules
 .idea
 .temp
+app/_posts/personal/*
+app/images/posts/personal/*
+app/_drafts
+CNAME

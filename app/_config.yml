@@ -1,19 +1,22 @@
 # Site settings
-title: Your Awesome Title
-email: your-email@domain.com
+title: Jekyll Polymer Theme
+email: julia@juliaebert.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://blog.juliaebert.com" # the base hostname & protocol for your site
+twitter_username: ''
+github_username:  jtebert
 disqus_shortname: juliaebert
-paginate: 5
+google_analytics: UA-54476418-1
 
+paginate: 5
+paginate_path: "page:num"
 excerpt_separator: <!--more-->
+
+# Gems
+gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
-exclude: [dist/, manifest.json, package.json, README.md, bower.json, gulp.js]
+exclude: [dist/, package.json, README.md, bower.json, gulp.js, node_modules]

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 {% include head.html %}
@@ -13,13 +13,14 @@
       <div class="wrapper">
 
         <!-- Drawer Toolbar -->
-        <nav-image src="/images/material-bg-5.png" id="menu-img"></nav-image>
+        <nav-image src="{{ site.baseurl }}/images/material-bg-10.png" id="menu-img"></nav-image>
 
         <!-- Drawer Content -->
         <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
-          <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
-          <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
-          <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
+          <a href="{{ site.baseurl }}/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
+          <a href="{{ site.baseurl }}/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="{{ site.baseurl }}/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
+          <a data-route="contact" href="{{ site.baseurl }}/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
@@ -27,7 +28,7 @@
         <paper-menu class="list" on-iron-select="onMenuSelect">
           <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
           <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
-          <a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
@@ -43,12 +44,12 @@
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">{{ site.title }}</span>
         <!-- Search bar -->
         <my-search-bar class="top" id="search-input"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">{{ site.title }}</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">{{ site.title }}</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     {{ content }}
@@ -58,7 +59,7 @@
 
 </template>
 
-<script src="/scripts/jekyll-search.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/scripts/jekyll-search.min.js" type="text/javascript"></script>
 
 <!-- MathJax -->
 <script type="text/javascript"
@@ -66,8 +67,14 @@
 </script>
 
 <!-- build:js scripts/app.js -->
-<script src="/scripts/app.js"></script>
+<script src="{{ site.baseurl }}/scripts/app.js"></script>
 <!-- endbuild-->
+
+{% include analytics.html %}
+
+<script type="text/javascript" src="{{ site.baseurl }}/scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/scripts/lightbox/js/lightbox.js"></script>
+
 </body>
 
 </html>

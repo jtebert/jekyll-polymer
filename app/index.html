@@ -2,22 +2,27 @@
 layout: default
 ---
 
+
+<div class="card-wrapper">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-<my-card>
-  {% if post.image %}
-  <card-image src="{{ '/images/posts/' | prepend: site.baseurl | append: post.image }}"></card-image>
-    <div class="card-image">
-      <my-card-title title="{{ post.title }}" subtitle="{{ post.date | date: '%Y %B %-d' }}"></my-card-title>
+
+  <paper-card class="my-card"
+          {% if post.image %}
+              image="{{ site.baseurl }}/images/posts/{{ post.image }}"
+          {% endif %}>
+    <div class="card-content">
+      <div class="title">{{ post.title }}</div>
+      <div class="subtitle">{{ post.date | date: '%Y %B %-d' }}</div>
+      {{ post.excerpt }}
     </div>
-  {% else %}
-    <my-card-colorbar>{{ post.title }}</my-card-colorbar>
-    <my-card-title subtitle="{{ post.date | date: '%Y %B %-d' }}"></my-card-title>
-  {% endif %}
-  <card-content>{{ post.excerpt }}</card-content>
-  <my-card-more href="{{ post.url }}">Read More</my-card-more>
-</my-card>
+    <div class="card-actions">
+      <a href="{{ site.baseurl }}{{ post.url }}"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
 {% endfor %}
+</div>
 
 <!-- Page navigation links -->
 {% if paginator.total_pages > 1 %}
@@ -44,7 +49,7 @@ layout: default
 
   <!-- Right Arrow -->
   {% if paginator.next_page %}
-  <my-page-link href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  <my-page-link href="{{ paginator.next_page_path  }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   {% else %}
   <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   {% endif %}

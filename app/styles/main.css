@@ -24,7 +24,7 @@ a {
 }
 
 
-paper-menu a span{
+paper-menu a span {
     font-weight: 500;
 }
 
@@ -34,4 +34,13 @@ paper-menu {
 
 #middleBar.paper-toolbar {
     z-index: 0 !important;
+}
+
+my-search-bar {
+    z-index: 1 !important;
+}
+
+#post x-card paper-material {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }

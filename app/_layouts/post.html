@@ -4,20 +4,67 @@ layout: default
 
 <style>
   body {
-    background-color: #fff !important;
+    background-color: #f9f9f9 !important;
   }
 </style>
 
 <div id="post">
-  <h1 class="paper-font-display2">{{ page.title }}</h1>
-  <h2 class="paper-font-subhead">{{ page.date | date: "%b %-d, %Y" }}</h2>
+
+  {% if page.hero-image %}
+  <a href="{{ site.baseurl }}/images/posts/{{ page.image }}" data-lightbox="image-1" data-title="{{ page.image-caption }}">
+    <img class="materialboxed" src="{{ site.baseurl }}/images/posts/{{ page.image }}">
+  </a>
+
+  {% endif %}
+
+  <h1 class="paper-font-display1">{{ page.title }}</h1>
+  <h4 class="paper-font-subhead" id="date">{{ page.date | date: "%b %-d, %Y" }}</h4>
 
   <div id="post-content">
     {{ content }}
   </div>
 
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ excerpt }}&source={{ site.url }}" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url={{ site.url }}{{ page.url }}&name={[ page.title }}&description={{ excerpt }}" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    {% if page.previous %}
+    <a href="{{ site.baseurl }}{{ page.previous.url }}"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    {% else %}
+    <paper-button raised disabled>
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button>
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ site.baseurl }}{{ page.next.url }}"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    {% else %}
+      <paper-button raised disabled>
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button>
+    {% endif %}
+  </div>
+
   {% if site.disqus_shortname %}
-    {% include disqus-card.html %}
+    {% include disqus-comments.html %}
   {% endif %}
 
 </div>

@@ -1,0 +1,27 @@
+<dom-module id="my-card-colorbar">
+
+    <style>
+        :host {
+            display: block;
+            border-radius: 2px 2px 0 0;
+            background-color: var(--accent-color);
+            padding: 16px;
+            color: #fff;
+        }
+    </style>
+
+    <template>
+        <span class="paper-font-headline" id="content"><content></content></span>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'my-card-colorbar',
+
+            properties: {
+                color: String
+            }
+        });
+    </script>
+
+</dom-module>

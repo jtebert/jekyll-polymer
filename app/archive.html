@@ -1,0 +1,16 @@
+---
+layout: page
+title: Archive
+permalink: /archive/
+---
+
+<div id="archive">
+{% for post in site.posts %}
+    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentyear != year %}
+        <h2>{{ currentyear }}</h2>
+        {% capture year %}{{currentyear}}{% endcapture %}
+    {% endif %}
+    <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+{% endfor %}
+</div>

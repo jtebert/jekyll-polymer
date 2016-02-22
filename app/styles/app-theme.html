@@ -22,17 +22,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   /* Application theme */
 
   :root {
-    --dark-primary-color: #616161;
-    --default-primary-color: #9E9E9E;
+    --dark-primary-color: #D32F2F;
+    --primary-color: #607D8B;
+    --default-primary-color: #607D8B;
     --light-primary-color: #CFD8DC;
     --text-primary-color: #FFFFFF; /*text/icons*/
-    --accent-color: #03A9F4;
-    --primary-background-color: #ececec;
+    --accent-color: #FF5722;
+    --primary-background-color: #f5f5f5;
     --primary-text-color: #212121;
     --secondary-text-color: #727272;
     --disabled-text-color: #bdbdbd;
     --divider-color: #E0E0E0;
-    --code-text-color: #9f499b;
+    --code-text-color: var(--default-primary-color);
 
 
     /* Components */
@@ -54,9 +55,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   body {
-    background-color: var(--primary-background-color, #e5e5e5);
+    background-color: var(--primary-background-color);
     color: var(--primary-text-color);
     @apply(--paper-font-body1);
+  }
+
+  p, ul {
+    line-height: 24px;
+    margin: 0 0 20px 0;
   }
 
   code, pre {
@@ -69,6 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     @apply(--paper-font-subhead);
     color: var(--secondary-text-color);
     font-style: italic;
+    margin: 20px 0;
   }
   paper-item {
     position: relative;
@@ -97,7 +104,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     text-decoration: none;
   }
 
-  my-card a:hover {
+  x-card a:hover {
     text-decoration: underline;
   }
 
@@ -126,8 +133,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   #post {
     padding: 24px 64px;
-    max-width: 912px;
+    max-width: 700px;
     transition: padding 0.2s linear;
+  }
+
+  #post img {
+    max-width: 100%;
   }
 
   @media only screen and (max-width: 850px) {
@@ -139,45 +150,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   /** Content of posts **/
 
+  paper-button.accent {
+     color: white;
+     background-color: var(--accent-color);
+  }
+
   #post img {
     max-width: 100%;
   }
 
   #post-content {
     @apply(--paper-font-body1);
-    font-size: 16px;
+    margin-bottom: 32px;
   }
 
   dt {
     font-weight: 700;
   }
 
-  #post-content ul {
-    list-style-type: disc;
+  #date {
+    font-weight: 400 !important;
   }
 
-  #post-content h1 {
+  #post h1 {
     @apply(--paper-font-display1);
   }
 
-  #post-content h2 {
+  #post h2 {
     @apply(--paper-font-headline);
   }
 
-  #post-content h3 {
+  #post h3 {
     @apply(--paper-font-title);
   }
 
-  #post-content h4 {
+  #post h4 {
     @apply(--paper-font-subhead);
+    font-weight: 500;
   }
 
-  #post-content h5 {
+  #post h5 {
     @apply(--paper-font-body2);
   }
 
-  #post-content h6 {
+  #post h6 {
     @apply(--paper-font-caption);
+  }
+
+  #post-content h1, #post-content h2, #post-content h3 {
+    color: var(--accent-color);
   }
 
   #post-content a:hover {
@@ -202,6 +223,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   .paper-font-subhead {
     color: var(--secondary-text-color, #727272);
+  }
+
+  .section {
+    margin: 32px 0;
+  }
+  .share {
+    margin: 16px 0;
+  }
+  .share h3 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .share a paper-icon-button {
+    color: var(--secondary-text-color, #727272);
+    margin: 4px;
   }
 
   paper-material {
@@ -354,4 +391,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   @media all and (min-width: 1281px) and (max-width: 1600px) { }
   /* desktop-xlarge */
   @media all and (min-width: 1601px) and (max-width: 1920px) { }
+
+
+.card-wrapper {
+  width: 700px;
+  max-width: calc(100% - 32px);
+  padding: 0;
+  position: relative;
+  margin: 16px auto;
+}
+
+  .my-card {
+    width: 100%;
+    background: #ffffff;
+    margin-bottom: 16px;
+  }
+  .my-card .title { @apply(--paper-font-headline); }
+  .my-card .subtitle {
+    @apply(--paper-font-body1);
+    color: var(--secondary-text-color, #727272);
+    margin: 8px 0 16px 0;
+  }
+
+  paper-card {
+    --paper-card-header-image: {
+      height: 0;
+       padding-bottom: 56.25%;
+     }
+  }
+
+  #archive h2 {
+    color: var(--primary-text-color);
+  }
+  #archive li {
+    list-style: none;
+  }
+
 </style>
