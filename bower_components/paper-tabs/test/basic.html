@@ -18,11 +18,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
-    <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
     <link rel="import" href="../paper-tabs.html">
-    <link rel="import" href="../../test-fixture/test-fixture.html">
-
+    <link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
+    
   </head>
   <body>
 
@@ -32,6 +31,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <paper-tab>ITEM ONE</paper-tab>
           <paper-tab>ITEM TWO</paper-tab>
           <paper-tab>ITEM THREE</paper-tab>
+        </paper-tabs>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="HiddenTabs">
+      <template>
+        <paper-tabs hidden>
+          <paper-tab>ITEM ONE</paper-tab>
+          <paper-tab>ITEM TWO</paper-tab>
         </paper-tabs>
       </template>
     </test-fixture>
@@ -93,7 +101,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         test('has role tablist', function() {
           assert.equal(tabs.getAttribute('role'), 'tablist');
         });
+      });
 
+      suite('hidden tabs', function() {
+        var tabs;
+
+        setup(function() {
+          tabs = fixture('HiddenTabs');
+        });
+
+        test('choose the correct bar position once made visible', function() {
+          tabs.removeAttribute('hidden');
+          tabs.selected = 0;
+          expect(tabs._width).to.be.greaterThan(0);
+          expect(tabs._left).to.be.equal(0);
+        });
       });
 
       suite('set the selected attribute', function() {
@@ -126,10 +148,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       suite('select tab via click', function() {
 
         var tabs, index = 1;
+        var tab;
 
         setup(function () {
           tabs = fixture('basic');
-          var tab = tabs.querySelectorAll('paper-tab')[index];
+          tab = tabs.querySelectorAll('paper-tab')[index];
           tab.dispatchEvent(new CustomEvent('click', {bubbles: true}));
         });
 
@@ -149,6 +172,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }, 1000);
         });
 
+        test('pressing enter on tab causes a click', function(done) {
+          var clickCount = 0;
+          tab.addEventListener('click', function onTabClick() {
+            clickCount++;
+            tab.removeEventListener('click', onTabClick);
+
+            expect(clickCount).to.be.equal(1);
+            done();
+          });
+
+          MockInteractions.pressEnter(tab);
+        });
+      });
+
+      suite('noink attribute', function() {
+        var tabs;
+
+        setup(function () {
+          tabs = fixture('basic');
+        });
+
+        test('noink attribute propagates to all descendant tabs', function() {
+          tabs.noink = true;
+          Array.prototype.slice.apply(tabs.querySelectorAll('paper-tab')).forEach(function(tab) {
+            assert.isTrue(tab.noink);
+          });
+
+          tabs.noink = false;
+          Array.prototype.slice.apply(tabs.querySelectorAll('paper-tab')).forEach(function(tab) {
+            assert.isFalse(tab.noink);
+          });
+        });
       });
 
     </script>

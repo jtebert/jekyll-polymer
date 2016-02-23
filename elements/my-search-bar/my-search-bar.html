@@ -2,33 +2,41 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 
 <dom-module id="my-search-bar">
 
     <style>
         #search {
+            /*
             display: -webkit-box;
             display: -webkit-flex;
             display: -moz-flex;
             display: -ms-flexbox;
             display: -o-flex;
             display: flex;
+
             -webkit-box-align: center;
             -webkit-align-items: center;
             -moz-align-items: center;
             -ms-align-items: center;
             -o-align-items: center;
             align-items: center;
+
             -webkit-box-flex: 1;
             -webkit-flex: 0 0 auto;
             -moz-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
             -o-flex: 0 0 auto;
             flex: 0 0 auto;
-            width: 40px;
+*/
+            position: absolute;
+            top: 0;
+            right: 0;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+
         }
 
         #search[opened] {
@@ -42,33 +50,39 @@
             margin-left: 0;
         }
 
-        #search[opened] input {
+        #search[opened] input[is=iron-input] {
             padding: 10px;
-            visibility: visible
+            visibility: visible;
+            width: calc(100% - 40px);
         }
 
         #search #back-icon {
             display: none;
         }
         #search #search-icon {
-            display: block;
+            display: inline-block;
         }
 
-        input {
-            background-color: inherit;
+        paper-icon-button {
+            position: absolute;
+            top: 12px;
+        }
+
+        input[is=iron-input] {
+            width: 10px;
+            margin-left: 40px;
+            background: none;
             border: none;
             font-size: 20px;
             outline: none;
             padding: 0;
             color: inherit;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1 0 0;
-            -moz-flex: 1 0 0;
-            -ms-flex: 1 0 0;
-            -o-flex: 1 0 0;
-            flex: 1 0 0;
+            display: inline-block;
             visibility: hidden;
-            -webkit-appearance: none
+            -webkit-appearance: none;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         #results-container {
@@ -109,7 +123,7 @@
             SimpleJekyllSearch({
                 searchInput: document.getElementById('search-input'),
                 resultsContainer: document.getElementById('results-container'),
-                json: '/search.json',
+                json: '{{searchjson}}',
                 searchResultTemplate:
                         '<a href="{url}" class="test"><paper-item> \
                           <paper-item-body two-line> \
@@ -191,13 +205,13 @@
                 var backIcon = document.querySelector('#back-icon');
                 if (!this.opened) {
                     results.style.display = 'none';
-                    searchIcon.style.display = 'block';
+                    searchIcon.style.display = 'inline-block';
                     backIcon.style.display = 'none';
                 }
                 if (this.opened) {
                     results.style.display = 'block';
                     searchIcon.style.display = 'none';
-                    backIcon.style.display = 'block';
+                    backIcon.style.display = 'inline-block';
                 }
             },
 

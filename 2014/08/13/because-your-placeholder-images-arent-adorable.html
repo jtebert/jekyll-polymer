@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -114,10 +119,9 @@
 <div id="post">
 
   
-  <a href="/images/posts/2014-08-13-placekitten.jpg" data-lightbox="image-1" data-title="This image came from Placekitten. Meow!">
-    <img class="materialboxed" src="/images/posts/2014-08-13-placekitten.jpg">
+  <a href="/images/posts/personal/2014-08-13-placekitten.jpg" data-lightbox="image-1" data-title="This image came from Placekitten. Meow!">
+    <img class="materialboxed" src="/images/posts/personal/2014-08-13-placekitten.jpg">
   </a>
-
   
 
   <h1 class="paper-font-display1">Because your placeholder images aren't adorable enough</h1>
@@ -130,7 +134,7 @@
 
 <p>But there’s a simpler, more adorable way! With placekitten, you can simply use a URL to direct to an adorable cat. Do you need a black-and-white 600x300 image? Easy! Just use:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placekitten.com/g/600/300&quot;</span><span class="nt">/&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/g/600/300"</span><span class="nt">/&gt;</span></code></pre></figure>
 
 <p>An adorable kitten will show up for your viewing and designing pleasure, like this:</p>
 
@@ -157,13 +161,13 @@
 
   <div class="section">
     
-    <a href="/2014/08/07/updated-including-code-in-your-tumblr-posts-the.html"><paper-button raised>
+    <a href="/2014/08/07/updated-including-code-in-your-tumblr-posts-the.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/08/24/how-to-send-mail-as-with-gmails-recent-update.html"><paper-button raised>
+      <a href="/2014/08/25/how-to-send-mail-as-with-gmails-recent-update.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -215,7 +219,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

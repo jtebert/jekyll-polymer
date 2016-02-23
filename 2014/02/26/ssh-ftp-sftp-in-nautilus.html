@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -125,9 +130,9 @@
 
 <p>In the Nautilus file manager (which likes to just call itself Files now), just enter into the location bar:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">ssh://username@host</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh://username@host</code></pre></figure>
 
-<p>Or whatever your preferred accessing method is (ssh, stfp, ftp).  (Also useful to remember: the change the location bar from buttons to a text field, hit <code>Ctrl + L</code>.)</p>
+<p>Or whatever your preferred accessing method is (ssh, stfp, ftp).  (Also useful to remember: the change the location bar from buttons to a text field, hit <code class="highlighter-rouge">Ctrl + L</code>.)</p>
 
 <p>The remote directory is then mounted and appears on the left side bar under “Network.”  It will stay mounted even if you close Nautilus, and you just have to click on it to re-open it.  To unmount, just click the arrow next to it in the left panel.</p>
 
@@ -152,13 +157,13 @@
 
   <div class="section">
     
-    <a href="/2014/01/30/compiling-and-running-java-with-junit-from-the.html"><paper-button raised>
+    <a href="/2014/01/30/compiling-and-running-java-with-junit-from-the.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/02/26/a-simple-bash-script-to-compile-java-with.html"><paper-button raised>
+      <a href="/2014/02/26/a-simple-bash-script-to-compile-java-with.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -210,7 +215,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

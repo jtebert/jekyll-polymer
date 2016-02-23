@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -114,10 +119,9 @@
 <div id="post">
 
   
-  <a href="/images/posts/2014-07-10-django.png" data-lightbox="image-1" data-title="">
-    <img class="materialboxed" src="/images/posts/2014-07-10-django.png">
+  <a href="/images/posts/personal/2014-07-10-django.png" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/images/posts/personal/2014-07-10-django.png">
   </a>
-
   
 
   <h1 class="paper-font-display1">A simple Django log in page</h1>
@@ -130,71 +134,71 @@
 
 <p>First, set up the url for the login page. Add the following to your project’s urls.py:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">url</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">url</span>
 <span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">RedirectView</span>
 
-<span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">''</span><span class="p">,</span>
     <span class="c"># ...</span>
-    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^login/$&#39;</span><span class="p">,</span> <span class="s">&#39;django.contrib.auth.views.login&#39;</span><span class="p">),</span>
-    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^accounts/profile/$&#39;</span><span class="p">,</span> <span class="n">RedirectView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;/&#39;</span><span class="p">)),</span>
-    <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^logout/$&#39;</span><span class="p">,</span> <span class="s">&#39;django.contrib.auth.views.logout_then_login&#39;</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^login/$'</span><span class="p">,</span> <span class="s">'django.contrib.auth.views.login'</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^accounts/profile/$'</span><span class="p">,</span> <span class="n">RedirectView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">'/'</span><span class="p">)),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^logout/$'</span><span class="p">,</span> <span class="s">'django.contrib.auth.views.logout_then_login'</span><span class="p">),</span>
     <span class="c"># ...</span>
-<span class="p">)</span></code></pre></div>
+<span class="p">)</span></code></pre></figure>
 
 <p>The first URL sets /login/ as the login page and uses Django’s built-in login view (which takes care of all of the authentication and error messages).After logging in with the built-in login view, the user is automatically redirected to /accounts/profile/. But with the 2nd URL, you don’t have to worry about setting that up. Instead, the user is automatically redirected to the URL you specify. (In this case, that’s set to the home page.)The 3rd URL is used to log a user out. Going to /logout/ automatically logs the user out and redirects them to the login page. This means all you have to do is have a link to the URL /logout and the rest of the work is all done for you! (You can also use the logout view, but this is the easiest place to start, I think.)With any of these, you can change the URLs to whatever you please.</p>
 
 <p>From these URLs, the only page you now have to create is the log in screen. You don’t have to add anything to any views.py, because you’re using a built-in view. All you have to write is the template. Create the file my_project/registration/login.html and put in it:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2&gt;</span>Log In<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span> <span class="na">action=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2&gt;</span>Log In<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
     {% csrf_token %}
     {{ form.as_p }}
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Log in&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Log in"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
 
 <p>This will display a simple form with fields for the username and password and a submit button. Errors are automatically generated and displayed if the user enters an invalid username/password combination or leaves either of the fields blank. When the user clicks “Log in”, they’re redirected to the URL you specified above.</p>
 
 <p>Let’s say that you now want to protect pages so that only logged in users can view them. That’s pretty easy now. Just add the tag @login_required above any view where a user needs to be logged in. And what if they aren’t logged in? They should be re-directed to the login page. To specify what that page is, add this line to your project’s settings.py:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s">&#39;/login&#39;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s">'/login'</span></code></pre></figure>
 
 <p>Or whatever URL you chose above as your login page URL. After logging in, the user will be automatically taken back to whatever page they were kicked off of for not being logged in, which is pretty cool.</p>
 
 <p>Lastly, you can also style the login page or embed it into a larger template for your project. The trick with this is knowing what the generated HTML elements are in order to style them. I figured it out by inspecting the elements in my browser on that page. Here are a few useful ones:</p>
 
-<p>Generated errors: <code>&lt;ul class="errorlist"&gt;&lt;li&gt;Error&lt;/li&gt;&lt;/ul&gt;</code></p>
+<p>Generated errors: <code class="highlighter-rouge">&lt;ul class="errorlist"&gt;&lt;li&gt;Error&lt;/li&gt;&lt;/ul&gt;</code></p>
 
-<p>Username field: <code>&lt;input id="id_username" maxlength="254" name="username" type="text"&gt;</code></p>
+<p>Username field: <code class="highlighter-rouge">&lt;input id="id_username" maxlength="254" name="username" type="text"&gt;</code></p>
 
-<p>Password field: <code>&lt;input id="id_password" name="password" type="password"&gt;</code></p>
+<p>Password field: <code class="highlighter-rouge">&lt;input id="id_password" name="password" type="password"&gt;</code></p>
 
 <p>Here’s the CSS I used to start:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">form</span> <span class="nc">.errorlist</span> <span class="p">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="m">#f00</span><span class="p">;</span>
-    <span class="k">list-style-type</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">.9em</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">form</span> <span class="nc">.errorlist</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#f00</span><span class="p">;</span>
+    <span class="nl">list-style-type</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">.9em</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">form</span> <span class="nt">p</span> <span class="p">{</span>
-    <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">input</span> <span class="p">{</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#999</span><span class="p">;</span>
-    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">.25em</span> <span class="m">.5em</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">1em</span><span class="p">);</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#999</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">.25em</span> <span class="m">.5em</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="n">-</span> <span class="m">1em</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="err">"</span><span class="nt">submit</span><span class="err">"</span><span class="o">]</span> <span class="p">{</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>From that, you can adjust and update, but hopefully if you’ve run across this in the chasm of the internet, I’ve saved you at least some amount of frustration.</p>
 
@@ -219,13 +223,13 @@
 
   <div class="section">
     
-    <a href="/2014/07/10/make-your-own-xkcd-style-passwords.html"><paper-button raised>
+    <a href="/2014/07/10/make-your-own-xkcd-style-passwords.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html"><paper-button raised>
+      <a href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -277,7 +281,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

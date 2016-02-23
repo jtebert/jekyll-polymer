@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -74,103 +74,135 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
-    <!-- This loops through the paginated posts -->
+    <div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
-<x-card>
-  
-    <my-card-colorbar>About the Jekyll Polymer Theme</my-card-colorbar>
-    <my-card-title subtitle="2015 June 19"></my-card-title>
-  
-  <card-content><p>This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (<a href="https://github.com/jtebert/jekyll-polymer">See the Github repository for details.</a>)</p>
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">About the Jekyll Polymer Theme</div>
+      <div class="subtitle">2015 June 19</div>
+      <p>This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (<a href="https://github.com/jtebert/jekyll-polymer">See the Github repository for details.</a>)</p>
 
 <p>I created this theme because I couldn’t figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn’t find any Jekyll blog themes available that used Polymer or followed Google’s material design specifications.</p>
 
-</card-content>
-  <my-card-more href="/2015/06/19/about-jekyll-polymer-theme.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Post with blocks of text</my-card-colorbar>
-    <my-card-title subtitle="2015 June 17"></my-card-title>
-  
-  <card-content><p>Schlitz YOLO synth sriracha lumbersexual magna, lo-fi leggings nostrud pug Carles XOXO hoodie eiusmod. Ea officia crucifix sunt lumbersexual nesciunt, jean shorts Etsy occupy tousled ennui irony. Adipisicing exercitation bespoke, Pinterest drinking vinegar officia food truck aliquip. Chillwave Intelligentsia four loko flannel cornhole bespoke. Ea chillwave ennui anim commodo. Wayfarers brunch trust fund crucifix, squid kitsch health goth Pitchfork cliche Etsy sustainable iPhone distillery 8-bit. Thundercats non Portland forage minim selfies, food truck irure mustache.</p>
-
-</card-content>
-  <my-card-more href="/2015/06/17/hipsum.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/goat.jpg"></card-image>
-    <div class="card-image">
-      <my-card-title title="Image in front matter (featured image)" subtitle="2015 June 10"></my-card-title>
     </div>
-  
-  <card-content><p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-</card-content>
-  <my-card-more href="/jekyll/update/2015/06/10/featured-image.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/goat2.jpg"></card-image>
-    <div class="card-image">
-      <my-card-title title="Welcome to Jekyll!" subtitle="2015 June 8"></my-card-title>
+    <div class="card-actions">
+      <a href="/2015/06/19/about-jekyll-polymer-theme.html"><paper-button>Read More</paper-button></a>
     </div>
-  
-  <card-content><p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  </paper-card>
 
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
-</card-content>
-  <my-card-more href="/2015/06/08/welcome-to-jekyll.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Typography</my-card-colorbar>
-    <my-card-title subtitle="2015 June 8"></my-card-title>
-  
-  <card-content><p>Here are the different features and styles available for posts written in Markdown.</p>
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Post with blocks of text</div>
+      <div class="subtitle">2015 June 17</div>
+      <p>Schlitz YOLO synth sriracha lumbersexual magna, lo-fi leggings nostrud pug Carles XOXO hoodie eiusmod. Ea officia crucifix sunt lumbersexual nesciunt, jean shorts Etsy occupy tousled ennui irony. Adipisicing exercitation bespoke, Pinterest drinking vinegar officia food truck aliquip. Chillwave Intelligentsia four loko flannel cornhole bespoke. Ea chillwave ennui anim commodo. Wayfarers brunch trust fund crucifix, squid kitsch health goth Pitchfork cliche Etsy sustainable iPhone distillery 8-bit. Thundercats non Portland forage minim selfies, food truck irure mustache.</p>
 
-</card-content>
-  <my-card-more href="/2015/06/08/typography.html">Read More</my-card-more>
-</x-card>
 
+    </div>
+    <div class="card-actions">
+      <a href="/2015/06/17/hipsum.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/goat.jpg"
+          >
+    <div class="card-content">
+      <div class="title">Image in front matter (featured image)</div>
+      <div class="subtitle">2015 June 10</div>
+      <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/jekyll/update/2015/06/10/featured-image.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/goat2.jpg"
+          >
+    <div class="card-content">
+      <div class="title">Welcome to Jekyll!</div>
+      <div class="subtitle">2015 June 8</div>
+      <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2015/06/08/welcome-to-jekyll.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Typography</div>
+      <div class="subtitle">2015 June 8</div>
+      <p>Here are the different features and styles available for posts written in Markdown.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2015/06/08/typography.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+</div>
 
 <!-- Page navigation links -->
 
@@ -182,33 +214,33 @@
 
   <!-- Page Numbers -->
   
+    
+    <my-page-link active>1</my-page-link>
+    
   
-  <my-page-link active>1</my-page-link>
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
   
+    
+    <my-page-link href="/page3">3</my-page-link>
+    
   
+    
+    <my-page-link href="/page4">4</my-page-link>
+    
   
-  <my-page-link href="/page2">2</my-page-link>
+    
+    <my-page-link href="/page5">5</my-page-link>
+    
   
+    
+    <my-page-link href="/page6">6</my-page-link>
+    
   
-  
-  <my-page-link href="/page3">3</my-page-link>
-  
-  
-  
-  <my-page-link href="/page4">4</my-page-link>
-  
-  
-  
-  <my-page-link href="/page5">5</my-page-link>
-  
-  
-  
-  <my-page-link href="/page6">6</my-page-link>
-  
-  
-  
-  <my-page-link href="/page7">7</my-page-link>
-  
+    
+    <my-page-link href="/page7">7</my-page-link>
+    
   
 
   <!-- Right Arrow -->
@@ -243,7 +275,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

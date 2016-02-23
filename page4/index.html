@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -74,109 +74,141 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
-    <!-- This loops through the paginated posts -->
+    <div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
-<x-card>
-  
-  <card-image src="/images/posts/2014-07-10-django.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="A simple Django log in page" subtitle="2014 July 10"></my-card-title>
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-07-10-django.png"
+          >
+    <div class="card-content">
+      <div class="title">A simple Django log in page</div>
+      <div class="subtitle">2014 July 10</div>
+      <p>I just started working with Django and wanted to create a really basic user authentication system. According to the DRY (Don’t Repeat Yourself) principle, I didn’t want to rewrite Django’s built-in login system and end up creating an inferior version. But I also couldn’t find any good examples of how to do this. After lots of Google and StackOverflow, here’s what I came up with.</p>
+
+
     </div>
-  
-  <card-content><p>I just started working with Django and wanted to create a really basic user authentication system. According to the DRY (Don’t Repeat Yourself) principle, I didn’t want to rewrite Django’s built-in login system and end up creating an inferior version. But I also couldn’t find any good examples of how to do this. After lots of Google and StackOverflow, here’s what I came up with.</p>
+    <div class="card-actions">
+      <a href="/2014/07/10/a-simple-django-log-in-page.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
 
-</card-content>
-  <my-card-more href="/2014/07/10/a-simple-django-log-in-page.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Make your own XKCD-style passwords!</my-card-colorbar>
-    <my-card-title subtitle="2014 July 10"></my-card-title>
-  
-  <card-content><p><a href="http://xkcd.com/936/">According to XKCD</a>, the most secure passwords are made up of a series of random words, and they are much easier to remember as a human than the random nonsense.</p>
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Make your own XKCD-style passwords!</div>
+      <div class="subtitle">2014 July 10</div>
+      <p><a href="http://xkcd.com/936/">According to XKCD</a>, the most secure passwords are made up of a series of random words, and they are much easier to remember as a human than the random nonsense.</p>
 
 <p>But humans are also not good at coming up with things that are even vaguely random. Luckily, computers are!* And someone made a snazzy little script to take advantage of this.</p>
 
-</card-content>
-  <my-card-more href="/2014/07/10/make-your-own-xkcd-style-passwords.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>HTML meta tags</my-card-colorbar>
-    <my-card-title subtitle="2014 June 13"></my-card-title>
-  
-  <card-content><p>Meta tags in HTML headers never made sense to me.</p>
+    </div>
+    <div class="card-actions">
+      <a href="/2014/07/10/make-your-own-xkcd-style-passwords.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">HTML meta tags</div>
+      <div class="subtitle">2014 June 13</div>
+      <p>Meta tags in HTML headers never made sense to me.</p>
 
 <p>I found that <a href="http://searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags">this page</a> provided a nice summary of what they are and why.* Here’s my summary of some of the purposes of the significant meta tags.</p>
 
-</card-content>
-  <my-card-more href="/2014/06/13/html-meta-tags.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Image in excerpt</my-card-colorbar>
-    <my-card-title subtitle="2014 June 8"></my-card-title>
-  
-  <card-content><p><img src="https://www.google.com/logos/doodles/2015/womens-world-cup-2015-us-first-match-5145027185475584-hp.jpg" /></p>
-
-<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-</card-content>
-  <my-card-more href="/2014/06/08/image-in-excerpt.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/2014-06-04-dot-grid.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="Make your own dot grid paper with Inkscape" subtitle="2014 June 4"></my-card-title>
     </div>
-  
-  <card-content><p>I like being precise, so I use a lot of graph paper, even for writing. But recently I discovered <a href="http://www.utrechtart.com/Fabriano-Eco-Qua-Glued-Notebooks--Designers-Dot-Paper--5-8-x-8-25--A5--MP-77824-003-i1018010.utrecht">dot paper</a>, which provides all the precision of graph paper without all the lines!</p>
+    <div class="card-actions">
+      <a href="/2014/06/13/html-meta-tags.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Image in excerpt</div>
+      <div class="subtitle">2014 June 8</div>
+      <p><img src="https://www.google.com/logos/doodles/2015/womens-world-cup-2015-us-first-match-5145027185475584-hp.jpg" /></p>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/06/08/image-in-excerpt.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-06-04-dot-grid.png"
+          >
+    <div class="card-content">
+      <div class="title">Make your own dot grid paper with Inkscape</div>
+      <div class="subtitle">2014 June 4</div>
+      <p>I like being precise, so I use a lot of graph paper, even for writing. But recently I discovered <a href="http://www.utrechtart.com/Fabriano-Eco-Qua-Glued-Notebooks--Designers-Dot-Paper--5-8-x-8-25--A5--MP-77824-003-i1018010.utrecht">dot paper</a>, which provides all the precision of graph paper without all the lines!</p>
 
 <p>The problem?  I’m a college student who doesn’t want to spend $5 on a small notebook, and I also like loose-leaf paper.The solution?  Make grid paper myself!  (Since I have a $120 university print quota, this is also completely free.) There are templates online, but none of them quite met my specifications, so I decided to make my own in my favorite graphics program: Inkscape.</p>
 
 <p>So, let me explain it for people who have absolutely no Inkscape experience whatsoever.</p>
 
-</card-content>
-  <my-card-more href="/2014/06/04/make-your-own-dot-grid-paper-with-inkscape.html">Read More</my-card-more>
-</x-card>
 
+    </div>
+    <div class="card-actions">
+      <a href="/2014/06/04/make-your-own-dot-grid-paper-with-inkscape.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+</div>
 
 <!-- Page navigation links -->
 
@@ -190,33 +222,33 @@
 
   <!-- Page Numbers -->
   
+    
+    <my-page-link href="/">1</my-page-link>
+    
   
-  <my-page-link href="/">1</my-page-link>
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
   
+    
+    <my-page-link href="/page3">3</my-page-link>
+    
   
+    
+    <my-page-link active>4</my-page-link>
+    
   
-  <my-page-link href="/page2">2</my-page-link>
+    
+    <my-page-link href="/page5">5</my-page-link>
+    
   
+    
+    <my-page-link href="/page6">6</my-page-link>
+    
   
-  
-  <my-page-link href="/page3">3</my-page-link>
-  
-  
-  
-  <my-page-link active>4</my-page-link>
-  
-  
-  
-  <my-page-link href="/page5">5</my-page-link>
-  
-  
-  
-  <my-page-link href="/page6">6</my-page-link>
-  
-  
-  
-  <my-page-link href="/page7">7</my-page-link>
-  
+    
+    <my-page-link href="/page7">7</my-page-link>
+    
   
 
   <!-- Right Arrow -->
@@ -251,7 +283,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

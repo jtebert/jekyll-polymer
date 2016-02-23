@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -74,107 +74,139 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
-    <!-- This loops through the paginated posts -->
+    <div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
-<x-card>
-  
-  <card-image src="/images/posts/2014-09-10-drracket-monokai.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="How to make DrRacket more pleasant-looking" subtitle="2014 September 10"></my-card-title>
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-09-10-drracket-monokai.png"
+          >
+    <div class="card-content">
+      <div class="title">How to make DrRacket more pleasant-looking</div>
+      <div class="subtitle">2014 September 10</div>
+      <p>DrRacket’s default color scheme isn’t pretty, and there aren’t a lot of alternatives included. Luckily, some programmer before you decided to fix that instead of writing whatever code they were actually supposed to be working on. The result is 54 different color schemes for DrRacket (27 each of dark and light) <a href="https://github.com/tuirgin/base16-drracket">which can be found here</a>. It’s also really easy to install - you don’t even have to download anything separately. Just fire up a terminal and run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">raco pkg install git://github.com/tuirgin/base16-drracket</code></pre></figure>
+
+
     </div>
-  
-  <card-content><p>DrRacket’s default color scheme isn’t pretty, and there aren’t a lot of alternatives included. Luckily, some programmer before you decided to fix that instead of writing whatever code they were actually supposed to be working on. The result is 54 different color schemes for DrRacket (27 each of dark and light) <a href="https://github.com/tuirgin/base16-drracket">which can be found here</a>. It’s also really easy to install - you don’t even have to download anything separately. Just fire up a terminal and run:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">raco pkg install git://github.com/tuirgin/base16-drracket</code></pre></div>
-
-</card-content>
-  <my-card-more href="/2014/09/10/how-to-make-drracket-more-pleasant-looking.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/2014-08-24-gmail.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="How to 'Send Mail As' with Gmail's recent update" subtitle="2014 August 24"></my-card-title>
+    <div class="card-actions">
+      <a href="/2014/09/10/how-to-make-drracket-more-pleasant-looking.html"><paper-button>Read More</paper-button></a>
     </div>
-  
-  <card-content><p>It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let you automatically use its SMTP servers. If that last sentence didn’t make sense, don’t worry. I’ll walk you through how to set it up step by step. To start out, I assume that you already have email forwarding set up so that your custom email (say, me@example.com) gets sent to your gmail (which we’ll call example@gmail.com).</p>
+  </paper-card>
 
-</card-content>
-  <my-card-more href="/2014/08/24/how-to-send-mail-as-with-gmails-recent-update.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-  <card-image src="/images/posts/2014-08-13-placekitten.jpg"></card-image>
-    <div class="card-image">
-      <my-card-title title="Because your placeholder images aren't adorable enough" subtitle="2014 August 13"></my-card-title>
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-08-24-gmail.png"
+          >
+    <div class="card-content">
+      <div class="title">How to 'Send Mail As' with Gmail's recent update</div>
+      <div class="subtitle">2014 August 25</div>
+      <p>It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let you automatically use its SMTP servers. If that last sentence didn’t make sense, don’t worry. I’ll walk you through how to set it up step by step. To start out, I assume that you already have email forwarding set up so that your custom email (say, me@example.com) gets sent to your gmail (which we’ll call example@gmail.com).</p>
+
+
     </div>
-  
-  <card-content><p>Because your placeholder images aren’‘t adorable enoughWhen it comes to placeholder images for designing web pages, I tend to use whatever shows up on Google Images when I search for a random word. Or goats. I don’t know why, but lately I’ve used a lot of goats on my web pages.</p>
-
-</card-content>
-  <my-card-more href="/2014/08/13/because-your-placeholder-images-arent-adorable.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/2014-08-07-tumblr-logo.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="Updated: Including code in your Tumblr posts (the easy way!)" subtitle="2014 August 7"></my-card-title>
+    <div class="card-actions">
+      <a href="/2014/08/25/how-to-send-mail-as-with-gmails-recent-update.html"><paper-button>Read More</paper-button></a>
     </div>
-  
-  <card-content><p>My latest obsession is Markdown, the markup language that magically turns almost-plain text into fully-formatted HTML. If you’ve ever written anything on StackExchange or Reddit, you’ve used Markdown. It turns out that Markdown is also supported on Tumblr!</p>
+  </paper-card>
 
-</card-content>
-  <my-card-more href="/2014/08/07/updated-including-code-in-your-tumblr-posts-the.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Making your Linux command line prompt look shiny</my-card-colorbar>
-    <my-card-title subtitle="2014 August 7"></my-card-title>
-  
-  <card-content><p>Are you tired of that boring, single color command prompt in your terminal? Do you just need one more way to procrastinate? Or do you, like me, often lose your spot when there is a ton of output and you can’t tell where it started?</p>
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-08-13-placekitten.jpg"
+          >
+    <div class="card-content">
+      <div class="title">Because your placeholder images aren't adorable enough</div>
+      <div class="subtitle">2014 August 13</div>
+      <p>Because your placeholder images aren’‘t adorable enoughWhen it comes to placeholder images for designing web pages, I tend to use whatever shows up on Google Images when I search for a random word. Or goats. I don’t know why, but lately I’ve used a lot of goats on my web pages.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/08/13/because-your-placeholder-images-arent-adorable.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-08-07-tumblr-logo.png"
+          >
+    <div class="card-content">
+      <div class="title">Updated: Including code in your Tumblr posts (the easy way!)</div>
+      <div class="subtitle">2014 August 7</div>
+      <p>My latest obsession is Markdown, the markup language that magically turns almost-plain text into fully-formatted HTML. If you’ve ever written anything on StackExchange or Reddit, you’ve used Markdown. It turns out that Markdown is also supported on Tumblr!</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/08/07/updated-including-code-in-your-tumblr-posts-the.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Making your Linux command line prompt look shiny</div>
+      <div class="subtitle">2014 August 7</div>
+      <p>Are you tired of that boring, single color command prompt in your terminal? Do you just need one more way to procrastinate? Or do you, like me, often lose your spot when there is a ton of output and you can’t tell where it started?</p>
 
 <p>Whatever the reason, you might want to change up the way the bash prompt looks in your terminal. As it turns out, there’s a simple, awesome tool to help you do that. There’s an interactive GUI to change color, boldnes, and insert text. It will even show you a live preview of what your prompt will look like.</p>
 
-</card-content>
-  <my-card-more href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html">Read More</my-card-more>
-</x-card>
 
+    </div>
+    <div class="card-actions">
+      <a href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+</div>
 
 <!-- Page navigation links -->
 
@@ -188,33 +220,33 @@
 
   <!-- Page Numbers -->
   
+    
+    <my-page-link href="/">1</my-page-link>
+    
   
-  <my-page-link href="/">1</my-page-link>
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
   
+    
+    <my-page-link active>3</my-page-link>
+    
   
+    
+    <my-page-link href="/page4">4</my-page-link>
+    
   
-  <my-page-link href="/page2">2</my-page-link>
+    
+    <my-page-link href="/page5">5</my-page-link>
+    
   
+    
+    <my-page-link href="/page6">6</my-page-link>
+    
   
-  
-  <my-page-link active>3</my-page-link>
-  
-  
-  
-  <my-page-link href="/page4">4</my-page-link>
-  
-  
-  
-  <my-page-link href="/page5">5</my-page-link>
-  
-  
-  
-  <my-page-link href="/page6">6</my-page-link>
-  
-  
-  
-  <my-page-link href="/page7">7</my-page-link>
-  
+    
+    <my-page-link href="/page7">7</my-page-link>
+    
   
 
   <!-- Right Arrow -->
@@ -249,7 +281,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

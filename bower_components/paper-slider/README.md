@@ -1,5 +1,23 @@
-paper-slider
-============
+
+<!---
+
+This README is automatically generated from the comments in these files:
+paper-slider.html
+
+Edit those files, and our readme bot will duplicate them over here!
+Edit this file, and the bot will squash your changes :)
+
+-->
+
+[![Build Status](https://travis-ci.org/PolymerElements/paper-slider.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-slider)
+
+_[Demo and API Docs](https://elements.polymer-project.org/elements/paper-slider)_
+
+
+##&lt;paper-slider&gt;
+
+
+Material design: [Sliders](https://www.google.com/design/spec/components/sliders.html)
 
 `paper-slider` allows user to select a value from a range of values by
 moving the slider thumb.  The interactive nature of the slider makes it a
@@ -8,62 +26,33 @@ brightness, or color saturation.
 
 Example:
 
-```html
-<paper-slider></paper-slider>
-```
+    <paper-slider></paper-slider>
 
-Use `min` and `max` to specify the slider range. Default is `0` to `100`. For example:
-```html
-<paper-slider min="10" max="200" value="110"></paper-slider>
-```
+Use `min` and `max` to specify the slider range.  Default is 0 to 100.
 
-### Styling slider
+Example:
 
-To change the slider progress bar color:
-```css
-paper-slider {
-  --paper-slider-active-color: #0f9d58;
-}
-```
+    <paper-slider min="10" max="200" value="110"></paper-slider>
 
-To change the slider knob color:
-```css
-paper-slider {
-  --paper-slider-knob-color: #0f9d58;
-}
-```
+### Styling
 
-To change the slider pin color:
-```css
-paper-slider {
-  --paper-slider-pin-color: #0f9d58;
-}
-```
+The following custom properties and mixins are available for styling:
 
-To change the slider pin's font color:
-```css
-paper-slider {
-  --paper-slider-pin-font-color: #0f9d58;
-}
-```
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-slider-bar-color` | The background color of the slider | `transparent`
+`--paper-slider-active-color` | The progress bar color | `--google-blue-700`
+`--paper-slider-secondary-color` | The secondary progress bar color | `--google-blue-300`
+`--paper-slider-knob-color` | The knob color | `--google-blue-700`
+`--paper-slider-disabled-knob-color` | The disabled knob color | `--paper-grey-400`
+`--paper-slider-pin-color` | The pin color | `--google-blue-700`
+`--paper-slider-font-color` | The pin's text color | `#fff`
+`--paper-slider-disabled-active-color` | The disabled progress bar color | `--paper-grey-400`
+`--paper-slider-disabled-secondary-color` | The disabled secondary progress bar color | `--paper-grey-400`
+`--paper-slider-knob-start-color` | The fill color of the knob at the far left | `transparent`
+`--paper-slider-knob-start-border-color` | The border color of the knob at the far left | `--paper-grey-400`
+`--paper-slider-pin-start-color` | The color of the pin at the far left | `--paper-grey-400`
+`--paper-slider-height` | Height of the progress bar | `2px`
+`--paper-slider-input` | Mixin applied to the input in editable mode | `{}`
 
-To change the slider secondary progress bar color:
-```css
-paper-slider {
-  --paper-slider-secondary-color: #0f9d58;
-}
-```
 
-To change the slider disabled active color:
-```css
-paper-slider {
-  --paper-slider-disabled-active-color: #ccc;
-}
-```
-
-To change the slider disabled secondary progress bar color:
-```css
-paper-slider {
-  --paper-slider-disabled-secondary-color: #ccc;
-}
-```

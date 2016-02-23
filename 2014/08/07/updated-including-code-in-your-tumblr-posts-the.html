@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -114,10 +119,9 @@
 <div id="post">
 
   
-  <a href="/images/posts/2014-08-07-tumblr-logo.png" data-lightbox="image-1" data-title="">
-    <img class="materialboxed" src="/images/posts/2014-08-07-tumblr-logo.png">
+  <a href="/images/posts/personal/2014-08-07-tumblr-logo.png" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/images/posts/personal/2014-08-07-tumblr-logo.png">
   </a>
-
   
 
   <h1 class="paper-font-display1">Updated: Including code in your Tumblr posts (the easy way!)</h1>
@@ -134,40 +138,40 @@
 
 <p>One bonus of Markdown that I’ve discovered is that it’s really great for easily incorporating code into normal-text documents. There are 3 way to do this:</p>
 
-<h2 id="inline-code">Inline code:</h2>
+<p>##Inline code:</p>
 
 <p><em>Type this:</em></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">I put some <span class="sb">`</span>code<span class="sb">`</span> in my text.</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">I put some <span class="sb">`</span>code<span class="sb">`</span> <span class="k">in </span>my text.</code></pre></figure>
 
 <p><em>Get this output:</em></p>
 
-<p>I put some <code>code</code> in my text.</p>
+<p>I put some <code class="highlighter-rouge">code</code> in my text.</p>
 
-<h2 id="code-blocks">Code blocks:</h2>
+<p>##Code blocks:</p>
 
 <p><em>Type this:</em> (with 4 spaces at the beginning of the line)</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">.   This is a block
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">.   This is a block
         with multiple lines of code.
-        Ta-da!</code></pre></div>
+        Ta-da!</code></pre></figure>
 
 <p><em>Get this output:</em></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">This is a block
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">This is a block
     with multiple lines of code.
-    Ta-da!</code></pre></div>
+    Ta-da!</code></pre></figure>
 
 <p>Multi-line code: For a lot of Markdown editors, this does the same this as the 4-spaces approach. On Tumblr, though, it shows up like the single-tick code, but split over multiple lines.</p>
 
 <p><em>Type this:</em></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="sb">```</span>This is code written
-on multiple lines<span class="sb">```</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="sb">```</span>This is code written
+on multiple lines<span class="sb">```</span></code></pre></figure>
 
 <p><em>Get this output:</em></p>
 
-<p><code>This is code written on multiple lines</code></p>
+<p><code class="highlighter-rouge">This is code written on multiple lines</code></p>
 
   </div>
 
@@ -190,13 +194,13 @@ on multiple lines<span class="sb">```</span></code></pre></div>
 
   <div class="section">
     
-    <a href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html"><paper-button raised>
+    <a href="/2014/08/07/making-your-linux-command-line-prompt-look-shiny.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/08/13/because-your-placeholder-images-arent-adorable.html"><paper-button raised>
+      <a href="/2014/08/13/because-your-placeholder-images-arent-adorable.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -248,7 +252,7 @@ on multiple lines<span class="sb">```</span></code></pre></div>
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

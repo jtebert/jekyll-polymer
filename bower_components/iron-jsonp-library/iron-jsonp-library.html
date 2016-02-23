@@ -49,9 +49,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       // Following properties are to be set by behavior users
       /**
-       * Library url. Must contain string `%%callback_name%%`.
+       * Library url. Must contain string `%%callback%%`.
        *
-       * `%%callback_name%%` is a placeholder for jsonp wrapper function name
+       * `%%callback%%` is a placeholder for jsonp wrapper function name
        *
        * Ex: https://maps.googleapis.com/maps/api/js?callback=%%callback%%
        * @property libraryUrl
@@ -72,6 +72,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        */
     },
 
+    observers: [
+      '_libraryUrlChanged(libraryUrl)'
+    ],
+
+    _libraryUrlChanged: function(libraryUrl) {
+      // can't load before ready because notifyEvent might not be set
+      if (this._isReady && this.libraryUrl)
+        this._loadLibrary();
+    },
+
     _libraryLoadCallback: function(err, result) {
       if (err) {
         console.warn("Library load failed:", err.message);
@@ -81,7 +91,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this._setLibraryErrorMessage(null);
         this._setLibraryLoaded(true);
         if (this.notifyEvent)
-          this.fire( this.notifyEvent, result);
+          this.fire(this.notifyEvent, result);
       }
     },
 
@@ -95,7 +105,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     ready: function() {
-      this._loadLibrary();
+      this._isReady = true;
+      if (this.libraryUrl)
+        this._loadLibrary();
     }
   };
 
@@ -138,7 +150,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         callbackName = name + '_loaded';
         url = url.replace(this.callbackMacro, callbackName);
       } else {
-        this.error = new Error('IronJsonpLibraryBehavior a %%callback_name%% parameter is required in libraryUrl');
+        this.error = new Error('IronJsonpLibraryBehavior a %%callback%% parameter is required in libraryUrl');
         // TODO(sjmiles): we should probably fallback to listening to script.load
         return;
       }
@@ -209,10 +221,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   Example:
 
-    <iron-jsonp-library
-      library-url="https://apis.google.com/js/plusone.js?onload=%%callback%%"
-      notify-event="api-load"
-      library-loaded="{{loaded}}"></iron-jsonp-library>
+      <iron-jsonp-library
+        library-url="https://apis.google.com/js/plusone.js?onload=%%callback%%"
+        notify-event="api-load"
+        library-loaded="{{loaded}}"></iron-jsonp-library>
 
   Will emit 'api-load' event when loaded, and set 'loaded' to true
 
@@ -230,9 +242,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     properties: {
       /**
-       * Library url. Must contain string `%%callback_name%%`.
+       * Library url. Must contain string `%%callback%%`.
        *
-       * `%%callback_name%%` is a placeholder for jsonp wrapper function name
+       * `%%callback%%` is a placeholder for jsonp wrapper function name
        *
        * Ex: https://maps.googleapis.com/maps/api/js?callback=%%callback%%
        */

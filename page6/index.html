@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -74,97 +74,128 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
-    <!-- This loops through the paginated posts -->
+    <div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
-<x-card>
-  
-    <my-card-colorbar>A simple bash script to compile Java (with packages) (and possibly JUnit)</my-card-colorbar>
-    <my-card-title subtitle="2014 February 26"></my-card-title>
-  
-  <card-content><p>Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files to compile.</p>
 
-</card-content>
-  <my-card-more href="/2014/02/26/a-simple-bash-script-to-compile-java-with.html">Read More</my-card-more>
-</x-card>
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">A simple bash script to compile Java (with packages) (and possibly JUnit)</div>
+      <div class="subtitle">2014 February 26</div>
+      <p>Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files to compile.</p>
 
-<x-card>
-  
-    <my-card-colorbar>ssh/ftp/sftp in Nautilus</my-card-colorbar>
-    <my-card-title subtitle="2014 February 26"></my-card-title>
-  
-  <card-content><p>Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful to have a GUI.  Instead of installing extra programs, though, you can just do it directly from within your file browser in Linux.</p>
 
-</card-content>
-  <my-card-more href="/2014/02/26/ssh-ftp-sftp-in-nautilus.html">Read More</my-card-more>
-</x-card>
+    </div>
+    <div class="card-actions">
+      <a href="/2014/02/26/a-simple-bash-script-to-compile-java-with.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
 
-<x-card>
-  
-    <my-card-colorbar>Compiling and running Java with JUnit from the command line</my-card-colorbar>
-    <my-card-title subtitle="2014 January 30"></my-card-title>
-  
-  <card-content><p>Here’s how to compile a set of Java files with the JUnit library and then run it.  (All in Linux.  Adapt for any other OSes.  Also using JUnit 4+)  This took me far longer to figure out than I care to admit. [Note: this is only when all files are in the default package.  More on running with packages to come in the future.]</p>
 
-</card-content>
-  <my-card-more href="/2014/01/30/compiling-and-running-java-with-junit-from-the.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>Changing Media Names in Linux</my-card-colorbar>
-    <my-card-title subtitle="2013 June 25"></my-card-title>
-  
-  <card-content><p>Unlike in Windows/Mac, you can’t always change the names/labels/mount points from within the file explorer.  The best/most consistent way to do this is (from my experience) for external/USB devices is through the command line.  The most straightforward instructions I have found are <a href="https://help.ubuntu.com/community/RenameUSBDrive">on the Ubuntu website</a>.</p>
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">ssh/ftp/sftp in Nautilus</div>
+      <div class="subtitle">2014 February 26</div>
+      <p>Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful to have a GUI.  Instead of installing extra programs, though, you can just do it directly from within your file browser in Linux.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/02/26/ssh-ftp-sftp-in-nautilus.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Compiling and running Java with JUnit from the command line</div>
+      <div class="subtitle">2014 January 30</div>
+      <p>Here’s how to compile a set of Java files with the JUnit library and then run it.  (All in Linux.  Adapt for any other OSes.  Also using JUnit 4+)  This took me far longer to figure out than I care to admit. [Note: this is only when all files are in the default package.  More on running with packages to come in the future.]</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/01/30/compiling-and-running-java-with-junit-from-the.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Changing Media Names in Linux</div>
+      <div class="subtitle">2013 June 25</div>
+      <p>Unlike in Windows/Mac, you can’t always change the names/labels/mount points from within the file explorer.  The best/most consistent way to do this is (from my experience) for external/USB devices is through the command line.  The most straightforward instructions I have found are <a href="https://help.ubuntu.com/community/RenameUSBDrive">on the Ubuntu website</a>.</p>
 
 <p>For internal drives/partitions, I have found GParted works well.</p>
 
-</card-content>
-  <my-card-more href="/2013/06/25/changing-media-names-in-linux.html">Read More</my-card-more>
-</x-card>
+    </div>
+    <div class="card-actions">
+      <a href="/2013/06/25/changing-media-names-in-linux.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
 
-<x-card>
-  
-    <my-card-colorbar>How to format code snippets with HTML on Tumblr</my-card-colorbar>
-    <my-card-title subtitle="2013 June 21"></my-card-title>
-  
-  <card-content><p>There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.</p>
 
-</card-content>
-  <my-card-more href="/2013/06/21/how-to-format-code-snippets-with-html-on-tumblr.html">Read More</my-card-more>
-</x-card>
 
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">How to format code snippets with HTML on Tumblr</div>
+      <div class="subtitle">2013 June 22</div>
+      <p>There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+</div>
 
 <!-- Page navigation links -->
 
@@ -178,33 +209,33 @@
 
   <!-- Page Numbers -->
   
+    
+    <my-page-link href="/">1</my-page-link>
+    
   
-  <my-page-link href="/">1</my-page-link>
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
   
+    
+    <my-page-link href="/page3">3</my-page-link>
+    
   
+    
+    <my-page-link href="/page4">4</my-page-link>
+    
   
-  <my-page-link href="/page2">2</my-page-link>
+    
+    <my-page-link href="/page5">5</my-page-link>
+    
   
+    
+    <my-page-link active>6</my-page-link>
+    
   
-  
-  <my-page-link href="/page3">3</my-page-link>
-  
-  
-  
-  <my-page-link href="/page4">4</my-page-link>
-  
-  
-  
-  <my-page-link href="/page5">5</my-page-link>
-  
-  
-  
-  <my-page-link active>6</my-page-link>
-  
-  
-  
-  <my-page-link href="/page7">7</my-page-link>
-  
+    
+    <my-page-link href="/page7">7</my-page-link>
+    
   
 
   <!-- Right Arrow -->
@@ -239,7 +270,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

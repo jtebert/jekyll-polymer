@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -135,27 +140,27 @@
 
 <p>This is created using a pretty simple script in Matlab. The data is generated pseudo-randomly:</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c">% Generate pseudo-random data</span>
-<span class="n">num_data_points</span> <span class="p">=</span> <span class="mi">25</span><span class="p">;</span>
-<span class="n">data</span> <span class="p">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_data_points</span><span class="p">);</span>
-<span class="k">for</span> <span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">data</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span> <span class="p">=</span> <span class="n">data</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span><span class="o">*</span><span class="nb">i</span>^<span class="p">.</span><span class="mi">5</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c1">% Generate pseudo-random data</span>
+<span class="n">num_data_points</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_data_points</span><span class="p">);</span>
+<span class="k">for</span> <span class="nb">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">size</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">data</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span><span class="o">*</span><span class="nb">i</span><span class="o">^.</span><span class="mi">5</span><span class="p">;</span>
 <span class="k">end</span>
 
-<span class="c">% x values</span>
-<span class="n">x_max</span> <span class="p">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="c1">% x values</span>
+<span class="n">x_max</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
 
-<span class="c">% Calculate mean and standard deviation of data</span>
-<span class="n">data_mean</span> <span class="p">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">data_std</span> <span class="p">=</span> <span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span></code></pre></div>
+<span class="c1">% Calculate mean and standard deviation of data</span>
+<span class="n">data_mean</span> <span class="o">=</span> <span class="nb">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">data_std</span> <span class="o">=</span> <span class="nb">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span></code></pre></figure>
 
 <p>Then it’s plotted with a few lines of code using the errorbar function:</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c">% Plotting error with errorbar</span>
-<span class="n">figure</span>
-<span class="n">errorbar</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">,</span> <span class="n">data_std</span><span class="p">,</span> <span class="s">&#39;LineWidth&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">title</span><span class="p">(</span><span class="s">&#39;Plot error with errorbar&#39;</span><span class="p">)</span>
-<span class="n">xlim</span><span class="p">([</span><span class="mi">0</span> <span class="n">x_max</span><span class="p">])</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c1">% Plotting error with errorbar</span>
+<span class="nb">figure</span>
+<span class="nb">errorbar</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">,</span> <span class="n">data_std</span><span class="p">,</span> <span class="s1">'LineWidth'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s1">'Plot error with errorbar'</span><span class="p">)</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span> <span class="n">x_max</span><span class="p">])</span></code></pre></figure>
 
 <p>However, I’ve discovered that using the patch function in Matlab can create much more visually appealing and easier to interpret graphs like this:</p>
 
@@ -163,17 +168,17 @@
 
 <p>This requires some additional code:</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c">% Plotting error with patches</span>
-<span class="n">figure</span>
-<span class="n">hold</span> <span class="n">on</span>
-<span class="n">title</span><span class="p">(</span><span class="s">&#39;Plot error with patch&#39;</span><span class="p">)</span>
-<span class="n">xlim</span><span class="p">([</span><span class="mi">0</span> <span class="n">x_max</span><span class="p">])</span>
-<span class="c">% Loop the x values back to the start</span>
-<span class="n">patch_x_vals</span> <span class="p">=</span> <span class="p">[</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">x_vals</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)];</span>
-<span class="c">% Create the data+std and data-std values</span>
-<span class="n">patch_data_std</span> <span class="p">=</span> <span class="p">[</span><span class="n">data_mean</span><span class="o">-</span><span class="n">data_std</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">data_std</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)];</span> 
-<span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">,</span> <span class="s">&#39;LineWidth&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">patch</span><span class="p">(</span><span class="n">patch_x_vals</span><span class="p">,</span> <span class="n">patch_data_std</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">],</span> <span class="s">&#39;EdgeColor&#39;</span><span class="p">,</span> <span class="s">&#39;None&#39;</span><span class="p">,</span> <span class="s">&#39;FaceAlpha&#39;</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="c1">% Plotting error with patches</span>
+<span class="nb">figure</span>
+<span class="nb">hold</span> <span class="n">on</span>
+<span class="nb">title</span><span class="p">(</span><span class="s1">'Plot error with patch'</span><span class="p">)</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span> <span class="n">x_max</span><span class="p">])</span>
+<span class="c1">% Loop the x values back to the start</span>
+<span class="n">patch_x_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">x_vals</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)];</span>
+<span class="c1">% Create the data+std and data-std values</span>
+<span class="n">patch_data_std</span> <span class="o">=</span> <span class="p">[</span><span class="n">data_mean</span><span class="o">-</span><span class="n">data_std</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">data_std</span><span class="p">(</span><span class="k">end</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">)];</span> 
+<span class="nb">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">data_mean</span><span class="p">,</span> <span class="s1">'LineWidth'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">patch</span><span class="p">(</span><span class="n">patch_x_vals</span><span class="p">,</span> <span class="n">patch_data_std</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">'EdgeColor'</span><span class="p">,</span> <span class="s1">'None'</span><span class="p">,</span> <span class="s1">'FaceAlpha'</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">);</span></code></pre></figure>
 
 <p>The patch is drawn as a polygon, starting on the left with the lower bound, then reversing direction to draw the upper bound of the error from right to left. The arguments to patch after this specify the face color, edge color, and transparency.</p>
 
@@ -200,13 +205,13 @@
 
   <div class="section">
     
-    <a href="/2014/10/30/an-awesomely-useful-thing-google-keep.html"><paper-button raised>
+    <a href="/2014/10/30/an-awesomely-useful-thing-google-keep.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/12/15/shiny-matlab-figures-sizing-and-parameters.html"><paper-button raised>
+      <a href="/2014/12/15/shiny-matlab-figures-sizing-and-parameters.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -258,7 +263,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -74,101 +74,132 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
-    <!-- This loops through the paginated posts -->
+    <div class="card-wrapper">
+<!-- This loops through the paginated posts -->
 
-<x-card>
-  
-    <my-card-colorbar>Shrinking Gnome title bars</my-card-colorbar>
-    <my-card-title subtitle="2014 May 29"></my-card-title>
-  
-  <card-content><p>I’ve been using Ubuntu Gnome lately, but my biggest pet peeve has always been the big, fluffy title bars. This can be ameliorated a bit by shrinking the Window Titles font size (in the ‘Fonts’ section of the Gnome Tweak Tool), but the big benefit comes from reducing the padding in the title bar.</p>
 
-</card-content>
-  <my-card-more href="/2014/05/29/shrinking-gnome-title-bars.html">Read More</my-card-more>
-</x-card>
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Shrinking Gnome title bars</div>
+      <div class="subtitle">2014 May 29</div>
+      <p>I’ve been using Ubuntu Gnome lately, but my biggest pet peeve has always been the big, fluffy title bars. This can be ameliorated a bit by shrinking the Window Titles font size (in the ‘Fonts’ section of the Gnome Tweak Tool), but the big benefit comes from reducing the padding in the title bar.</p>
 
-<x-card>
-  
-    <my-card-colorbar>When Ubuntu says "System program problem detected" whenever you turn your computer on</my-card-colorbar>
-    <my-card-title subtitle="2014 May 29"></my-card-title>
-  
-  <card-content><p>Contrary to what I thought, these errors popping up every time you turn the computer on doesn’t mean that there is always a bunch of stuff crashing on start up.  It means that something crashed in the past and somehow never got cleared from the crash reports.  So that means there is a simple fix!</p>
 
-</card-content>
-  <my-card-more href="/2014/05/29/when-ubuntu-says-system-program-problem-detected.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-    <my-card-colorbar>Improving Linux Battery Life</my-card-colorbar>
-    <my-card-title subtitle="2014 May 13"></my-card-title>
-  
-  <card-content><p>Everyone wants to squeeze a bit more time out of their battery.  The simplest trick to improve battery life is reducing screen brightness, but there are also a number of tools that manage laptop power usage to increase battery time.  I’ve had great success so far with TLP, which dynamically manages power depending on whether the laptop is running on battery or AC.  It increased my battery life by over an hour!  There’s a nice description of what exactly it adjusts and how to install it <a href="http://www.webupd8.org/2013/04/improve-power-usage-battery-life-in.html">here</a>.</p>
-
-</card-content>
-  <my-card-more href="/2014/05/13/improving-linux-battery-life.html">Read More</my-card-more>
-</x-card>
-
-<x-card>
-  
-  <card-image src="/images/posts/2014-05-13-mendeley.png"></card-image>
-    <div class="card-image">
-      <my-card-title title="Managing Scientific Papers (for free!)" subtitle="2014 May 13"></my-card-title>
     </div>
-  
-  <card-content><p>I have to keep track of a lot of scientific papers.  Previously, I did this by manually naming all of the papers I had in a consistent format (making for looooong file names) and trying to keep them all in the same spot.  This was not terribly effective or well-organized, and did not lend itself to easy searching.</p>
+    <div class="card-actions">
+      <a href="/2014/05/29/shrinking-gnome-title-bars.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">When Ubuntu says "System program problem detected" whenever you turn your computer on</div>
+      <div class="subtitle">2014 May 29</div>
+      <p>Contrary to what I thought, these errors popping up every time you turn the computer on doesn’t mean that there is always a bunch of stuff crashing on start up.  It means that something crashed in the past and somehow never got cleared from the crash reports.  So that means there is a simple fix!</p>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/05/29/when-ubuntu-says-system-program-problem-detected.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">Improving Linux Battery Life</div>
+      <div class="subtitle">2014 May 13</div>
+      <p>Everyone wants to squeeze a bit more time out of their battery.  The simplest trick to improve battery life is reducing screen brightness, but there are also a number of tools that manage laptop power usage to increase battery time.  I’ve had great success so far with TLP, which dynamically manages power depending on whether the laptop is running on battery or AC.  It increased my battery life by over an hour!  There’s a nice description of what exactly it adjusts and how to install it <a href="http://www.webupd8.org/2013/04/improve-power-usage-battery-life-in.html">here</a>.</p>
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/05/13/improving-linux-battery-life.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+
+  <paper-card class="my-card"
+          
+              image="/images/posts/personal/2014-05-13-mendeley.png"
+          >
+    <div class="card-content">
+      <div class="title">Managing Scientific Papers (for free!)</div>
+      <div class="subtitle">2014 May 13</div>
+      <p>I have to keep track of a lot of scientific papers.  Previously, I did this by manually naming all of the papers I had in a consistent format (making for looooong file names) and trying to keep them all in the same spot.  This was not terribly effective or well-organized, and did not lend itself to easy searching.</p>
 
 <p>I knew of software like Microsoft EndNote, but that costs money and doesn’t work on Linux, which are my two fatal strikes against any software I look at.  At some point, someone pointed out Mendeley to me.  I don’t know how I didn’t discover it before.</p>
 
-</card-content>
-  <my-card-more href="/2014/05/13/managing-scientific-papers-for-free.html">Read More</my-card-more>
-</x-card>
 
-<x-card>
-  
-    <my-card-colorbar>The simple terminal way to see your IP address</my-card-colorbar>
-    <my-card-title subtitle="2014 March 4"></my-card-title>
-  
-  <card-content><p>If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:</p>
+    </div>
+    <div class="card-actions">
+      <a href="/2014/05/13/managing-scientific-papers-for-free.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl icanhazip.com</code></pre></div>
 
-</card-content>
-  <my-card-more href="/2014/03/04/the-simple-terminal-way-to-see-your-ip-address.html">Read More</my-card-more>
-</x-card>
 
+  <paper-card class="my-card"
+          >
+    <div class="card-content">
+      <div class="title">The simple terminal way to see your IP address</div>
+      <div class="subtitle">2014 March 5</div>
+      <p>If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl icanhazip.com</code></pre></figure>
+
+
+    </div>
+    <div class="card-actions">
+      <a href="/2014/03/05/the-simple-terminal-way-to-see-your-ip-address.html"><paper-button>Read More</paper-button></a>
+    </div>
+  </paper-card>
+
+
+</div>
 
 <!-- Page navigation links -->
 
@@ -182,33 +213,33 @@
 
   <!-- Page Numbers -->
   
+    
+    <my-page-link href="/">1</my-page-link>
+    
   
-  <my-page-link href="/">1</my-page-link>
+    
+    <my-page-link href="/page2">2</my-page-link>
+    
   
+    
+    <my-page-link href="/page3">3</my-page-link>
+    
   
+    
+    <my-page-link href="/page4">4</my-page-link>
+    
   
-  <my-page-link href="/page2">2</my-page-link>
+    
+    <my-page-link active>5</my-page-link>
+    
   
+    
+    <my-page-link href="/page6">6</my-page-link>
+    
   
-  
-  <my-page-link href="/page3">3</my-page-link>
-  
-  
-  
-  <my-page-link href="/page4">4</my-page-link>
-  
-  
-  
-  <my-page-link active>5</my-page-link>
-  
-  
-  
-  <my-page-link href="/page6">6</my-page-link>
-  
-  
-  
-  <my-page-link href="/page7">7</my-page-link>
-  
+    
+    <my-page-link href="/page7">7</my-page-link>
+    
   
 
   <!-- Right Arrow -->
@@ -243,7 +274,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

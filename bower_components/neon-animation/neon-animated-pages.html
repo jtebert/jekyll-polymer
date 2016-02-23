@@ -9,11 +9,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html">
 <link rel="import" href="../iron-selector/iron-selectable.html">
-<link rel="import" href="../paper-styles/paper-styles.html">
 <link rel="import" href="neon-animation-runner-behavior.html">
 <link rel="import" href="animations/opaque-animation.html">
 
 <!--
+Material design: [Meaningful transitions](https://www.google.com/design/spec/animation/meaningful-transitions.html)
+
 `neon-animated-pages` manages a set of pages and runs an animation when switching between them. Its
 children pages should implement `Polymer.NeonAnimatableBehavior` and define `entry` and `exit`
 animations to be run when switching to or switching out of the page.
@@ -33,7 +34,11 @@ animations to be run when switching to or switching out of the page.
     }
 
     :host > ::content > * {
-      @apply(--layout-fit);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       height: 100%;
     }
 
@@ -92,8 +97,8 @@ animations to be run when switching to or switching out of the page.
     _selectedChanged: function(selected) {
 
       var selectedPage = this.selectedItem;
-      var oldPage = this._prevSelected || false;
-      this._prevSelected = selectedPage;
+      var oldPage = this._valueToItem(this._prevSelected) || false;
+      this._prevSelected = selected;
 
       // on initial load and if animateInitialSelection is negated, simply display selectedPage.
       if (!oldPage && !this.animateInitialSelection) {
@@ -130,6 +135,7 @@ animations to be run when switching to or switching out of the page.
           this._squelchNextFinishEvent = true;
           this.cancelAnimation();
           this._completeSelectedChanged();
+          this._squelchNextFinishEvent = false;
         }
 
         // configure the animation.
@@ -160,14 +166,14 @@ animations to be run when switching to or switching out of the page.
         // on first load, ensure we run animations only after element is attached.
         if (!this.isAttached) {
           this.async(function () {
-            this.playAnimation(null, {
+            this.playAnimation(undefined, {
               fromPage: null,
               toPage: selectedPage
             });
           });
 
         } else {
-          this.playAnimation(null, {
+          this.playAnimation(undefined, {
             fromPage: oldPage,
             toPage: selectedPage
           });
@@ -178,6 +184,10 @@ animations to be run when switching to or switching out of the page.
       }
     },
 
+    /**
+     * @param {Object=} oldPage
+     * @param {Object=} selectedPage
+     */
     _completeSelectedChanged: function(oldPage, selectedPage) {
       if (selectedPage) {
         selectedPage.classList.remove('neon-animating');
@@ -191,7 +201,7 @@ animations to be run when switching to or switching out of the page.
           node.classList && node.classList.remove('neon-animating');
         }
       }
-      this.async(this.notifyResize);
+      this.async(this._notifyPageResize);
     },
 
     _onNeonAnimationFinish: function(event) {
@@ -200,6 +210,14 @@ animations to be run when switching to or switching out of the page.
         return;
       }
       this._completeSelectedChanged(event.detail.fromPage, event.detail.toPage);
+    },
+
+    _notifyPageResize: function() {
+      var selectedPage = this.selectedItem || this._valueToItem(this.selected);
+      this.resizerShouldNotify = function(element) {
+        return element == selectedPage;
+      }
+      this.notifyResize();
     }
 
   })

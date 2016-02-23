@@ -2,11 +2,11 @@
 <!--
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE
-The complete set of authors may be found at http://polymer.github.io/AUTHORS
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
 <head>
@@ -18,18 +18,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="../../web-component-tester/browser.js"></script>
   <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
-  <link rel="import" href="../iron-range-behavior.html">
+  <link rel="import" href="x-progressbar.html">
   <link rel="import" href="../../test-fixture/test-fixture.html">
 </head>
 <body>
-
-  <script>
-    Polymer({
-      is: 'x-progressbar',
-
-      behaviors: [Polymer.IronRangeBehavior]
-    });
-  </script>
 
   <test-fixture id="trivialRange">
     <template>
@@ -53,11 +45,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('set value', function(done) {
         range.value = 50;
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.equal(range.value, 50);
           // test clamp value
           range.value = 60.1;
-          asyncPlatformFlush(function() {
+          flush(function() {
             assert.equal(range.value, 60);
             done();
           });
@@ -67,7 +59,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('set max', function(done) {
         range.max = 10;
         range.value = 11;
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.equal(range.value, range.max);
           done();
         });
@@ -76,7 +68,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('test ratio', function(done) {
         range.max = 10;
         range.value = 5;
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.equal(range.ratio, 50);
           done();
         });
@@ -86,10 +78,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         range.min = 10
         range.max = 50;
         range.value = 30;
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.equal(range.ratio, 50);
           range.value = 0;
-          asyncPlatformFlush(function() {
+          flush(function() {
             assert.equal(range.value, range.min);
             done();
           });
@@ -100,14 +92,56 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         range.min = 0;
         range.max = 10;
         range.value = 5.1;
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.equal(range.value, 5);
           range.step = 0.1;
           range.value = 5.1;
-          asyncPlatformFlush(function() {
+          flush(function() {
             assert.equal(range.value, 5.1);
             done();
           });
+        });
+      });
+
+      test('odd values', function(done) {
+        range.min = 1;
+        range.max = 7;
+        range.step = 2;
+        range.value = 3;
+
+        flush(function() {
+          assert.equal(range.value, 3);
+
+          range.value += range.step;
+          assert.equal(range.value, 5);
+
+          range.value += range.step;
+          assert.equal(range.value, 7);
+          done();
+        });
+      });
+
+      test('negative values should round up', function(done) {
+        range.min = -10;
+        range.max = 10;
+        range.step = 0.1;
+        range.value = -8.4252;
+
+        flush(function() {
+          assert.equal(range.value, -8.4);
+          done();
+        });
+      });
+
+      test('positive values should round up', function(done) {
+        range.min = 10;
+        range.max = 100;
+        range.step = 0.25;
+        range.value = 19.34567;
+
+        flush(function() {
+          assert.equal(range.value, 19.25);
+          done();
         });
       });
 

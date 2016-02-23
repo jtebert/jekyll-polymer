@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -114,10 +119,9 @@
 <div id="post">
 
   
-  <a href="/images/posts/2014-10-30-google-keep.jpg" data-lightbox="image-1" data-title="">
-    <img class="materialboxed" src="/images/posts/2014-10-30-google-keep.jpg">
+  <a href="/images/posts/personal/2014-10-30-google-keep.jpg" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/images/posts/personal/2014-10-30-google-keep.jpg">
   </a>
-
   
 
   <h1 class="paper-font-display1">An Awesomely Useful Thing: Google Keep</h1>
@@ -130,23 +134,23 @@
 
 <p>Then I discovered that Google has its own feature, and I’m surprised that I had never heard of it: Google Keep. Since I am already fully integrated into the Google ecosystem, it fits fantastically with everything else I already use, too. Here’s how it works:</p>
 
-<h2 id="create-notes">Create Notes</h2>
+<p>##Create Notes</p>
 
 <p>You can make lists, checkbox lists, text, audio, or image notes to keep track of anything you need to. I have a grocery list, a list of things to do at work, and movies I want to watch, for example. These notes all show up on the keep website that you can drag to organize, recolor, and archive when you’re done. Plus, you can add an image to any note. I’m not a fan of most of the colors for the notes (they’re a bit bright for black text), but the whole thing uses Google’s great new Material design and is really slick overall. When you’re done, you can also archive notes instead of deleting them, in case you ever need to go back and check it in the future.</p>
 
-<h2 id="share-notes">Share Notes</h2>
+<p>##Share Notes</p>
 
 <p>You can share notes. Now you can make blame your roommate for not picking up more milk.</p>
 
-<h2 id="remind-yourself">Remind Yourself</h2>
+<p>##Remind Yourself</p>
 
 <p>You can also set reminders for your notes, by time or place, so you don’t forget what to do when or where you need to do it.</p>
 
-<h2 id="see-it-everywhere">See it Everywhere</h2>
+<p>##See it Everywhere</p>
 
 <p>One of the most useful features of Keep is that it has a nice web interface, Android app, and iOS app. Creating, organizing, and handling notes is straight forward in all of them without unnecessary distractions. Bonus: there’s a widget for Android, too. Because it’s all connected to your Google account, all of your notes are synced and instantly accessible anywhere you’re logged into Google - no installation necessary.</p>
 
-<h2 id="overall">Overall</h2>
+<p>##Overall</p>
 
 <p>Having some way to group or sort notes would be a great additional feature, but even without that it’s a great tool. I’d also like to see integration with reminders in the new Inbox, but that might come with time. Overall, Google Keep is the most painless way I have found to keep my thoughts in control: full-featured without being overwhelming, free and ad-free, and effectively cross-platform.</p>
 
@@ -171,13 +175,13 @@
 
   <div class="section">
     
-    <a href="/2014/09/10/drracket-tricks-and-customization.html"><paper-button raised>
+    <a href="/2014/09/10/drracket-tricks-and-customization.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/12/15/shiny-matlab-figures-drawing-error-with-patches.html"><paper-button raised>
+      <a href="/2014/12/15/shiny-matlab-figures-drawing-error-with-patches.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -229,7 +233,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

@@ -17,12 +17,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-
   <link rel="import" href="../../paper-input/paper-input.html">
   <link rel="import" href="../../paper-button/paper-button.html">
-  <link rel="import" href="../../paper-styles/paper-styles.html">
   <link rel="import" href="../../paper-styles/demo-pages.html">
+  <link rel="import" href="../../paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="../../paper-dropdown-menu/paper-dropdown-menu.html">
+  <link rel="import" href="../../paper-menu/paper-menu.html">
+  <link rel="import" href="../../paper-item/paper-item.html">
   <link rel="import" href="../iron-form.html">
+  <link rel="import" href="simple-element.html">
 </head>
 <style>
   .wide {
@@ -30,7 +33,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 </style>
 <body>
-  <div class="horizontal center-center layout">
+  <div class="horizontal-section-container">
     <div>
       <h4>method="get"</h4>
       <div class="horizontal-section">
@@ -41,17 +44,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <input type="checkbox" name="food" value="donuts" checked> I like donuts<br>
           <input type="checkbox" name="food" value="pizza" required> I like pizza<br>
-          <br>
+          <paper-checkbox name="food" value="cheese" required>I like cheese</paper-checkbox><br>
 
-          <input type="radio" name="color" value="red" checked>Red<br>
-          <input type="radio" name="color" value="blue" checked>Blue<br>
-          <input type="radio" name="color" value="green">Green<br>
+          <paper-dropdown-menu label="Cars" name="cars" required>
+            <paper-menu class="dropdown-content">
+              <paper-item value="volvo">Volvo</paper-item>
+              <paper-item value="saab">Saab</paper-item>
+              <paper-item value="fiat">Fiat</paper-item>
+              <paper-item value="audi">Audi</paper-item>
+            </paper-menu>
+          </paper-dropdown-menu>
+
+          <p>
+            Sample custom element, not required: <br>
+            <simple-element name="custom-one"></simple-element>
+          </p>
+
+          <p>
+            Sample custom element, required: (look, styling!)<br>
+            <simple-element required name="custom-two"></simple-element><br>
+          </p>
 
           <br><br>
 
           <paper-button raised
-              onclick="clickHandler(event)">Submit</paper-button>
-          <button type="submit">Native Submit</button>
+              onclick="submitHandler(event)">Submit</paper-button>
+          <paper-button raised
+              onclick="resetHandler(event)">Reset</paper-button>
         </form>
       </div>
     </div>
@@ -63,7 +82,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <paper-input name="name" label="Name" required></paper-input>
           <br>
           <p>Duplicate name <input name="name" required></p>
-          <br><br>
+
+          <input type="radio" name="color" value="red" checked>Red<br>
+          <input type="radio" name="color" value="blue" checked>Blue<br>
+          <input type="radio" name="color" value="green">Green<br>
+          <br>
 
           <label>Cars</label>
           <select name="cars">
@@ -90,15 +113,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <br><br><br>
           <paper-button raised
-              onclick="clickHandler(event)">Submit</paper-button>
+              onclick="submitHandler(event)">Submit</paper-button>
           <button type="submit">Native Submit</button>
+          <button type="reset">Native Reset</button>
         </form>
       </div>
     </div>
   </div>
-
   <br><br>
-  <div class="layout vertical center-center">
+  <div class="horizontal-section-container">
     <div>
       <h4>Submitted form data</h4>
       <div class="horizontal-section wide">
@@ -116,8 +139,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       output.innerHTML = JSON.stringify(event.detail);
     }
 
-    function clickHandler(event) {
+    function submitHandler(event) {
       Polymer.dom(event).localTarget.parentElement.submit();
+    }
+    function resetHandler(event) {
+      Polymer.dom(event).localTarget.parentElement.reset();
     }
   </script>
 </body>

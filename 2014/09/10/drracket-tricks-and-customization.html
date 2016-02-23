@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -114,10 +119,9 @@
 <div id="post">
 
   
-  <a href="/images/posts/2014-09-10-drracket-logo.png" data-lightbox="image-1" data-title="">
-    <img class="materialboxed" src="/images/posts/2014-09-10-drracket-logo.png">
+  <a href="/images/posts/personal/2014-09-10-drracket-logo.png" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/images/posts/personal/2014-09-10-drracket-logo.png">
   </a>
-
   
 
   <h1 class="paper-font-display1">DrRacket Tricks and Customization</h1>
@@ -132,13 +136,13 @@
   <li>Customize the color scheme to something you like. I explain how to get a bunch of options in [this post](/2014/09/10/how-to-make-drracket-more-pleasant-looking.html</li>
   <li>Go to Edit &gt; Preferences &gt; Editing &gt; General and check the box for “Enable automatic parentheses.” It automatically closes your parentheses and makes your life a lot easier.</li>
   <li>In the same tab, also check “Show line numbers”</li>
-  <li>Instead of writing out lambda all the time, you can use a keyboard shortcut to get the character λ. It’s <code>Ctrl + \</code>.</li>
+  <li>Instead of writing out lambda all the time, you can use a keyboard shortcut to get the character λ. It’s <code class="highlighter-rouge">Ctrl + \</code>.</li>
   <li>Fix code indentation for a section by highlighting it and pressing Tab.</li>
-  <li>Fix indentation for your entire file with <code>Ctrl + I</code>.</li>
+  <li>Fix indentation for your entire file with <code class="highlighter-rouge">Ctrl + I</code>.</li>
   <li>You can right click on any function name to search for it in the help desk.</li>
   <li>You can change the default browser for opening documentation under Edit &gt; Preferences &gt; Browser.</li>
   <li>To prevent a zillion windows from opening, go to Edit &gt; Preferences &gt; General and check “Open files in separate tabs”</li>
-  <li>When working with large programs the program contour is nice for navigating within the file. Turn it on with View &gt; Show Program Contour or with <code>Ctrl + U</code>.</li>
+  <li>When working with large programs the program contour is nice for navigating within the file. Turn it on with View &gt; Show Program Contour or with <code class="highlighter-rouge">Ctrl + U</code>.</li>
   <li>You can change the position of the Interactions area (below vs. to the right of the Definitions area) with View &gt; Use Horizontal Layout.</li>
 </ul>
 
@@ -163,13 +167,13 @@
 
   <div class="section">
     
-    <a href="/2014/09/10/how-to-make-drracket-more-pleasant-looking.html"><paper-button raised>
+    <a href="/2014/09/10/how-to-make-drracket-more-pleasant-looking.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2014/10/30/an-awesomely-useful-thing-google-keep.html"><paper-button raised>
+      <a href="/2014/10/30/an-awesomely-useful-thing-google-keep.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -221,7 +225,7 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->

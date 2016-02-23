@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -73,36 +73,41 @@
         <paper-menu class="list" attr-for-selected="data-route" selected="" on-iron-select="onMenuSelect">
           <a href="/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
           <a href="/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
+          <a href="/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
           <a data-route="contact" href="/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
         </paper-menu>
 
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
+            <a href="http://juliaebert.com"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          
+          
+            <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; 2016, Julia Ebert</div>
 
     </div>
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
         <!-- Menu toggle -->
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-        <span class="flex"></span>
+        <span class="title">Jekyll Polymer Theme</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="/search.json"></my-search-bar>
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>
-    </paper-toolbar>
+        <!--<div class="middle paper-font-display2 app-name">Jekyll Polymer Theme</div>-->
+      </paper-toolbar>
 
     <!-- Main Content -->
     <style>
@@ -221,11 +226,11 @@ It’s split over multiple lines.</p>
 
 <p>You can render <em>LaTeX</em> mathematical expressions using <strong>MathJax</strong>, as on <a href="http://math.stackexchange.com/">math.stackexchange.com</a>:</p>
 
-<p>There are inline equations like \( y = x + 2 \) indicated by <code>\\( ... \\)</code>.</p>
+<p>There are inline equations like \( y = x + 2 \) indicated by <code class="highlighter-rouge">\\( ... \\)</code>.</p>
 
-<p>You can also display an equation (not inline displayed) using inline code, like \[ y = x + 4\] which you do with <code>\\[ ... \\]</code>.</p>
+<p>You can also display an equation (not inline displayed) using inline code, like \[ y = x + 4\] which you do with <code class="highlighter-rouge">\\[ ... \\]</code>.</p>
 
-<p>Or you can display a block of math by surrounding it with <code>$$ ... $$</code>. Like this:</p>
+<p>Or you can display a block of math by surrounding it with <code class="highlighter-rouge">$$ ... $$</code>. Like this:</p>
 
 <script type="math/tex; mode=display">\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.</script>
 
@@ -233,49 +238,53 @@ It’s split over multiple lines.</p>
   <p><strong>Tip:</strong> Make sure you include MathJax into your publications to render mathematical expression correctly. Your page/template should include something like:</p>
 </blockquote>
 
-<p><code>
-&lt;script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"&gt;&lt;/script&gt;
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"&gt;&lt;/script&gt;
+</code></pre>
+</div>
 
 <h1 id="code">Code</h1>
 
 <h2 id="inline-code">Inline code</h2>
 
-<p>Code embedded in a paragraph looks like <code>this is code</code>. Code can also be in blocks with or without line numbers.</p>
+<p>Code embedded in a paragraph looks like <code class="highlighter-rouge">this is code</code>. Code can also be in blocks with or without line numbers.</p>
 
 <h2 id="code-blocks-fenced-code">Code blocks (fenced code)</h2>
 
-<p>Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just <code>linenos</code> instead of <code>linenos=table</code>, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)</p>
+<p>Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just <code class="highlighter-rouge">linenos</code> instead of <code class="highlighter-rouge">linenos=table</code>, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)</p>
 
 <p>With line numbers (as table):</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-ruby" data-lang="ruby">1
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-    <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+5</pre></td><td class="code"><pre>  <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
-  <span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.</span>
-</pre></div>
-</td></tr></table>
+  <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Without line numbers:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-    <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
-  <span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.</span></code></pre></div>
+  <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span></code></pre></figure>
 
 <p>With line numbers (inline):</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-<span class="lineno">2</span>     <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="lineno">3</span>   <span class="k">end</span>
-<span class="lineno">4</span>   <span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-<span class="lineno">5</span>   <span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre>  <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <h1 id="definition-lists">Definition Lists</h1>
 
@@ -348,13 +357,13 @@ It’s split over multiple lines.</p>
 
   <div class="section">
     
-    <a href="/2014/12/15/shiny-matlab-figures-exporting.html"><paper-button raised>
+    <a href="/2014/12/15/shiny-matlab-figures-exporting.html"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/2015/06/08/welcome-to-jekyll.html"><paper-button raised>
+      <a href="/2015/06/08/welcome-to-jekyll.html"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     
@@ -406,7 +415,7 @@ It’s split over multiple lines.</p>
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','/scripts/g-analyt.js','ga');
 		
-		ga('create', '', 'auto');
+		ga('create', 'UA-54476418-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
