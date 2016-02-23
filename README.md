@@ -4,11 +4,26 @@ A Jekyll theme built with Google's Polymer library and following the material de
 
 There are a few custom web components included designed to match Material design.
 
-## Installation instructions.
+## Installation instructions
+
+(Instructions are based off of those for the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).)
 
 - Clone this repository or download it as a .zip file and unzip.
-- From the project root folder, run `npm install` and `bower install` to install dependencies (including Polymer)
-- Run the local server from the `app` directory with `jekyll serve`.
+- From the project root folder, run `npm install -g gulp bower && npm install && bower install`. (See the [Polymer Starter Kit installation instructions](https://github.com/PolymerElements/polymer-starter-kit#install-dependencies) for more details or troubleshooting.)
+
+## Deployment
+
+### Serve/watch
+
+`jekyll serve`
+
+(Eventually this will also be migrated to gulp.)
+
+### Build and vulcanize
+
+`jekyll build & gulp`
+
+The deployment ready files will be in the `dist/` directory. This can be slow. (I also plan to condense this all into gulp, but it's a start.)
 
 ## Features
 

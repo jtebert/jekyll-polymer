@@ -1,3 +1,6 @@
+source: app
+destination: app/_site
+
 # Site settings
 title: Jekyll Polymer Theme
 author: Julia Ebert
@@ -12,6 +15,7 @@ github_username:  jtebert
 disqus_shortname: juliaebert
 google_analytics: UA-54476418-1
 
+# Pagination
 paginate: 5
 paginate_path: "page:num"
 excerpt_separator: <!--more-->
@@ -21,4 +25,3 @@ gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
-exclude: [dist/, package.json, README.md, bower.json, gulp.js, node_modules]
