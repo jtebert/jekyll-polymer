@@ -406,11 +406,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background: #ffffff;
     margin-bottom: 16px;
   }
-  .my-card .title { @apply(--paper-font-headline); }
+  .my-card .title {
+    @apply(--paper-font-headline);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
   .my-card .subtitle {
     @apply(--paper-font-body1);
     color: var(--secondary-text-color, #727272);
-    margin: 8px 0 16px 0;
+    margin: -8px 0 16px 0;
   }
 
   paper-card {

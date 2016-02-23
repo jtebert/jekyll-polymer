@@ -1,8 +1,8 @@
+##[DEMO](http://blog.juliaebert.com)
+
 A Jekyll theme built with Google's Polymer library and following the material design specifications.
 
-There are a few custom web components included designed to match the Material design specifications.
-
-**Note:** Demo does not yet show current version
+There are a few custom web components included designed to match Material design.
 
 ## Installation instructions.
 

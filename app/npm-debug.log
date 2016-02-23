@@ -1,0 +1,955 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'gulp-compass' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose install initial load of /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/package.json
+5 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/browser-sync/package.json
+6 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/del/package.json
+7 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/glob/package.json
+8 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt/package.json
+9 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-appengine/package.json
+10 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-concurrent/package.json
+11 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-contrib-compass/package.json
+12 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-contrib-watch/package.json
+13 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-contrib-yuidoc/package.json
+14 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-doc-merge/package.json
+15 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-jekyll/package.json
+16 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/grunt-vulcanize/package.json
+17 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp/package.json
+18 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-autoprefixer/package.json
+19 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-cache/package.json
+20 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-changed/package.json
+21 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-cssmin/package.json
+22 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-flatten/package.json
+23 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-if/package.json
+24 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-imagemin/package.json
+25 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-jshint/package.json
+26 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-load-plugins/package.json
+27 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-minify-html/package.json
+28 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-rename/package.json
+29 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-replace/package.json
+30 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-size/package.json
+31 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-uglify/package.json
+32 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-uncss/package.json
+33 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-useref/package.json
+34 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-vulcanize/package.json
+35 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/jshint-stylish/package.json
+36 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/load-grunt-tasks/package.json
+37 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/merge-stream/package.json
+38 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/opn/package.json
+39 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/require-dir/package.json
+40 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/run-sequence/package.json
+41 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/vulcanize/package.json
+42 verbose installManyTop reading scoped package data from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/web-component-tester/package.json
+43 info package.json grunt-appengine@0.1.6 No license field.
+44 info package.json grunt@0.4.5 No license field.
+45 info package.json grunt-contrib-yuidoc@0.8.0 No license field.
+46 info package.json grunt-contrib-watch@0.6.1 No license field.
+47 info package.json grunt-contrib-compass@1.0.3 No license field.
+48 info package.json gulp-if@1.2.5 No license field.
+49 info package.json gulp-rename@1.2.2 No license field.
+50 info package.json gulp-minify-html@1.0.3 No license field.
+51 info package.json grunt-doc-merge@1.1.0 No repository field.
+52 info package.json grunt-doc-merge@1.1.0 license should be a valid SPDX license expression
+53 info package.json web-component-tester@3.2.0 license should be a valid SPDX license expression
+54 verbose readDependencies loading dependencies from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/package.json
+55 silly cache add args [ 'gulp-compass', null ]
+56 verbose cache add spec gulp-compass
+57 silly cache add parsed spec { raw: 'gulp-compass',
+57 silly cache add   scope: null,
+57 silly cache add   name: 'gulp-compass',
+57 silly cache add   rawSpec: '',
+57 silly cache add   spec: '*',
+57 silly cache add   type: 'range' }
+58 silly addNamed gulp-compass@*
+59 verbose addNamed "*" is a valid semver range for gulp-compass
+60 silly addNameRange { name: 'gulp-compass', range: '*', hasData: false }
+61 silly mapToRegistry name gulp-compass
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry uri https://registry.npmjs.org/gulp-compass
+65 verbose addNameRange registry:https://registry.npmjs.org/gulp-compass not in flight; fetching
+66 verbose request uri https://registry.npmjs.org/gulp-compass
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 10:19:03
+69 verbose request id b9928011b24f7fe1
+70 verbose etag "8EA8VH0Q2TPE0V22J1UAGSKZH"
+71 http request GET https://registry.npmjs.org/gulp-compass
+72 http 200 https://registry.npmjs.org/gulp-compass
+73 silly get cb [ 200,
+73 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+73 silly get     etag: '"BBNIX9HPU0QH93ZSRT19WLN2F"',
+73 silly get     'content-type': 'application/json',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     'content-length': '53245',
+73 silly get     'accept-ranges': 'bytes',
+73 silly get     date: 'Tue, 23 Feb 2016 10:19:04 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     age: '0',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-lhr6321-LHR',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '1',
+73 silly get     'x-timer': 'S1456222744.063349,VS0,VE87',
+73 silly get     vary: 'Accept' } ]
+74 verbose get saving gulp-compass to /home/jtebert/.npm/registry.npmjs.org/gulp-compass/.cache.json
+75 silly addNameRange number 2 { name: 'gulp-compass', range: '*', hasData: true }
+76 silly addNameRange versions [ 'gulp-compass',
+76 silly addNameRange   [ '0.0.1',
+76 silly addNameRange     '0.0.2',
+76 silly addNameRange     '0.0.3',
+76 silly addNameRange     '0.0.4',
+76 silly addNameRange     '0.0.5',
+76 silly addNameRange     '0.0.6',
+76 silly addNameRange     '1.0.0',
+76 silly addNameRange     '1.0.1',
+76 silly addNameRange     '1.0.2',
+76 silly addNameRange     '1.0.3',
+76 silly addNameRange     '1.0.4',
+76 silly addNameRange     '1.0.5',
+76 silly addNameRange     '1.0.6',
+76 silly addNameRange     '1.0.7',
+76 silly addNameRange     '1.0.8',
+76 silly addNameRange     '1.0.9',
+76 silly addNameRange     '1.1.0',
+76 silly addNameRange     '1.1.1',
+76 silly addNameRange     '1.1.2',
+76 silly addNameRange     '1.1.3',
+76 silly addNameRange     '1.1.4',
+76 silly addNameRange     '1.1.5',
+76 silly addNameRange     '1.1.6',
+76 silly addNameRange     '1.1.7',
+76 silly addNameRange     '1.1.8',
+76 silly addNameRange     '1.1.9',
+76 silly addNameRange     '1.2.0',
+76 silly addNameRange     '1.3.0',
+76 silly addNameRange     '1.3.1',
+76 silly addNameRange     '1.3.2',
+76 silly addNameRange     '1.3.3',
+76 silly addNameRange     '2.0.0',
+76 silly addNameRange     '2.0.1',
+76 silly addNameRange     '2.0.2',
+76 silly addNameRange     '2.0.3',
+76 silly addNameRange     '2.0.4',
+76 silly addNameRange     '2.1.0' ] ]
+77 silly addNamed gulp-compass@2.1.0
+78 verbose addNamed "2.1.0" is a plain semver version for gulp-compass
+79 silly cache afterAdd gulp-compass@2.1.0
+80 verbose afterAdd /home/jtebert/.npm/gulp-compass/2.1.0/package/package.json not in flight; writing
+81 verbose afterAdd /home/jtebert/.npm/gulp-compass/2.1.0/package/package.json written
+82 silly install resolved [ { name: 'gulp-compass',
+82 silly install resolved     version: '2.1.0',
+82 silly install resolved     description: 'Compile Compass files',
+82 silly install resolved     main: 'lib',
+82 silly install resolved     repository:
+82 silly install resolved      { type: 'git',
+82 silly install resolved        url: 'git://github.com/appleboy/gulp-compass.git' },
+82 silly install resolved     keywords:
+82 silly install resolved      [ 'gulp',
+82 silly install resolved        'gulpplugin',
+82 silly install resolved        'compass',
+82 silly install resolved        'scss',
+82 silly install resolved        'sass',
+82 silly install resolved        'css',
+82 silly install resolved        'compile',
+82 silly install resolved        'preprocessor',
+82 silly install resolved        'style' ],
+82 silly install resolved     author: { name: 'Bo-Yi Wu' },
+82 silly install resolved     license: 'MIT',
+82 silly install resolved     bugs: { url: 'https://github.com/appleboy/gulp-compass/issues' },
+82 silly install resolved     homepage: 'https://github.com/appleboy/gulp-compass',
+82 silly install resolved     dependencies: { 'gulp-util': '^3.0.4', through2: '^0.6.5', which: '^1.1.1' },
+82 silly install resolved     devDependencies:
+82 silly install resolved      { coveralls: '^2.11.2',
+82 silly install resolved        del: '^1.1.1',
+82 silly install resolved        gulp: '^3.8.10',
+82 silly install resolved        'gulp-istanbul': '^0.6.0',
+82 silly install resolved        'gulp-jscs': '^1.6.0',
+82 silly install resolved        'gulp-jshint': '^1.9.2',
+82 silly install resolved        'gulp-load-plugins': '^0.8.0',
+82 silly install resolved        'gulp-mocha': '^2.0.0',
+82 silly install resolved        'iconv-lite': '^0.4.7',
+82 silly install resolved        'jshint-reporter-jscs': '^0.1.0',
+82 silly install resolved        'map-stream': '0.0.5',
+82 silly install resolved        mocha: '^2.1.0',
+82 silly install resolved        should: '^4.6.5' },
+82 silly install resolved     engines: { node: '>=0.10.0' },
+82 silly install resolved     scripts: { test: 'gulp' },
+82 silly install resolved     gitHead: '0b1d104fc52d933b72db7701602bd385eace0ba7',
+82 silly install resolved     _id: 'gulp-compass@2.1.0',
+82 silly install resolved     _shasum: '1fef21ed547fc8685e754fc31954c4fc6dd2bcb3',
+82 silly install resolved     _from: 'gulp-compass@*',
+82 silly install resolved     _npmVersion: '2.7.3',
+82 silly install resolved     _nodeVersion: '0.10.36',
+82 silly install resolved     _npmUser: { name: 'appleboy', email: 'appleboy.tw@gmail.com' },
+82 silly install resolved     maintainers: [ [Object] ],
+82 silly install resolved     dist:
+82 silly install resolved      { shasum: '1fef21ed547fc8685e754fc31954c4fc6dd2bcb3',
+82 silly install resolved        tarball: 'http://registry.npmjs.org/gulp-compass/-/gulp-compass-2.1.0.tgz' },
+82 silly install resolved     directories: {},
+82 silly install resolved     _resolved: 'https://registry.npmjs.org/gulp-compass/-/gulp-compass-2.1.0.tgz',
+82 silly install resolved     readme: 'ERROR: No README data found!' } ]
+83 info install gulp-compass@2.1.0 into /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app
+84 info installOne gulp-compass@2.1.0
+85 verbose installOne of gulp-compass to /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app not in flight; installing
+86 verbose lock using /home/jtebert/.npm/_locks/gulp-compass-2cf3ec3c2de7d9d5.lock for /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+87 silly install write writing gulp-compass 2.1.0 to /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+88 verbose unbuild node_modules/gulp-compass
+89 silly gentlyRm /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass is being purged from base /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app
+90 verbose gentlyRm don't care about contents; nuking /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+91 verbose tar unpack /home/jtebert/.npm/gulp-compass/2.1.0/package.tgz
+92 verbose tar unpacking to /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+93 silly gentlyRm /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass is being purged
+94 verbose gentlyRm don't care about contents; nuking /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+95 silly gunzTarPerm modes [ '775', '664' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+98 silly gunzTarPerm extractEntry .npmignore
+99 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+100 silly gunzTarPerm extractEntry README.md
+101 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+102 silly gunzTarPerm extractEntry LICENSE
+103 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+104 silly gunzTarPerm extractEntry gulpfile.js
+105 silly gunzTarPerm modified mode [ 'gulpfile.js', 420, 436 ]
+106 silly gunzTarPerm extractEntry .travis.yml
+107 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+108 silly gunzTarPerm extractEntry .jscsrc
+109 silly gunzTarPerm modified mode [ '.jscsrc', 420, 436 ]
+110 silly gunzTarPerm extractEntry .jshintrc
+111 silly gunzTarPerm modified mode [ '.jshintrc', 420, 436 ]
+112 silly gunzTarPerm extractEntry lib/callCounter.js
+113 silly gunzTarPerm modified mode [ 'lib/callCounter.js', 420, 436 ]
+114 silly gunzTarPerm extractEntry lib/compass.js
+115 silly gunzTarPerm modified mode [ 'lib/compass.js', 420, 436 ]
+116 silly gunzTarPerm extractEntry lib/helpers.js
+117 silly gunzTarPerm modified mode [ 'lib/helpers.js', 420, 436 ]
+118 silly gunzTarPerm extractEntry lib/index.js
+119 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 436 ]
+120 silly gunzTarPerm extractEntry .editorconfig
+121 silly gunzTarPerm modified mode [ '.editorconfig', 420, 436 ]
+122 silly gunzTarPerm extractEntry test/compass_test.js
+123 silly gunzTarPerm modified mode [ 'test/compass_test.js', 420, 436 ]
+124 silly gunzTarPerm extractEntry test/callCounter_test.js
+125 silly gunzTarPerm modified mode [ 'test/callCounter_test.js', 420, 436 ]
+126 silly gunzTarPerm extractEntry test/Gemfile.lock
+127 silly gunzTarPerm modified mode [ 'test/Gemfile.lock', 420, 436 ]
+128 silly gunzTarPerm extractEntry test/bower_components/_base.scss
+129 silly gunzTarPerm modified mode [ 'test/bower_components/_base.scss', 420, 436 ]
+130 silly gunzTarPerm extractEntry test/bower_components2/_base2.scss
+131 silly gunzTarPerm modified mode [ 'test/bower_components2/_base2.scss', 420, 436 ]
+132 silly gunzTarPerm extractEntry test/.sass-cache/6a96f20f03dac6e90e23265a4caed8e2b7c15a86/_sprites.scssc
+133 silly gunzTarPerm modified mode [ 'test/.sass-cache/6a96f20f03dac6e90e23265a4caed8e2b7c15a86/_sprites.scssc',
+133 silly gunzTarPerm   384,
+133 silly gunzTarPerm   436 ]
+134 silly gunzTarPerm extractEntry test/.sass-cache/0b3025ce5ebd5d8f274b2380e48048e88fc76a81/_base.scssc
+135 silly gunzTarPerm modified mode [ 'test/.sass-cache/0b3025ce5ebd5d8f274b2380e48048e88fc76a81/_base.scssc',
+135 silly gunzTarPerm   384,
+135 silly gunzTarPerm   436 ]
+136 silly gunzTarPerm extractEntry test/.sass-cache/1645c67ddc542f6c83c4d07a177d273ceac6ef18/_modular-scale.scssc
+137 silly gunzTarPerm modified mode [ 'test/.sass-cache/1645c67ddc542f6c83c4d07a177d273ceac6ef18/_modular-scale.scssc',
+137 silly gunzTarPerm   384,
+137 silly gunzTarPerm   436 ]
+138 silly gunzTarPerm extractEntry test/.sass-cache/26af0709ed35d68a4006a91613fa1b2aedc66c9c/_su.scssc
+139 silly gunzTarPerm modified mode [ 'test/.sass-cache/26af0709ed35d68a4006a91613fa1b2aedc66c9c/_su.scssc',
+139 silly gunzTarPerm   384,
+139 silly gunzTarPerm   436 ]
+140 silly gunzTarPerm extractEntry test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_container.scssc
+141 silly gunzTarPerm modified mode [ 'test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_container.scssc',
+141 silly gunzTarPerm   384,
+141 silly gunzTarPerm   436 ]
+142 silly gunzTarPerm extractEntry test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_end.scssc
+143 silly gunzTarPerm modified mode [ 'test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_end.scssc',
+143 silly gunzTarPerm   384,
+143 silly gunzTarPerm   436 ]
+144 silly gunzTarPerm extractEntry test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_isolate.scssc
+145 silly gunzTarPerm modified mode [ 'test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_isolate.scssc',
+145 silly gunzTarPerm   384,
+145 silly gunzTarPerm   436 ]
+146 silly gunzTarPerm extractEntry test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_span.scssc
+147 silly gunzTarPerm modified mode [ 'test/.sass-cache/28c3aad7f490e60d2f7f756dd9f47cf260b2bc80/_span.scssc',
+147 silly gunzTarPerm   384,
+147 silly gunzTarPerm   436 ]
+148 silly gunzTarPerm extractEntry test/.sass-cache/2ed8477003f929c026d03f7c889db7cb66b50d4c/_base.scssc
+149 silly gunzTarPerm modified mode [ 'test/.sass-cache/2ed8477003f929c026d03f7c889db7cb66b50d4c/_base.scssc',
+149 silly gunzTarPerm   384,
+149 silly gunzTarPerm   436 ]
+150 silly gunzTarPerm extractEntry test/.sass-cache/2ed8477003f929c026d03f7c889db7cb66b50d4c/_sprite-img.scssc
+151 silly gunzTarPerm modified mode [ 'test/.sass-cache/2ed8477003f929c026d03f7c889db7cb66b50d4c/_sprite-img.scssc',
+151 silly gunzTarPerm   384,
+151 silly gunzTarPerm   436 ]
+152 silly gunzTarPerm extractEntry test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_float.scssc
+153 silly gunzTarPerm modified mode [ 'test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_float.scssc',
+153 silly gunzTarPerm   384,
+153 silly gunzTarPerm   436 ]
+154 silly gunzTarPerm extractEntry test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_shared.scssc
+155 silly gunzTarPerm modified mode [ 'test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_shared.scssc',
+155 silly gunzTarPerm   384,
+155 silly gunzTarPerm   436 ]
+156 silly gunzTarPerm extractEntry test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_support.scssc
+157 silly gunzTarPerm modified mode [ 'test/.sass-cache/3c8b90f728508aeff09236a4d52f5a54f0cb0236/_support.scssc',
+157 silly gunzTarPerm   384,
+157 silly gunzTarPerm   436 ]
+158 silly gunzTarPerm extractEntry test/.sass-cache/4ac0b25779f5cae781eefe63409913373413ddd1/_susy.scssc
+159 silly gunzTarPerm modified mode [ 'test/.sass-cache/4ac0b25779f5cae781eefe63409913373413ddd1/_susy.scssc',
+159 silly gunzTarPerm   384,
+159 silly gunzTarPerm   436 ]
+160 silly gunzTarPerm extractEntry test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_grid.scssc
+161 silly gunzTarPerm modified mode [ 'test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_grid.scssc',
+161 silly gunzTarPerm   384,
+161 silly gunzTarPerm   436 ]
+162 silly gunzTarPerm extractEntry test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_settings.scssc
+163 silly gunzTarPerm modified mode [ 'test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_settings.scssc',
+163 silly gunzTarPerm   384,
+163 silly gunzTarPerm   436 ]
+164 silly gunzTarPerm extractEntry test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_utilities.scssc
+165 silly gunzTarPerm modified mode [ 'test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_utilities.scssc',
+165 silly gunzTarPerm   384,
+165 silly gunzTarPerm   436 ]
+166 silly gunzTarPerm extractEntry test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_validation.scssc
+167 silly gunzTarPerm modified mode [ 'test/.sass-cache/4ba583ff5a04c4661c4ea9f77387875e2ca3ae4d/_validation.scssc',
+167 silly gunzTarPerm   384,
+167 silly gunzTarPerm   436 ]
+168 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_calc.scssc
+169 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_calc.scssc',
+169 silly gunzTarPerm   384,
+169 silly gunzTarPerm   436 ]
+170 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_function-list.scssc
+171 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_function-list.scssc',
+171 silly gunzTarPerm   384,
+171 silly gunzTarPerm   436 ]
+172 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_function.scssc
+173 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_function.scssc',
+173 silly gunzTarPerm   384,
+173 silly gunzTarPerm   436 ]
+174 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_generate-list.scssc
+175 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_generate-list.scssc',
+175 silly gunzTarPerm   384,
+175 silly gunzTarPerm   436 ]
+176 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_pow.scssc
+177 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_pow.scssc',
+177 silly gunzTarPerm   384,
+177 silly gunzTarPerm   436 ]
+178 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_ratios.scssc
+179 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_ratios.scssc',
+179 silly gunzTarPerm   384,
+179 silly gunzTarPerm   436 ]
+180 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_respond.scssc
+181 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_respond.scssc',
+181 silly gunzTarPerm   384,
+181 silly gunzTarPerm   436 ]
+182 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_round-px.scssc
+183 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_round-px.scssc',
+183 silly gunzTarPerm   384,
+183 silly gunzTarPerm   436 ]
+184 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_sort-list.scssc
+185 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_sort-list.scssc',
+185 silly gunzTarPerm   384,
+185 silly gunzTarPerm   436 ]
+186 silly gunzTarPerm extractEntry test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_tests.scssc
+187 silly gunzTarPerm modified mode [ 'test/.sass-cache/4bb94029a48650c2bb8c572d7a4afad1b43b2079/_tests.scssc',
+187 silly gunzTarPerm   384,
+187 silly gunzTarPerm   436 ]
+188 silly gunzTarPerm extractEntry test/.sass-cache/5b4576438dd129626a7b2610bfb6981133714a70/_reset.scssc
+189 silly gunzTarPerm modified mode [ 'test/.sass-cache/5b4576438dd129626a7b2610bfb6981133714a70/_reset.scssc',
+189 silly gunzTarPerm   384,
+189 silly gunzTarPerm   436 ]
+190 silly gunzTarPerm extractEntry test/.sass-cache/5b4576438dd129626a7b2610bfb6981133714a70/_support.scssc
+191 silly gunzTarPerm modified mode [ 'test/.sass-cache/5b4576438dd129626a7b2610bfb6981133714a70/_support.scssc',
+191 silly gunzTarPerm   384,
+191 silly gunzTarPerm   436 ]
+192 silly gunzTarPerm extractEntry test/.sass-cache/659a7ce5a2510e7ee34271694a15d4b43d226856/_utilities.scssc
+193 silly gunzTarPerm modified mode [ 'test/.sass-cache/659a7ce5a2510e7ee34271694a15d4b43d226856/_utilities.scssc',
+193 silly gunzTarPerm   384,
+193 silly gunzTarPerm   436 ]
+194 silly gunzTarPerm extractEntry test/.sass-cache/662b8a8e3d5661afa68c02e69056d6d895ecd5e4/_susy.scssc
+195 silly gunzTarPerm modified mode [ 'test/.sass-cache/662b8a8e3d5661afa68c02e69056d6d895ecd5e4/_susy.scssc',
+195 silly gunzTarPerm   384,
+195 silly gunzTarPerm   436 ]
+196 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_background.scssc
+197 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_background.scssc',
+197 silly gunzTarPerm   384,
+197 silly gunzTarPerm   436 ]
+198 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_box-sizing.scssc
+199 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_box-sizing.scssc',
+199 silly gunzTarPerm   384,
+199 silly gunzTarPerm   436 ]
+200 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_clearfix.scssc
+201 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_clearfix.scssc',
+201 silly gunzTarPerm   384,
+201 silly gunzTarPerm   436 ]
+202 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_prefix.scssc
+203 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_prefix.scssc',
+203 silly gunzTarPerm   384,
+203 silly gunzTarPerm   436 ]
+204 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_rem.scssc
+205 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_rem.scssc',
+205 silly gunzTarPerm   384,
+205 silly gunzTarPerm   436 ]
+206 silly gunzTarPerm extractEntry test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_support.scssc
+207 silly gunzTarPerm modified mode [ 'test/.sass-cache/69501f56b74f066067eaeded7f8f5515064cb586/_support.scssc',
+207 silly gunzTarPerm   384,
+207 silly gunzTarPerm   436 ]
+208 silly gunzTarPerm extractEntry test/.sass-cache/11aaaa36d302a7afac3382ad5cd9fc7f77872af2/_reset.scssc
+209 silly gunzTarPerm modified mode [ 'test/.sass-cache/11aaaa36d302a7afac3382ad5cd9fc7f77872af2/_reset.scssc',
+209 silly gunzTarPerm   384,
+209 silly gunzTarPerm   436 ]
+210 silly gunzTarPerm extractEntry test/.sass-cache/11aaaa36d302a7afac3382ad5cd9fc7f77872af2/_support.scssc
+211 silly gunzTarPerm modified mode [ 'test/.sass-cache/11aaaa36d302a7afac3382ad5cd9fc7f77872af2/_support.scssc',
+211 silly gunzTarPerm   384,
+211 silly gunzTarPerm   436 ]
+212 silly gunzTarPerm extractEntry test/.sass-cache/7e1e8ae0e828f1b01e42795a1c27815931be6b24/%042.pngc
+213 silly gunzTarPerm modified mode [ 'test/.sass-cache/7e1e8ae0e828f1b01e42795a1c27815931be6b24/%042.pngc',
+213 silly gunzTarPerm   384,
+213 silly gunzTarPerm   436 ]
+214 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_background.scssc
+215 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_background.scssc',
+215 silly gunzTarPerm   384,
+215 silly gunzTarPerm   436 ]
+216 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_container.scssc
+217 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_container.scssc',
+217 silly gunzTarPerm   384,
+217 silly gunzTarPerm   436 ]
+218 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_direction.scssc
+219 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_direction.scssc',
+219 silly gunzTarPerm   384,
+219 silly gunzTarPerm   436 ]
+220 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_inspect.scssc
+221 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_inspect.scssc',
+221 silly gunzTarPerm   384,
+221 silly gunzTarPerm   436 ]
+222 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_margins.scssc
+223 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_margins.scssc',
+223 silly gunzTarPerm   384,
+223 silly gunzTarPerm   436 ]
+224 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_output.scssc
+225 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_output.scssc',
+225 silly gunzTarPerm   384,
+225 silly gunzTarPerm   436 ]
+226 silly gunzTarPerm extractEntry test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_padding.scssc
+227 silly gunzTarPerm modified mode [ 'test/.sass-cache/83b81394df489706ae78155f5d5b29f994e736e1/_padding.scssc',
+227 silly gunzTarPerm   384,
+227 silly gunzTarPerm   436 ]
+228 silly gunzTarPerm extractEntry test/.sass-cache/8b36a1f8236de95cd49e08e9812bdf78c4a9e8df/_sprites.scssc
+229 silly gunzTarPerm modified mode [ 'test/.sass-cache/8b36a1f8236de95cd49e08e9812bdf78c4a9e8df/_sprites.scssc',
+229 silly gunzTarPerm   384,
+229 silly gunzTarPerm   436 ]
+230 silly gunzTarPerm extractEntry test/.sass-cache/8c7c21bb93b049e5146630c80b1c6a9768bbf12b/_replacement.scssc
+231 silly gunzTarPerm modified mode [ 'test/.sass-cache/8c7c21bb93b049e5146630c80b1c6a9768bbf12b/_replacement.scssc',
+231 silly gunzTarPerm   384,
+231 silly gunzTarPerm   436 ]
+232 silly gunzTarPerm extractEntry test/.sass-cache/90047004dd7dd12d6f25283b6b29a048b15a009f/_base_1.scssc
+233 silly gunzTarPerm modified mode [ 'test/.sass-cache/90047004dd7dd12d6f25283b6b29a048b15a009f/_base_1.scssc',
+233 silly gunzTarPerm   384,
+233 silly gunzTarPerm   436 ]
+234 silly gunzTarPerm extractEntry test/.sass-cache/90047004dd7dd12d6f25283b6b29a048b15a009f/_base_2.scssc
+235 silly gunzTarPerm modified mode [ 'test/.sass-cache/90047004dd7dd12d6f25283b6b29a048b15a009f/_base_2.scssc',
+235 silly gunzTarPerm   384,
+235 silly gunzTarPerm   436 ]
+236 silly gunzTarPerm extractEntry test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile.scssc
+237 silly gunzTarPerm modified mode [ 'test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile.scssc',
+237 silly gunzTarPerm   384,
+237 silly gunzTarPerm   436 ]
+238 silly gunzTarPerm extractEntry test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile2.scssc
+239 silly gunzTarPerm modified mode [ 'test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile2.scssc',
+239 silly gunzTarPerm   384,
+239 silly gunzTarPerm   436 ]
+240 silly gunzTarPerm extractEntry test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile3.scssc
+241 silly gunzTarPerm modified mode [ 'test/.sass-cache/97294d877d3f37efb59e58e22e7910252930a90c/compile3.scssc',
+241 silly gunzTarPerm   384,
+241 silly gunzTarPerm   436 ]
+242 silly gunzTarPerm extractEntry test/.sass-cache/a28758e297225892944ae7a835ba0382c7958878/_base.scssc
+243 silly gunzTarPerm modified mode [ 'test/.sass-cache/a28758e297225892944ae7a835ba0382c7958878/_base.scssc',
+243 silly gunzTarPerm   384,
+243 silly gunzTarPerm   436 ]
+244 silly gunzTarPerm extractEntry test/.sass-cache/a28758e297225892944ae7a835ba0382c7958878/_sprite-img.scssc
+245 silly gunzTarPerm modified mode [ 'test/.sass-cache/a28758e297225892944ae7a835ba0382c7958878/_sprite-img.scssc',
+245 silly gunzTarPerm   384,
+245 silly gunzTarPerm   436 ]
+246 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/_imported.scssc
+247 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/_imported.scssc',
+247 silly gunzTarPerm   384,
+247 silly gunzTarPerm   436 ]
+248 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/compile.scssc
+249 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/compile.scssc',
+249 silly gunzTarPerm   384,
+249 silly gunzTarPerm   436 ]
+250 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/import.scssc
+251 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/import.scssc',
+251 silly gunzTarPerm   384,
+251 silly gunzTarPerm   436 ]
+252 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/import2.scssc
+253 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/import2.scssc',
+253 silly gunzTarPerm   384,
+253 silly gunzTarPerm   436 ]
+254 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/multiple-require.scssc
+255 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/multiple-require.scssc',
+255 silly gunzTarPerm   384,
+255 silly gunzTarPerm   436 ]
+256 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/partial.scssc
+257 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/partial.scssc',
+257 silly gunzTarPerm   384,
+257 silly gunzTarPerm   436 ]
+258 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/require.scssc
+259 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/require.scssc',
+259 silly gunzTarPerm   384,
+259 silly gunzTarPerm   436 ]
+260 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/simple.sassc
+261 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/simple.sassc',
+261 silly gunzTarPerm   384,
+261 silly gunzTarPerm   436 ]
+262 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/simple2.sassc
+263 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/simple2.sassc',
+263 silly gunzTarPerm   384,
+263 silly gunzTarPerm   436 ]
+264 silly gunzTarPerm extractEntry test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/spriting.scssc
+265 silly gunzTarPerm modified mode [ 'test/.sass-cache/ac8e86f65a13990053f9119e11afd2949d89f734/spriting.scssc',
+265 silly gunzTarPerm   384,
+265 silly gunzTarPerm   436 ]
+266 silly gunzTarPerm extractEntry test/.sass-cache/b4d2708ab3a215f995b28c3a496499b35bbbea12/_replacement.scssc
+267 silly gunzTarPerm modified mode [ 'test/.sass-cache/b4d2708ab3a215f995b28c3a496499b35bbbea12/_replacement.scssc',
+267 silly gunzTarPerm   384,
+267 silly gunzTarPerm   436 ]
+268 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_gutters.scssc
+269 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_gutters.scssc',
+269 silly gunzTarPerm   384,
+269 silly gunzTarPerm   436 ]
+270 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_background.scssc
+271 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_background.scssc',
+271 silly gunzTarPerm   384,
+271 silly gunzTarPerm   436 ]
+272 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_box-sizing.scssc
+273 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_box-sizing.scssc',
+273 silly gunzTarPerm   384,
+273 silly gunzTarPerm   436 ]
+274 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_breakpoint-plugin.scssc
+275 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_breakpoint-plugin.scssc',
+275 silly gunzTarPerm   384,
+275 silly gunzTarPerm   436 ]
+276 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_container.scssc
+277 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_container.scssc',
+277 silly gunzTarPerm   384,
+277 silly gunzTarPerm   436 ]
+278 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_context.scssc
+279 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_context.scssc',
+279 silly gunzTarPerm   384,
+279 silly gunzTarPerm   436 ]
+280 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_gallery.scssc
+281 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_gallery.scssc',
+281 silly gunzTarPerm   384,
+281 silly gunzTarPerm   436 ]
+282 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_grids.scssc
+283 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_grids.scssc',
+283 silly gunzTarPerm   384,
+283 silly gunzTarPerm   436 ]
+284 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_bleed.scssc
+285 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_bleed.scssc',
+285 silly gunzTarPerm   384,
+285 silly gunzTarPerm   436 ]
+286 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_isolate.scssc
+287 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_isolate.scssc',
+287 silly gunzTarPerm   384,
+287 silly gunzTarPerm   436 ]
+288 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_margins.scssc
+289 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_margins.scssc',
+289 silly gunzTarPerm   384,
+289 silly gunzTarPerm   436 ]
+290 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_padding.scssc
+291 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_padding.scssc',
+291 silly gunzTarPerm   384,
+291 silly gunzTarPerm   436 ]
+292 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_rows.scssc
+293 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_rows.scssc',
+293 silly gunzTarPerm   384,
+293 silly gunzTarPerm   436 ]
+294 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_settings.scssc
+295 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_settings.scssc',
+295 silly gunzTarPerm   384,
+295 silly gunzTarPerm   436 ]
+296 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_span.scssc
+297 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_span.scssc',
+297 silly gunzTarPerm   384,
+297 silly gunzTarPerm   436 ]
+298 silly gunzTarPerm extractEntry test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_validation.scssc
+299 silly gunzTarPerm modified mode [ 'test/.sass-cache/c560412f26f8186f23afca12ebe00d2237674891/_validation.scssc',
+299 silly gunzTarPerm   384,
+299 silly gunzTarPerm   436 ]
+300 silly gunzTarPerm extractEntry test/.sass-cache/eabef0e8cc9d489ab01ee0021d8b188eae731e4b/%042c
+301 silly gunzTarPerm modified mode [ 'test/.sass-cache/eabef0e8cc9d489ab01ee0021d8b188eae731e4b/%042c',
+301 silly gunzTarPerm   384,
+301 silly gunzTarPerm   436 ]
+302 silly gunzTarPerm extractEntry test/.sass-cache/f7c98cf023553b8ae325fe9330460f7d3612f06c/_utilities.scssc
+303 silly gunzTarPerm modified mode [ 'test/.sass-cache/f7c98cf023553b8ae325fe9330460f7d3612f06c/_utilities.scssc',
+303 silly gunzTarPerm   384,
+303 silly gunzTarPerm   436 ]
+304 silly gunzTarPerm extractEntry test/.sass-cache/fc3338f81677852a318d3b3e61cf54874c3b7e78/_base2.scssc
+305 silly gunzTarPerm modified mode [ 'test/.sass-cache/fc3338f81677852a318d3b3e61cf54874c3b7e78/_base2.scssc',
+305 silly gunzTarPerm   384,
+305 silly gunzTarPerm   436 ]
+306 silly gunzTarPerm extractEntry test/Gemfile
+307 silly gunzTarPerm modified mode [ 'test/Gemfile', 420, 436 ]
+308 silly gunzTarPerm extractEntry test/config.rb
+309 silly gunzTarPerm modified mode [ 'test/config.rb', 493, 509 ]
+310 silly gunzTarPerm extractEntry test/css/multiple-require.css
+311 silly gunzTarPerm modified mode [ 'test/css/multiple-require.css', 420, 436 ]
+312 silly gunzTarPerm extractEntry test/css/base/compile.css
+313 silly gunzTarPerm modified mode [ 'test/css/base/compile.css', 420, 436 ]
+314 silly gunzTarPerm extractEntry test/css/base/compile2.css
+315 silly gunzTarPerm modified mode [ 'test/css/base/compile2.css', 420, 436 ]
+316 silly gunzTarPerm extractEntry test/css/base/compile3.css
+317 silly gunzTarPerm modified mode [ 'test/css/base/compile3.css', 420, 436 ]
+318 silly gunzTarPerm extractEntry test/css/error.css
+319 silly gunzTarPerm modified mode [ 'test/css/error.css', 420, 436 ]
+320 silly gunzTarPerm extractEntry test/css/import.css
+321 silly gunzTarPerm modified mode [ 'test/css/import.css', 420, 436 ]
+322 silly gunzTarPerm extractEntry test/css/import2.css
+323 silly gunzTarPerm modified mode [ 'test/css/import2.css', 420, 436 ]
+324 silly gunzTarPerm extractEntry test/css/compile.css
+325 silly gunzTarPerm modified mode [ 'test/css/compile.css', 420, 436 ]
+326 silly gunzTarPerm extractEntry test/css/partial.css
+327 silly gunzTarPerm modified mode [ 'test/css/partial.css', 420, 436 ]
+328 silly gunzTarPerm extractEntry test/css/require.css
+329 silly gunzTarPerm modified mode [ 'test/css/require.css', 420, 436 ]
+330 silly gunzTarPerm extractEntry test/css/simple.css
+331 silly gunzTarPerm modified mode [ 'test/css/simple.css', 420, 436 ]
+332 silly gunzTarPerm extractEntry test/css/simple2.css
+333 silly gunzTarPerm modified mode [ 'test/css/simple2.css', 420, 436 ]
+334 silly gunzTarPerm extractEntry test/css/spriting.css
+335 silly gunzTarPerm modified mode [ 'test/css/spriting.css', 420, 436 ]
+336 silly gunzTarPerm extractEntry test/expected/compile.css
+337 silly gunzTarPerm modified mode [ 'test/expected/compile.css', 420, 436 ]
+338 silly gunzTarPerm extractEntry test/expected/compile2.css
+339 silly gunzTarPerm modified mode [ 'test/expected/compile2.css', 420, 436 ]
+340 silly gunzTarPerm extractEntry test/expected/import.css
+341 silly gunzTarPerm modified mode [ 'test/expected/import.css', 420, 436 ]
+342 silly gunzTarPerm extractEntry test/expected/import2.css
+343 silly gunzTarPerm modified mode [ 'test/expected/import2.css', 420, 436 ]
+344 silly gunzTarPerm extractEntry test/expected/partial.css
+345 silly gunzTarPerm modified mode [ 'test/expected/partial.css', 420, 436 ]
+346 silly gunzTarPerm extractEntry test/expected/require.css
+347 silly gunzTarPerm modified mode [ 'test/expected/require.css', 420, 436 ]
+348 silly gunzTarPerm extractEntry test/expected/simple.css
+349 silly gunzTarPerm modified mode [ 'test/expected/simple.css', 420, 436 ]
+350 silly gunzTarPerm extractEntry test/expected/spriting.css
+351 silly gunzTarPerm modified mode [ 'test/expected/spriting.css', 420, 436 ]
+352 silly gunzTarPerm extractEntry test/images/my-icons/edit.png
+353 silly gunzTarPerm modified mode [ 'test/images/my-icons/edit.png', 420, 436 ]
+354 silly gunzTarPerm extractEntry test/images/my-icons/new.png
+355 silly gunzTarPerm modified mode [ 'test/images/my-icons/new.png', 420, 436 ]
+356 silly gunzTarPerm extractEntry test/images/my-icons-s73a5d512e7.png
+357 silly gunzTarPerm modified mode [ 'test/images/my-icons-s73a5d512e7.png', 420, 436 ]
+358 silly gunzTarPerm extractEntry test/sass/multiple-require.scss
+359 silly gunzTarPerm modified mode [ 'test/sass/multiple-require.scss', 420, 436 ]
+360 silly gunzTarPerm extractEntry test/sass/_imported.scss
+361 silly gunzTarPerm modified mode [ 'test/sass/_imported.scss', 420, 436 ]
+362 silly gunzTarPerm extractEntry test/sass/compile.scss
+363 silly gunzTarPerm modified mode [ 'test/sass/compile.scss', 420, 436 ]
+364 silly gunzTarPerm extractEntry test/sass/error.scss
+365 silly gunzTarPerm modified mode [ 'test/sass/error.scss', 420, 436 ]
+366 silly gunzTarPerm extractEntry test/sass/import.scss
+367 silly gunzTarPerm modified mode [ 'test/sass/import.scss', 420, 436 ]
+368 silly gunzTarPerm extractEntry test/sass/import2.scss
+369 silly gunzTarPerm modified mode [ 'test/sass/import2.scss', 420, 436 ]
+370 silly gunzTarPerm extractEntry test/sass/base/compile.scss
+371 silly gunzTarPerm modified mode [ 'test/sass/base/compile.scss', 420, 436 ]
+372 silly gunzTarPerm extractEntry test/sass/base/compile2.scss
+373 silly gunzTarPerm modified mode [ 'test/sass/base/compile2.scss', 420, 436 ]
+374 silly gunzTarPerm extractEntry test/sass/base/compile3.scss
+375 silly gunzTarPerm modified mode [ 'test/sass/base/compile3.scss', 420, 436 ]
+376 silly gunzTarPerm extractEntry test/sass/partial/_base_1.scss
+377 silly gunzTarPerm modified mode [ 'test/sass/partial/_base_1.scss', 420, 436 ]
+378 silly gunzTarPerm extractEntry test/sass/partial/_base_2.scss
+379 silly gunzTarPerm modified mode [ 'test/sass/partial/_base_2.scss', 420, 436 ]
+380 silly gunzTarPerm extractEntry test/sass/partial.scss
+381 silly gunzTarPerm modified mode [ 'test/sass/partial.scss', 420, 436 ]
+382 silly gunzTarPerm extractEntry test/sass/require.scss
+383 silly gunzTarPerm modified mode [ 'test/sass/require.scss', 420, 436 ]
+384 silly gunzTarPerm extractEntry test/sass/simple.sass
+385 silly gunzTarPerm modified mode [ 'test/sass/simple.sass', 420, 436 ]
+386 silly gunzTarPerm extractEntry test/sass/simple2.sass
+387 silly gunzTarPerm modified mode [ 'test/sass/simple2.sass', 420, 436 ]
+388 silly gunzTarPerm extractEntry test/sass/spriting.scss
+389 silly gunzTarPerm modified mode [ 'test/sass/spriting.scss', 420, 436 ]
+390 verbose write writing to /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass/package.json
+391 info preinstall gulp-compass@2.1.0
+392 verbose readDependencies loading dependencies from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass/package.json
+393 silly prepareForInstallMany adding gulp-util@^3.0.4 from gulp-compass dependencies
+394 silly prepareForInstallMany adding through2@^0.6.5 from gulp-compass dependencies
+395 silly prepareForInstallMany adding which@^1.1.1 from gulp-compass dependencies
+396 verbose readDependencies loading dependencies from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass/package.json
+397 silly cache add args [ 'gulp-util@^3.0.4', null ]
+398 verbose cache add spec gulp-util@^3.0.4
+399 silly cache add args [ 'through2@^0.6.5', null ]
+400 verbose cache add spec through2@^0.6.5
+401 silly cache add parsed spec { raw: 'gulp-util@^3.0.4',
+401 silly cache add   scope: null,
+401 silly cache add   name: 'gulp-util',
+401 silly cache add   rawSpec: '^3.0.4',
+401 silly cache add   spec: '>=3.0.4 <4.0.0',
+401 silly cache add   type: 'range' }
+402 silly addNamed gulp-util@>=3.0.4 <4.0.0
+403 verbose addNamed ">=3.0.4 <4.0.0" is a valid semver range for gulp-util
+404 silly addNameRange { name: 'gulp-util', range: '>=3.0.4 <4.0.0', hasData: false }
+405 silly mapToRegistry name gulp-util
+406 silly mapToRegistry using default registry
+407 silly mapToRegistry registry https://registry.npmjs.org/
+408 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+409 verbose addNameRange registry:https://registry.npmjs.org/gulp-util not in flight; fetching
+410 silly cache add parsed spec { raw: 'through2@^0.6.5',
+410 silly cache add   scope: null,
+410 silly cache add   name: 'through2',
+410 silly cache add   rawSpec: '^0.6.5',
+410 silly cache add   spec: '>=0.6.5 <0.7.0',
+410 silly cache add   type: 'range' }
+411 silly addNamed through2@>=0.6.5 <0.7.0
+412 verbose addNamed ">=0.6.5 <0.7.0" is a valid semver range for through2
+413 silly addNameRange { name: 'through2', range: '>=0.6.5 <0.7.0', hasData: false }
+414 silly mapToRegistry name through2
+415 silly mapToRegistry using default registry
+416 silly mapToRegistry registry https://registry.npmjs.org/
+417 silly mapToRegistry uri https://registry.npmjs.org/through2
+418 verbose addNameRange registry:https://registry.npmjs.org/through2 not in flight; fetching
+419 silly cache add args [ 'which@^1.1.1', null ]
+420 verbose cache add spec which@^1.1.1
+421 silly cache add parsed spec { raw: 'which@^1.1.1',
+421 silly cache add   scope: null,
+421 silly cache add   name: 'which',
+421 silly cache add   rawSpec: '^1.1.1',
+421 silly cache add   spec: '>=1.1.1 <2.0.0',
+421 silly cache add   type: 'range' }
+422 silly addNamed which@>=1.1.1 <2.0.0
+423 verbose addNamed ">=1.1.1 <2.0.0" is a valid semver range for which
+424 silly addNameRange { name: 'which', range: '>=1.1.1 <2.0.0', hasData: false }
+425 silly mapToRegistry name which
+426 silly mapToRegistry using default registry
+427 silly mapToRegistry registry https://registry.npmjs.org/
+428 silly mapToRegistry uri https://registry.npmjs.org/which
+429 verbose addNameRange registry:https://registry.npmjs.org/which not in flight; fetching
+430 verbose request uri https://registry.npmjs.org/gulp-util
+431 verbose request no auth needed
+432 info attempt registry request try #1 at 10:19:04
+433 verbose etag "ZFVQEDJVDTBWS1R0UC9VPUIQ"
+434 http request GET https://registry.npmjs.org/gulp-util
+435 http 200 https://registry.npmjs.org/gulp-util
+436 silly get cb [ 200,
+436 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+436 silly get     etag: '"BFCKLWK7PXVE4RTJUXKJK6QGT"',
+436 silly get     'content-type': 'application/json',
+436 silly get     'cache-control': 'max-age=300',
+436 silly get     'content-length': '61800',
+436 silly get     'accept-ranges': 'bytes',
+436 silly get     date: 'Tue, 23 Feb 2016 10:19:04 GMT',
+436 silly get     via: '1.1 varnish',
+436 silly get     age: '181',
+436 silly get     connection: 'keep-alive',
+436 silly get     'x-served-by': 'cache-lhr6331-LHR',
+436 silly get     'x-cache': 'HIT',
+436 silly get     'x-cache-hits': '6',
+436 silly get     'x-timer': 'S1456222744.761713,VS0,VE0',
+436 silly get     vary: 'Accept' } ]
+437 verbose get saving gulp-util to /home/jtebert/.npm/registry.npmjs.org/gulp-util/.cache.json
+438 silly addNameRange number 2 { name: 'gulp-util', range: '>=3.0.4 <4.0.0', hasData: true }
+439 silly addNameRange versions [ 'gulp-util',
+439 silly addNameRange   [ '0.0.1',
+439 silly addNameRange     '1.0.0',
+439 silly addNameRange     '1.1.0',
+439 silly addNameRange     '1.1.1',
+439 silly addNameRange     '1.2.0',
+439 silly addNameRange     '1.3.0',
+439 silly addNameRange     '2.0.0',
+439 silly addNameRange     '2.1.1',
+439 silly addNameRange     '2.1.2',
+439 silly addNameRange     '2.1.3',
+439 silly addNameRange     '2.1.4',
+439 silly addNameRange     '2.2.0',
+439 silly addNameRange     '2.2.1',
+439 silly addNameRange     '2.2.2',
+439 silly addNameRange     '2.2.3',
+439 silly addNameRange     '2.2.5',
+439 silly addNameRange     '2.2.6',
+439 silly addNameRange     '2.2.7',
+439 silly addNameRange     '2.2.8',
+439 silly addNameRange     '2.2.9',
+439 silly addNameRange     '2.2.10',
+439 silly addNameRange     '2.2.11',
+439 silly addNameRange     '2.2.12',
+439 silly addNameRange     '2.2.13',
+439 silly addNameRange     '2.2.14',
+439 silly addNameRange     '2.2.15',
+439 silly addNameRange     '2.2.16',
+439 silly addNameRange     '2.2.17',
+439 silly addNameRange     '2.2.18',
+439 silly addNameRange     '2.2.19',
+439 silly addNameRange     '2.2.20',
+439 silly addNameRange     '3.0.0',
+439 silly addNameRange     '3.0.1',
+439 silly addNameRange     '3.0.2',
+439 silly addNameRange     '3.0.3',
+439 silly addNameRange     '3.0.4',
+439 silly addNameRange     '3.0.5',
+439 silly addNameRange     '3.0.6',
+439 silly addNameRange     '3.0.7' ] ]
+440 silly addNamed gulp-util@3.0.7
+441 verbose addNamed "3.0.7" is a plain semver version for gulp-util
+442 verbose request uri https://registry.npmjs.org/which
+443 verbose request no auth needed
+444 info attempt registry request try #1 at 10:19:04
+445 verbose etag "96S32KNGR7RC2G6UDCTQWOHI9"
+446 http request GET https://registry.npmjs.org/which
+447 verbose request uri https://registry.npmjs.org/through2
+448 verbose request no auth needed
+449 info attempt registry request try #1 at 10:19:04
+450 verbose etag "5ET47R1KZF2XNEITC85UED027"
+451 http request GET https://registry.npmjs.org/through2
+452 silly mapToRegistry name gulp-util
+453 silly mapToRegistry using default registry
+454 silly mapToRegistry registry https://registry.npmjs.org/
+455 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+456 verbose addRemoteTarball https://registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz not in flight; adding
+457 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz',
+457 verbose addRemoteTarball   '78925c4b8f8b49005ac01a011c557e6218941cbb' ]
+458 http 200 https://registry.npmjs.org/which
+459 silly get cb [ 200,
+459 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+459 silly get     etag: '"B52BVY4O4P9O8PT73707GPCT8"',
+459 silly get     'content-type': 'application/json',
+459 silly get     'cache-control': 'max-age=300',
+459 silly get     'content-length': '16911',
+459 silly get     'accept-ranges': 'bytes',
+459 silly get     date: 'Tue, 23 Feb 2016 10:19:04 GMT',
+459 silly get     via: '1.1 varnish',
+459 silly get     age: '139',
+459 silly get     connection: 'keep-alive',
+459 silly get     'x-served-by': 'cache-lhr6320-LHR',
+459 silly get     'x-cache': 'HIT',
+459 silly get     'x-cache-hits': '12',
+459 silly get     'x-timer': 'S1456222744.804173,VS0,VE0',
+459 silly get     vary: 'Accept' } ]
+460 verbose get saving which to /home/jtebert/.npm/registry.npmjs.org/which/.cache.json
+461 silly addNameRange number 2 { name: 'which', range: '>=1.1.1 <2.0.0', hasData: true }
+462 silly addNameRange versions [ 'which',
+462 silly addNameRange   [ '1.0.0',
+462 silly addNameRange     '1.0.1',
+462 silly addNameRange     '1.0.2',
+462 silly addNameRange     '1.0.3',
+462 silly addNameRange     '1.0.5',
+462 silly addNameRange     '1.0.6',
+462 silly addNameRange     '1.0.7',
+462 silly addNameRange     '1.0.8',
+462 silly addNameRange     '1.0.9',
+462 silly addNameRange     '1.1.0',
+462 silly addNameRange     '1.1.1',
+462 silly addNameRange     '1.1.2',
+462 silly addNameRange     '1.2.0',
+462 silly addNameRange     '1.2.1',
+462 silly addNameRange     '1.2.4' ] ]
+463 silly addNamed which@1.2.4
+464 verbose addNamed "1.2.4" is a plain semver version for which
+465 http 200 https://registry.npmjs.org/through2
+466 silly get cb [ 200,
+466 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+466 silly get     etag: '"CRQ7ZQVXBDZ3LJSWQO1KKDSQ4"',
+466 silly get     'content-type': 'application/json',
+466 silly get     'cache-control': 'max-age=300',
+466 silly get     'content-length': '39263',
+466 silly get     'accept-ranges': 'bytes',
+466 silly get     date: 'Tue, 23 Feb 2016 10:19:04 GMT',
+466 silly get     via: '1.1 varnish',
+466 silly get     age: '66',
+466 silly get     connection: 'keep-alive',
+466 silly get     'x-served-by': 'cache-lhr6326-LHR',
+466 silly get     'x-cache': 'HIT',
+466 silly get     'x-cache-hits': '7',
+466 silly get     'x-timer': 'S1456222744.825215,VS0,VE0',
+466 silly get     vary: 'Accept' } ]
+467 verbose get saving through2 to /home/jtebert/.npm/registry.npmjs.org/through2/.cache.json
+468 info retry fetch attempt 1 at 10:19:04
+469 info attempt registry request try #1 at 10:19:04
+470 http fetch GET https://registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz
+471 silly mapToRegistry name which
+472 silly mapToRegistry using default registry
+473 silly mapToRegistry registry https://registry.npmjs.org/
+474 silly mapToRegistry uri https://registry.npmjs.org/which
+475 verbose addRemoteTarball https://registry.npmjs.org/which/-/which-1.2.4.tgz not in flight; adding
+476 verbose addRemoteTarball [ 'https://registry.npmjs.org/which/-/which-1.2.4.tgz',
+476 verbose addRemoteTarball   '1557f96080604e5b11b3599eb9f45b50a9efd722' ]
+477 info retry fetch attempt 1 at 10:19:04
+478 info attempt registry request try #1 at 10:19:04
+479 http fetch GET https://registry.npmjs.org/which/-/which-1.2.4.tgz
+480 http fetch 200 https://registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz
+481 silly addNameRange number 2 { name: 'through2', range: '>=0.6.5 <0.7.0', hasData: true }
+482 silly addNameRange versions [ 'through2',
+482 silly addNameRange   [ '0.0.0',
+482 silly addNameRange     '0.0.1',
+482 silly addNameRange     '0.0.2',
+482 silly addNameRange     '0.0.3',
+482 silly addNameRange     '0.0.4',
+482 silly addNameRange     '0.0.5',
+482 silly addNameRange     '0.1.0',
+482 silly addNameRange     '0.2.0',
+482 silly addNameRange     '0.2.1',
+482 silly addNameRange     '0.2.2',
+482 silly addNameRange     '0.2.3',
+482 silly addNameRange     '0.3.0',
+482 silly addNameRange     '0.4.0',
+482 silly addNameRange     '0.4.1',
+482 silly addNameRange     '1.0.0',
+482 silly addNameRange     '0.4.2',
+482 silly addNameRange     '0.5.0',
+482 silly addNameRange     '0.5.1',
+482 silly addNameRange     '0.6.0',
+482 silly addNameRange     '1.1.0',
+482 silly addNameRange     '0.6.1',
+482 silly addNameRange     '1.1.1',
+482 silly addNameRange     '0.6.2',
+482 silly addNameRange     '0.6.3',
+482 silly addNameRange     '0.6.4',
+482 silly addNameRange     '0.6.5',
+482 silly addNameRange     '2.0.0',
+482 silly addNameRange     '2.0.1' ] ]
+483 silly addNamed through2@0.6.5
+484 verbose addNamed "0.6.5" is a plain semver version for through2
+485 silly fetchAndShaCheck shasum 78925c4b8f8b49005ac01a011c557e6218941cbb
+486 verbose addTmpTarball /tmp/npm-6000-82c4d4cd/registry.npmjs.org/gulp-util/-/gulp-util-3.0.7.tgz not in flight; adding
+487 verbose addTmpTarball already have metadata; skipping unpack for gulp-util@3.0.7
+488 http fetch 200 https://registry.npmjs.org/which/-/which-1.2.4.tgz
+489 silly fetchAndShaCheck shasum 1557f96080604e5b11b3599eb9f45b50a9efd722
+490 verbose addTmpTarball /tmp/npm-6000-82c4d4cd/registry.npmjs.org/which/-/which-1.2.4.tgz not in flight; adding
+491 verbose addTmpTarball already have metadata; skipping unpack for which@1.2.4
+492 silly cache afterAdd through2@0.6.5
+493 verbose afterAdd /home/jtebert/.npm/through2/0.6.5/package/package.json not in flight; writing
+494 verbose afterAdd /home/jtebert/.npm/through2/0.6.5/package/package.json written
+495 verbose about to build /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+496 verbose unlock done using /home/jtebert/.npm/_locks/gulp-compass-2cf3ec3c2de7d9d5.lock for /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+497 verbose stack Error: EACCES, mkdir '/home/jtebert/.npm/gulp-util/3.0.7'
+497 verbose stack     at Error (native)
+498 verbose cwd /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app
+499 error Linux 4.2.0-27-generic
+500 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "gulp-compass"
+501 error node v0.12.4
+502 error npm  v2.10.1
+503 error path /home/jtebert/.npm/gulp-util/3.0.7
+504 error code EACCES
+505 error errno -13
+506 error Error: EACCES, mkdir '/home/jtebert/.npm/gulp-util/3.0.7'
+506 error     at Error (native)
+506 error  { [Error: EACCES, mkdir '/home/jtebert/.npm/gulp-util/3.0.7']
+506 error   errno: -13,
+506 error   code: 'EACCES',
+506 error   path: '/home/jtebert/.npm/gulp-util/3.0.7',
+506 error   parent: 'gulp-compass' }
+507 error Please try running this command again as root/Administrator.
+508 verbose exit [ -13, true ]
+509 verbose unbuild node_modules/gulp-compass
+510 info preuninstall gulp-compass@2.1.0
+511 info uninstall gulp-compass@2.1.0
+512 verbose unbuild rmStuff gulp-compass@2.1.0 from /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules
+513 info postuninstall gulp-compass@2.1.0
+514 silly gentlyRm /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass is being purged from base /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app
+515 verbose gentlyRm don't care about contents; nuking /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+516 silly vacuum-fs purging /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules/gulp-compass
+517 silly vacuum-fs quitting because other entries in /home/jtebert/OwnCloud/Projects/Programming/html/jekyll-polymer/app/node_modules
