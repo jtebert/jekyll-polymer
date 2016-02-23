@@ -27,8 +27,10 @@ var ensureFiles = require('./tasks/ensure-files.js');
 
 var spawn = require('child_process').spawn;
 var argv = require('yargs').argv;
+var YAML = require('yamljs');
+var htmlmin = require('gulp-htmlmin');
 
-// var ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -43,6 +45,11 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 var DIST = 'dist';
+var SRC = 'app/_site';
+
+var src = function(subpath) {
+  return !subpath ? SRC : path.join(SRC, subpath);
+};
 
 var dist = function(subpath) {
   return !subpath ? DIST : path.join(DIST, subpath);
@@ -71,33 +78,81 @@ var imageOptimizeTask = function(src, dest) {
 };
 
 var optimizeHtmlTask = function(src, dest) {
+  // TODO: Actually make it minimize or do something to the html
+  gulp.src(src)
+    //.pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(dest));
+
+  //var assets = $.useref.assets({
+  //  searchPath: ['.tmp', 'app']
+  //});
+
+  //return gulp.src(src)
+      //.pipe(assets)
+    // Concatenate and minify JavaScript
+      //.pipe($.if('*.js', $.uglify({
+      //  preserveComments: 'some'
+      //})))
+    // Concatenate and minify styles
+    // In case you are still using useref build blocks
+      //.pipe($.if('*.css', $.minifyCss()))
+      //.pipe(assets.restore())
+      //.pipe($.useref())
+    // Minify any HTML
+      //.pipe($.if('*.html', $.minifyHtml({
+      //  quotes: true,
+      //  empty: true,
+      //  spare: true
+      //})))
+    // Output files
+      //.pipe(gulp.dest(dest))
+      //.pipe($.size({
+      //  title: 'html'
+      //}));
+};
+
+var optimizeScriptsTask = function(src, dest) {
   var assets = $.useref.assets({
-    searchPath: ['.tmp', 'app/_site']
+    searchPath: ['.tmp', SRC]
   });
 
   return gulp.src(src)
-    .pipe(assets)
+      .pipe(assets)
     // Concatenate and minify JavaScript
-    .pipe($.if('*.js', $.uglify({
-      preserveComments: 'some'
-    })))
+      .pipe($.if('*.js', $.uglify({
+        preserveComments: 'some'
+      })))
     // Concatenate and minify styles
     // In case you are still using useref build blocks
-    .pipe($.if('*.css', $.minifyCss()))
-    .pipe(assets.restore())
-    .pipe($.useref())
-    // Minify any HTML
-    .pipe($.if('*.html', $.minifyHtml({
-      quotes: true,
-      empty: true,
-      spare: true
-    })))
+      .pipe($.if('*.css', $.minifyCss()))
+      .pipe(assets.restore())
+      .pipe($.useref())
+    // Images?
+      .pipe($.if('*.{gif,jpg,jpeg,png,svg}', $.imagemin({
+        progressive: true,
+        interlaced: true
+      })))
     // Output files
-    .pipe(gulp.dest(dest))
-    .pipe($.size({
-      title: 'html'
-    }));
+      .pipe(gulp.dest(dest))
+      .pipe($.size({
+        title: 'html'
+      }));
 };
+
+gulp.task('scripts', function() {
+  // Copy web fonts to dist
+  gulp.task('fonts', function() {
+    return gulp.src([src('scripts/**')])
+        .pipe(gulp.dest(dist('scripts')))
+        .pipe($.size({
+          title: 'scripts'
+        }));
+  });
+  // TODO: Actually make this optimization work (currently breaks images)
+  //return optimizeScriptsTask(
+  //    [src('scripts/**/*.*')],
+  //    dist('scripts'));
+});
 
 // Compile and automatically prefix stylesheets
 gulp.task('styles', function() {
@@ -121,13 +176,13 @@ gulp.task('ensureFiles', function(cb) {
 
 // Optimize images
 gulp.task('images', function() {
-  return imageOptimizeTask('app/_site/images/**/*', dist('images'));
+  return imageOptimizeTask(src('images/**/*'), dist('images'));
 });
 
 // Copy all files at the root level (app)
 gulp.task('copy', function() {
   var app = gulp.src([
-    'app/_site/*',
+    src('*'),
     '!app/_site/test',
     '!app/_site/elements',
     '!app/_site/bower_components',
@@ -140,7 +195,7 @@ gulp.task('copy', function() {
   // Copy over only the bower_components we need
   // These are things which cannot be vulcanized
   var bower = gulp.src([
-    'app/_site/bower_components/{webcomponentsjs,platinum-sw,sw-toolbox,promise-polyfill}/**/*'
+    src('bower_components/{webcomponentsjs,platinum-sw,sw-toolbox,promise-polyfill}/**/*')
   ]).pipe(gulp.dest(dist('bower_components')));
 
   return merge(app, bower)
@@ -151,7 +206,7 @@ gulp.task('copy', function() {
 
 // Copy web fonts to dist
 gulp.task('fonts', function() {
-  return gulp.src(['app/_site/fonts/**'])
+  return gulp.src([src('fonts/**')])
     .pipe(gulp.dest(dist('fonts')))
     .pipe($.size({
       title: 'fonts'
@@ -161,13 +216,14 @@ gulp.task('fonts', function() {
 // Scan your HTML for assets & optimize them
 gulp.task('html', function() {
   return optimizeHtmlTask(
-    ['app/_site/**/*.html', '!app/_site/{elements,test,bower_components}/**/*.html'],
+      // TODO: Changed extension from HTML because JS wasn't getting copied over.
+    [src('**/*.html'), '!app/_site/{elements,test,bower_components}/**/*.html'],
     dist());
 });
 
 // Vulcanize granular configuration
 gulp.task('vulcanize', function() {
-  return gulp.src('app/_site/elements/elements.html')
+  return gulp.src(src('elements/elements.html'))
     .pipe($.vulcanize({
       stripComments: true,
       inlineCss: true,
@@ -217,7 +273,7 @@ gulp.task('clean', function() {
   return del(['.tmp', dist()]);
 });
 
-gulp.task('jekyllserve', function(done) {
+gulp.task('serve', function(done) {
   if (argv.port) {
     return spawn('bundle', ['exec', 'jekyll', 'serve', '--port=' + argv.port], { stdio: 'inherit' })
         .on('close', done);
@@ -225,10 +281,7 @@ gulp.task('jekyllserve', function(done) {
     return spawn('bundle', ['exec', 'jekyll', 'serve'], { stdio: 'inherit' })
         .on('close', done);
   }
-
 });
-
-gulp.task('serve', ['jekyllserve']);
 
 // Watch files for changes & reload
 /*gulp.task('serve', ['styles', 'elements'], function() {
@@ -295,7 +348,7 @@ gulp.task('default', ['clean'], function(cb) {
     'jekyllbuild',
     ['ensureFiles', 'copy', 'styles'],
     'elements',
-    ['images', 'fonts', 'html'],
+    ['images', 'fonts', 'scripts', 'html'], //, 'html'
     'vulcanize', // 'cache-config',
     cb);
 });

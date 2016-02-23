@@ -7,7 +7,7 @@ layout: default
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 
-  <paper-card class="my-card"
+  <paper-card class="custom"
           {% if post.image %}
               image="{{ site.baseurl }}/images/posts/{{ post.image }}"
           {% endif %}>

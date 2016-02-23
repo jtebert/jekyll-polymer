@@ -4,6 +4,14 @@ A Jekyll theme built with Google's Polymer library and following the material de
 
 There are a few custom web components included designed to match Material design.
 
+## Features
+
+- Full-text searching with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
+- Paginated home page
+- Support for images in posts' YAML frontmatter (appears on cards in previews)
+- Threaded comments with Disqus
+- Google Analytics integration
+
 ## Installation instructions
 
 (Instructions are based off of those for the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).)
@@ -16,32 +24,22 @@ There are a few custom web components included designed to match Material design
 
 ### Serve/watch
 
-`gulp serve`
+`gulp serve`: Starts a jekyll serve process on the default port (4000 or whatever is specified in `_config.yml`).
 
-Starts a jekyll serve process on the default port (4000 or whatever is specified in `_config.yml`).
-
-`gulp serve --port 6666`
-
-Start serving on port `6666`
+`gulp serve --port 6666`: Start serving on port `6666`
 
 ### Build and vulcanize
 
-`gulp`
+`gulp`: Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the `dist/` directory. (This can be slow.)
 
-Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the `dist/` directory. (This can be slow.)
+## Deploy
 
-## Features
+`gulp deploy-gh-pages`: Deploy the current build to the gh-pages branch of your repository.
 
-- Full-text searching with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
-- Paginated home page
-- Support for images in posts' YAML frontmatter (appears on cards in previews)
-- Support for threaded comments with Disqus
-- Google Analytics integration
+`gulp build-deploy-gh-pages`: Rebuild and then deploy. (Equivalent to `gulp && gulp deploy-gh-pages`)
 
 ## Future Improvements:
 
-- Add 'source' option for YAML frontmatter
-- increase spacing between list items
 - Search
     - Ripple effect in search results on click (needs set height)
     - Escape toggles search show
@@ -61,4 +59,6 @@ Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the 
     - Show tags with posts
     - Allow filtering by tag
 - Add material box or lightbox for images
+- Add 'source' option for YAML frontmatter
+- increase spacing between list items
 - Fix things like header-panel to utilize updates to polymer paper elements

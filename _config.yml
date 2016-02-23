@@ -3,13 +3,17 @@ destination: app/_site
 
 # Site settings
 title: Jekyll Polymer Theme
+subtitle: Google material design for static sites
+description: > # this means to ignore newlines until "baseurl:"
+  This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
+
 author: Julia Ebert
 author_website: http://juliaebert.com
 email: julia@juliaebert.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
-baseurl: "" # the subpath of your site, e.g. /blog
+
+baseurl: "" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
 url: "http://blog.juliaebert.com" # the base hostname & protocol for your site
+
 twitter_username: ''
 github_username:  jtebert
 disqus_shortname: juliaebert

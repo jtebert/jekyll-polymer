@@ -5,10 +5,11 @@
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 
 <dom-module id="my-search-bar">
+<!-- TODO: Fix title showing up above this -->
 
     <style>
+
         #search {
-            /*
             display: -webkit-box;
             display: -webkit-flex;
             display: -moz-flex;
@@ -29,14 +30,11 @@
             -ms-flex: 0 0 auto;
             -o-flex: 0 0 auto;
             flex: 0 0 auto;
-*/
-            position: absolute;
-            top: 0;
-            right: 0;
+
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-
+            z-index: 100;
         }
 
         #search[opened] {
@@ -46,43 +44,36 @@
             left: 0;
             top: 0;
             padding: 0 16px;
-            background-color: var(--default-primary-color);
+            background-color: var(--primary-color);
             margin-left: 0;
         }
 
         #search[opened] input[is=iron-input] {
-            padding: 10px;
-            visibility: visible;
-            width: calc(100% - 40px);
+            padding: 8px;
+            display: block;
         }
 
         #search #back-icon {
             display: none;
         }
         #search #search-icon {
-            display: inline-block;
-        }
-
-        paper-icon-button {
-            position: absolute;
-            top: 12px;
+            display: block;
         }
 
         input[is=iron-input] {
-            width: 10px;
-            margin-left: 40px;
-            background: none;
+            background-color: inherit;
             border: none;
             font-size: 20px;
             outline: none;
             padding: 0;
             color: inherit;
-            display: inline-block;
-            visibility: hidden;
-            -webkit-appearance: none;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 0;
+            -moz-flex: 1 0 0;
+            -ms-flex: 1 0 0;
+            -o-flex: 1 0 0;
+            flex: 1 0 0;
+            display: none;
         }
 
         #results-container {
@@ -111,8 +102,8 @@
 
     <template>
         <div id="search" opened$="{{opened}}" on-click="toggleSearch">
-            <paper-icon-button icon="arrow-back" id="back-icon"></paper-icon-button>
             <paper-icon-button icon="search" id="search-icon"></paper-icon-button>
+            <paper-icon-button icon="arrow-back" id="back-icon"></paper-icon-button>
             <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
         </div>
         <div class="list" opened$="{{opened}}" id="results-container"></div>
@@ -205,13 +196,13 @@
                 var backIcon = document.querySelector('#back-icon');
                 if (!this.opened) {
                     results.style.display = 'none';
-                    searchIcon.style.display = 'inline-block';
+                    searchIcon.style.display = 'block';
                     backIcon.style.display = 'none';
                 }
                 if (this.opened) {
                     results.style.display = 'block';
                     searchIcon.style.display = 'none';
-                    backIcon.style.display = 'inline-block';
+                    backIcon.style.display = 'block';
                 }
             },
 
