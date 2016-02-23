@@ -26,15 +26,19 @@
         <my-nav-subheader>Elsewhere</my-nav-subheader>
 
         <paper-menu class="list" on-iron-select="onMenuSelect">
-          <a href="http://juliaebert.com/"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          <a href="https://github.com/jtebert/"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          {% if site.author_website %}
+            <a href="{{ site.author_website }}"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
+          {% endif %}
+          {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
+          {% endif %}
           <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
         </paper-menu>
 
         <div class="push"></div>
       </div>
 
-      <div id="copyright-info">&copy; 2015, Julia Ebert</div>
+      <div id="copyright-info">&copy; {{ site.time | date: '%Y' }}, {{ site.author }}</div>
 
     </div>
 
@@ -46,7 +50,7 @@
         <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
         <span class="title">{{ site.title }}</span>
         <!-- Search bar -->
-        <my-search-bar class="top" id="search-input"></my-search-bar>
+        <my-search-bar class="top" id="search-input" searchjson="{{ site.baseurl }}/search.json"></my-search-bar>
         <!-- Application name -->
         <!--<div class="middle paper-font-display2 app-name">{{ site.title }}</div>-->
       </paper-toolbar>

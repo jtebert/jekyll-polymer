@@ -1,6 +1,6 @@
 A Jekyll theme built with Google's Polymer library and following the material design specifications.
 
-There are a few custom web components included (mostly for the cards and navigation drawer) designed to match the Material design specifications.
+There are a few custom web components included designed to match the Material design specifications.
 
 **Note:** Demo does not yet show current version
 

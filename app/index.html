@@ -38,13 +38,13 @@ layout: default
 
   <!-- Page Numbers -->
   {% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
-  <my-page-link active>{{ page }}</my-page-link>
-  {% elsif page == 1 %}
-  <my-page-link href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</my-page-link>
-  {% else %}
-  <my-page-link href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</my-page-link>
-  {% endif %}
+    {% if page == paginator.page %}
+    <my-page-link active>{{ page }}</my-page-link>
+    {% elsif page == 1 %}
+    <my-page-link href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</my-page-link>
+    {% else %}
+    <my-page-link href="{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: ':num', page | replace: '//', '/' }}">{{ page }}</my-page-link>
+    {% endif %}
   {% endfor %}
 
   <!-- Right Arrow -->
