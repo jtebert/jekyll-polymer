@@ -9,21 +9,26 @@ There are a few custom web components included designed to match Material design
 (Instructions are based off of those for the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).)
 
 - Clone this repository or download it as a .zip file and unzip.
+- Install jekyll (and any other Ruby gems) with `bundle install`. (Prerequisite: must have Ruby installed. You may also have to install bundler with `gem install bundler`.)
 - From the project root folder, run `npm install -g gulp bower && npm install && bower install`. (See the [Polymer Starter Kit installation instructions](https://github.com/PolymerElements/polymer-starter-kit#install-dependencies) for more details or troubleshooting.)
 
 ## Deployment
 
 ### Serve/watch
 
-`jekyll serve`
+`gulp serve`
 
-(Eventually this will also be migrated to gulp.)
+Starts a jekyll serve process on the default port (4000 or whatever is specified in `_config.yml`).
+
+`gulp serve --port 6666`
+
+Start serving on port `6666`
 
 ### Build and vulcanize
 
-`jekyll build & gulp`
+`gulp`
 
-The deployment ready files will be in the `dist/` directory. This can be slow. (I also plan to condense this all into gulp, but it's a start.)
+Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the `dist/` directory. (This can be slow.)
 
 ## Features
 
@@ -56,8 +61,4 @@ The deployment ready files will be in the `dist/` directory. This can be slow. (
     - Show tags with posts
     - Allow filtering by tag
 - Add material box or lightbox for images
-- Syntax highlighting with Polymer colors (convert from prettify to highlight: `polymer-docs/css/prettify/`)
-- Make it production friendly with gulp/grunt code minimization
-    - Run the local server with `gulp serve`.
-    - Generate the static site for production by running `gulp`.
-      **Note:** This vulcanizes and minimizes the code, so I highly recommend using this output instead of the automatically generated `_site` folder or (if you're using Github Pages) letting it generate the static code.
+- Fix things like header-panel to utilize updates to polymer paper elements

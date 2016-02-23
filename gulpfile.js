@@ -25,6 +25,9 @@ var packageJson = require('./package.json');
 var crypto = require('crypto');
 var ensureFiles = require('./tasks/ensure-files.js');
 
+var spawn = require('child_process').spawn;
+var argv = require('yargs').argv;
+
 // var ghPages = require('gulp-gh-pages');
 
 var AUTOPREFIXER_BROWSERS = [
@@ -214,8 +217,21 @@ gulp.task('clean', function() {
   return del(['.tmp', dist()]);
 });
 
+gulp.task('jekyllserve', function(done) {
+  if (argv.port) {
+    return spawn('bundle', ['exec', 'jekyll', 'serve', '--port=' + argv.port], { stdio: 'inherit' })
+        .on('close', done);
+  } else {
+    return spawn('bundle', ['exec', 'jekyll', 'serve'], { stdio: 'inherit' })
+        .on('close', done);
+  }
+
+});
+
+gulp.task('serve', ['jekyllserve']);
+
 // Watch files for changes & reload
-gulp.task('serve', ['styles', 'elements'], function() {
+/*gulp.task('serve', ['styles', 'elements'], function() {
   browserSync({
     port: 5000,
     notify: false,
@@ -236,13 +252,13 @@ gulp.task('serve', ['styles', 'elements'], function() {
       baseDir: ['.tmp', 'app/_site'],
       middleware: [historyApiFallback()]
     }
-  });
+  });*/
 
-  gulp.watch(['app/_site/**/*.html'], reload);
-  gulp.watch(['app/_site/styles/**/*.css'], ['styles', reload]);
-  gulp.watch(['app/_site/elements/**/*.css'], ['elements', reload]);
-  gulp.watch(['app/_site/images/**/*'], reload);
-});
+  //gulp.watch(['app/_site/**/*.html'], reload);
+  //gulp.watch(['app/_site/styles/**/*.css'], ['styles', reload]);
+  //gulp.watch(['app/_site/elements/**/*.css'], ['elements', reload]);
+  //gulp.watch(['app/_site/images/**/*'], reload);
+//});
 
 // Build and serve the output from the dist build
 gulp.task('serve:dist', ['default'], function() {
@@ -267,10 +283,16 @@ gulp.task('serve:dist', ['default'], function() {
   });
 });
 
+gulp.task('jekyllbuild', function(done) {
+  return spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
+      .on('close', done);
+});
+
 // Build production files, the default task
 gulp.task('default', ['clean'], function(cb) {
   // Uncomment 'cache-config' if you are going to use service workers.
   runSequence(
+    'jekyllbuild',
     ['ensureFiles', 'copy', 'styles'],
     'elements',
     ['images', 'fonts', 'html'],

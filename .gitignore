@@ -1,12 +1,11 @@
 _site
 dist
 bower_components
-*~
 node_modules
 .idea
 app/_posts/personal/*
 app/images/posts/personal/*
 app/_drafts
 CNAME
-.tmp/*
+/.tmp
 npm-debug.log
