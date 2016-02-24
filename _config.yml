@@ -11,8 +11,8 @@ author: Julia Ebert
 author_website: http://juliaebert.com
 email: julia@juliaebert.com
 
-baseurl: "" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
-url: "http://blog.juliaebert.com" # the base hostname & protocol for your site
+baseurl: "/jekyll-polymer" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+url: "http://juliaebert.com" # the base hostname & protocol for your site
 
 twitter_username: ''
 github_username:  jtebert
@@ -29,3 +29,4 @@ gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/

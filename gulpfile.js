@@ -44,6 +44,7 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
+// Source and destination directories
 var DIST = 'dist';
 var SRC = 'app/_site';
 
@@ -274,13 +275,18 @@ gulp.task('clean', function() {
 });
 
 gulp.task('serve', function(done) {
+  var jekyll
   if (argv.port) {
-    return spawn('bundle', ['exec', 'jekyll', 'serve', '--port=' + argv.port], { stdio: 'inherit' })
+    jekyll = spawn('bundle', ['exec', 'jekyll', 'serve', '--port=' + argv.port], { stdio: 'inherit' })
         .on('close', done);
   } else {
-    return spawn('bundle', ['exec', 'jekyll', 'serve'], { stdio: 'inherit' })
+    jekyll = spawn('bundle', ['exec', 'jekyll', 'serve'], { stdio: 'inherit' })
         .on('close', done);
   }
+  jekyll.on('exit', function(code) {
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+  });
+  return jekyll
 });
 
 // Watch files for changes & reload
@@ -337,8 +343,12 @@ gulp.task('serve:dist', ['default'], function() {
 });
 
 gulp.task('jekyllbuild', function(done) {
-  return spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
+  var jekyll = spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
       .on('close', done);
+  jekyll.on('exit', function(code) {
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+  });
+  return jekyll
 });
 
 // Build production files, the default task

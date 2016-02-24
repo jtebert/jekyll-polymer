@@ -1,4 +1,4 @@
-##[DEMO](http://blog.juliaebert.com)
+##[DEMO](http://juliaebert.com/jekyll-polymer)
 
 A Jekyll theme built with Google's Polymer library and following the material design specifications.
 
@@ -27,6 +27,8 @@ There are a few custom web components included designed to match Material design
 `gulp serve`: Starts a jekyll serve process on the default port (4000 or whatever is specified in `_config.yml`).
 
 `gulp serve --port 6666`: Start serving on port `6666`
+
+`gulp serve:dist`: Build as below, and serve the result from the `dist/` directory. (Useful for testing changes to the gulpfile.)
 
 ### Build and vulcanize
 
@@ -62,3 +64,9 @@ There are a few custom web components included designed to match Material design
 - Add 'source' option for YAML frontmatter
 - increase spacing between list items
 - Fix things like header-panel to utilize updates to polymer paper elements
+
+### Known issues
+
+- JS and HTML aren't minimized
+- Title on toolbar appears over search bar (not yes sure why or how to fix it)
+- Too much space on cards between end of excerpt and read more button

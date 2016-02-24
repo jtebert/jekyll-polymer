@@ -49,7 +49,7 @@ layout: default
 
   <!-- Right Arrow -->
   {% if paginator.next_page %}
-  <my-page-link href="{{ paginator.next_page_path  }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
+  <my-page-link href="{{ paginator.next_page_path | prepend: site.baseurl }}"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   {% else %}
   <my-page-link disabled><iron-icon icon="chevron-right"></iron-icon></my-page-link>
   {% endif %}
