@@ -194,15 +194,21 @@
                 var results = document.querySelector('#results-container');
                 var searchIcon = document.querySelector('#search-icon');
                 var backIcon = document.querySelector('#back-icon');
+                var middleBar = document.querySelector('#middleBar');
+                var bottomBar = document.querySelector('#bottomBar');
                 if (!this.opened) {
                     results.style.display = 'none';
                     searchIcon.style.display = 'block';
                     backIcon.style.display = 'none';
+                    middleBar.style.display = 'block';
+                    bottomBar.style.display = 'block';
                 }
                 if (this.opened) {
                     results.style.display = 'block';
                     searchIcon.style.display = 'none';
                     backIcon.style.display = 'block';
+                    middleBar.style.display = 'none';
+                    bottomBar.style.display = 'none';
                 }
             },
 
