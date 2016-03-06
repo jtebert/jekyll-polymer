@@ -68,5 +68,4 @@ There are a few custom web components included designed to match Material design
 ### Known issues
 
 - JS and HTML aren't minimized
-- Title on toolbar appears over search bar (not yes sure why or how to fix it)
 - Too much space on cards between end of excerpt and read more button
