@@ -108,27 +108,6 @@
             <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
         </div>
         <div class="list" opened$="{{opened}}" id="results-container"></div>
-
-        <script type="text/javascript">
-            /*jshint multistr: true */
-            // Do search with json file and make results appear
-            SimpleJekyllSearch({
-                searchInput: document.getElementById('search-input'),
-                resultsContainer: document.getElementById('results-container'),
-                json: '{{searchjson}}',
-                searchResultTemplate:
-                        '<a href="{url}" class="test"><paper-item> \
-                          <paper-item-body two-line> \
-                            <div>{title}</div> \
-                            <div secondary>{date}</div> \
-                            <paper-ripple></paper-ripple>\
-                          </paper-item-body> \
-                        </paper-item></a><hr/>',
-                noResultsText: '<p>No posts found</p>',
-                limit: 20,
-                fuzzy: true
-            });
-        </script>
     </template>
 
     <script>
