@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>Archive</title>
-    <meta name="description" content="This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
-">
+    <title>How to 'Send Mail As' with Gmail's recent update</title>
+    <meta name="description" content="It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let...">
 
-    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/archive/">
+    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -129,154 +128,93 @@
 
 <div id="post">
 
-  <h1 class="paper-font-display1">Archive</h1>
+  
+  <a href="/jekyll-polymer/images/posts/personal/2014-08-24-gmail.png" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/jekyll-polymer/images/posts/personal/2014-08-24-gmail.png">
+  </a>
+  
+
+  <h1 class="paper-font-display1">How to 'Send Mail As' with Gmail's recent update</h1>
+  <h4 class="paper-font-subhead" id="date">Aug 24, 2014</h4>
 
   <div id="post-content">
-    <div id="archive">
+    <p>It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let you automatically use its SMTP servers. If that last sentence didn’t make sense, don’t worry. I’ll walk you through how to set it up step by step. To start out, I assume that you already have email forwarding set up so that your custom email (say, me@example.com) gets sent to your gmail (which we’ll call example@gmail.com).</p>
+
+<!--more-->
+
+<ol>
+  <li>You must have 2-step authentication set up for you Google account. If not, when you try to log in later, you’ll get an authentication failure, and then an email about a suspicious log in attempt.</li>
+  <li>Once you have 2-step authentication set up, you need a specific app password that you’ll use for setting up the email sending.From any Google page, click on your user picture in upper right corner and select Account. From the Account page, select the Security tab. In the Password box, click Settings next to App Passwords. On the dropdown menu that says Select app, choose Other (custom name). Type in any name you like (I went with Gmail SMTP) and click Generate. Copy the new password.</li>
+  <li>Now we can actually set this up! From your Gmail page, click the cog icon on the right side and select Settings. Go to the Accounts and Imports tab. In the Send mail as section, click Add another email address you own. In the window that pops up, put in the email address you want to send as (me@example.com) and click Next Step. (Go ahead and change the name and alias settings however you want.) On the next page, enter the information as follows:
+    <ul>
+      <li><strong>SMTP Server:</strong> smtp.gmail.com</li>
+      <li><strong>Port:</strong> 465</li>
+      <li><strong>Username:</strong> Your full gmail address, like example@gmail.com</li>
+      <li><strong>Password:</strong> The password you generated and copied in Step 2</li>
+      <li><strong>Secured Connection ussing SSL</strong> (Change the radio button to select this option)</li>
+    </ul>
+
+    <p>Then click Add Account. An email should show up in your inbox, which you can click to verify the email address. Now, if you go to Accounts and Import in your settings, you should see the new email address.
+That’s more of a pain than it used to be, and more than it should be, but it is still possible to send email from Gmail using your own custom email address.</p>
+  </li>
+</ol>
+
+<p>Source: <a href="https://productforums.google.com/forum/#!topic/gmail/kx8Yn8RvzeI">A helpful post on Google Product Forums</a></p>
+
+  </div>
+
+  <hr/>
+
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&title=How to 'Send Mail As' with Gmail's recent update&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&title=How to 'Send Mail As' with Gmail's recent update" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=How to 'Send Mail As' with Gmail's recent update&url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/jekyll-polymer/2014/08/13/because-your-placeholder-images-arent-adorable/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
 
     
+      <a href="/jekyll-polymer/2014/09/10/how-to-make-drracket-more-pleasant-looking/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
     
-        <h2>2015</h2>
-        
-    
-    <p><a href="/jekyll-polymer/2015/06/19/about-jekyll-polymer-theme/">About the Jekyll Polymer Theme</a></p>
+  </div>
 
-    
-    
-    <p><a href="/jekyll-polymer/2015/06/17/hipsum/">Post with blocks of text</a></p>
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
+</div>
 
-    
-    
-    <p><a href="/jekyll-polymer/jekyll/update/2015/06/10/featured-image/">Image in front matter (featured image)</a></p>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'juliaebert';
 
-    
-    
-    <p><a href="/jekyll-polymer/2015/06/08/welcome-to-jekyll/">Welcome to Jekyll!</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2015/06/08/typography/">Typography</a></p>
-
-    
-    
-        <h2>2014</h2>
-        
-    
-    <p><a href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-exporting/">Shiny Matlab Figures: Exporting</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-sizing-and-parameters/">Shiny Matlab Figures: Sizing and Parameters</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/12/15/shiny-matlab-figures-drawing-error-with-patches/">Shiny Matlab Figures: Drawing Error with Patches</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/10/30/an-awesomely-useful-thing-google-keep/">An Awesomely Useful Thing: Google Keep</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/09/10/drracket-tricks-and-customization/">DrRacket Tricks and Customization</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/09/10/how-to-make-drracket-more-pleasant-looking/">How to make DrRacket more pleasant-looking</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/">How to 'Send Mail As' with Gmail's recent update</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/08/13/because-your-placeholder-images-arent-adorable/">Because your placeholder images aren't adorable enough</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/08/07/updated-including-code-in-your-tumblr-posts-the/">Updated: Including code in your Tumblr posts (the easy way!)</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/08/07/making-your-linux-command-line-prompt-look-shiny/">Making your Linux command line prompt look shiny</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/07/10/a-simple-django-log-in-page/">A simple Django log in page</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/07/10/make-your-own-xkcd-style-passwords/">Make your own XKCD-style passwords!</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/06/13/html-meta-tags/">HTML meta tags</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/06/08/image-in-excerpt/">Image in excerpt</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/06/04/make-your-own-dot-grid-paper-with-inkscape/">Make your own dot grid paper with Inkscape</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/05/29/shrinking-gnome-title-bars/">Shrinking Gnome title bars</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/05/29/when-ubuntu-says-system-program-problem-detected/">When Ubuntu says "System program problem detected" whenever you turn your computer on</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/05/13/improving-linux-battery-life/">Improving Linux Battery Life</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/05/13/managing-scientific-papers-for-free/">Managing Scientific Papers (for free!)</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/">The simple terminal way to see your IP address</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/">A simple bash script to compile Java (with packages) (and possibly JUnit)</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/02/26/ssh-ftp-sftp-in-nautilus/">ssh/ftp/sftp in Nautilus</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2014/01/30/compiling-and-running-java-with-junit-from-the/">Compiling and running Java with JUnit from the command line</a></p>
-
-    
-    
-        <h2>2013</h2>
-        
-    
-    <p><a href="/jekyll-polymer/2013/06/25/changing-media-names-in-linux/">Changing Media Names in Linux</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2013/06/21/how-to-format-code-snippets-with-html-on-tumblr/">How to format code snippets with HTML on Tumblr</a></p>
-
-    
-    
-    <p><a href="/jekyll-polymer/2013/03/15/how-to-make-a-bash-command/">How to make a bash command</a></p>
-
-    
-    
-        <h2>2010</h2>
-        
-    
-    <p><a href="/jekyll-polymer/2010/06/08/long-code/">Long code that should scroll but doesn't always</a></p>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
 
 </div>
-  </div>
-</div></div>
+</div>
 
     </paper-scroll-header-panel>
   </paper-drawer-panel>

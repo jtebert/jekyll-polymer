@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>Jekyll Polymer Theme</title>
-    <meta name="description" content="This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
-">
+    <title>ssh/ftp/sftp in Nautilus</title>
+    <meta name="description" content="Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful t...">
 
-    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/page6/">
+    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/02/26/ssh-ftp-sftp-in-nautilus/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -121,139 +120,85 @@
       </paper-toolbar>
 
       <!-- Main Content -->
-      <div class="content"><div class="card-wrapper">
-<!-- This loops through the paginated posts -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
 
+<div id="post">
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">A simple bash script to compile Java (with packages) (and possibly JUnit)</div>
-      <div class="subtitle">2014 February 26</div>
-      <p>Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files to compile.</p>
+  
 
+  <h1 class="paper-font-display1">ssh/ftp/sftp in Nautilus</h1>
+  <h4 class="paper-font-subhead" id="date">Feb 26, 2014</h4>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+  <div id="post-content">
+    <p>Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful to have a GUI.  Instead of installing extra programs, though, you can just do it directly from within your file browser in Linux.</p>
 
+<!--more-->
 
+<p>In the Nautilus file manager (which likes to just call itself Files now), just enter into the location bar:</p>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">ssh/ftp/sftp in Nautilus</div>
-      <div class="subtitle">2014 February 26</div>
-      <p>Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful to have a GUI.  Instead of installing extra programs, though, you can just do it directly from within your file browser in Linux.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh://username@host</code></pre></figure>
 
+<p>Or whatever your preferred accessing method is (ssh, stfp, ftp).  (Also useful to remember: the change the location bar from buttons to a text field, hit <code class="highlighter-rouge">Ctrl + L</code>.)</p>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/02/26/ssh-ftp-sftp-in-nautilus/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+<p>The remote directory is then mounted and appears on the left side bar under “Network.”  It will stay mounted even if you close Nautilus, and you just have to click on it to re-open it.  To unmount, just click the arrow next to it in the left panel.</p>
 
+  </div>
 
+  <hr/>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">Compiling and running Java with JUnit from the command line</div>
-      <div class="subtitle">2014 January 30</div>
-      <p>Here’s how to compile a set of Java files with the JUnit library and then run it.  (All in Linux.  Adapt for any other OSes.  Also using JUnit 4+)  This took me far longer to figure out than I care to admit. [Note: this is only when all files are in the default package.  More on running with packages to come in the future.]</p>
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/&title=ssh/ftp/sftp in Nautilus&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/&title=ssh/ftp/sftp in Nautilus" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=ssh/ftp/sftp in Nautilus&url=http://juliaebert.com/2014/02/26/ssh-ftp-sftp-in-nautilus/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
 
+  <div class="section">
+    
+    <a href="/jekyll-polymer/2014/01/30/compiling-and-running-java-with-junit-from-the/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/01/30/compiling-and-running-java-with-junit-from-the/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+    
+      <a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
 
-
-
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">Changing Media Names in Linux</div>
-      <div class="subtitle">2013 June 25</div>
-      <p>Unlike in Windows/Mac, you can’t always change the names/labels/mount points from within the file explorer.  The best/most consistent way to do this is (from my experience) for external/USB devices is through the command line.  The most straightforward instructions I have found are <a href="https://help.ubuntu.com/community/RenameUSBDrive">on the Ubuntu website</a>.</p>
-
-<p>For internal drives/partitions, I have found GParted works well.</p>
-
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2013/06/25/changing-media-names-in-linux/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
-
-
-
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">How to format code snippets with HTML on Tumblr</div>
-      <div class="subtitle">2013 June 21</div>
-      <p>There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.</p>
-
-
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2013/06/21/how-to-format-code-snippets-with-html-on-tumblr/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
-
-
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
 </div>
 
-<!-- Page navigation links -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'juliaebert';
 
-<my-pagination>
-  <!-- Left Arrow -->
-  
-  <my-page-link href="/jekyll-polymer/page5">
-    <iron-icon icon="chevron-left"></iron-icon>
-  </my-page-link>
-  
-
-  <!-- Page Numbers -->
-  
-    
-    <my-page-link href="/jekyll-polymer/">1</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page2">2</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page3">3</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page4">4</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page5">5</my-page-link>
-    
-  
-    
-    <my-page-link active>6</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page7">7</my-page-link>
-    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   
 
-  <!-- Right Arrow -->
-  
-  <my-page-link href="/jekyll-polymer/page7"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
-  
-</my-pagination>
-
+</div>
 </div>
 
     </paper-scroll-header-panel>

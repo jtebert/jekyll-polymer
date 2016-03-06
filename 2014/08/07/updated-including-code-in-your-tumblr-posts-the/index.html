@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>Jekyll Polymer Theme</title>
-    <meta name="description" content="This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
-">
+    <title>Updated: Including code in your Tumblr posts (the easy way!)</title>
+    <meta name="description" content="My latest obsession is Markdown, the markup language that magically turns almost-plain text into fully-formatted HTML. If you’ve ever written anything on Sta...">
 
-    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/page6/">
+    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/08/07/updated-including-code-in-your-tumblr-posts-the/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -121,139 +120,122 @@
       </paper-toolbar>
 
       <!-- Main Content -->
-      <div class="content"><div class="card-wrapper">
-<!-- This loops through the paginated posts -->
+      <div class="content"><style>
+  body {
+    background-color: #f9f9f9 !important;
+  }
+</style>
 
+<div id="post">
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">A simple bash script to compile Java (with packages) (and possibly JUnit)</div>
-      <div class="subtitle">2014 February 26</div>
-      <p>Compiling Java when you have your code organized into packages gets more complicated because you have to make sure that Java finds all of the correct files to compile.</p>
+  
+  <a href="/jekyll-polymer/images/posts/personal/2014-08-07-tumblr-logo.png" data-lightbox="image-1" data-title="">
+    <img class="materialboxed" src="/jekyll-polymer/images/posts/personal/2014-08-07-tumblr-logo.png">
+  </a>
+  
 
+  <h1 class="paper-font-display1">Updated: Including code in your Tumblr posts (the easy way!)</h1>
+  <h4 class="paper-font-subhead" id="date">Aug 7, 2014</h4>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+  <div id="post-content">
+    <p>My latest obsession is Markdown, the markup language that magically turns almost-plain text into fully-formatted HTML. If you’ve ever written anything on StackExchange or Reddit, you’ve used Markdown. It turns out that Markdown is also supported on Tumblr!</p>
 
+<!--more-->
 
+<p>To enable it, click on the cog (settings) on the upper right of your Tumblr dashboard. Then click the “Dashboard” option on the right side, scroll down to “Text Editor” and select Markdown. You can check out all of the awesome output that Markdown produces with this cheatsheet.</p>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">ssh/ftp/sftp in Nautilus</div>
-      <div class="subtitle">2014 February 26</div>
-      <p>Sometimes it’s useful to be able to actually see the files that you are accessing remotely.  So, instead of just using ssh in the command line, it’s useful to have a GUI.  Instead of installing extra programs, though, you can just do it directly from within your file browser in Linux.</p>
+<!--more-->
 
+<p>One bonus of Markdown that I’ve discovered is that it’s really great for easily incorporating code into normal-text documents. There are 3 way to do this:</p>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/02/26/ssh-ftp-sftp-in-nautilus/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+<p>##Inline code:</p>
 
+<p><em>Type this:</em></p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">I put some <span class="sb">`</span>code<span class="sb">`</span> <span class="k">in </span>my text.</code></pre></figure>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">Compiling and running Java with JUnit from the command line</div>
-      <div class="subtitle">2014 January 30</div>
-      <p>Here’s how to compile a set of Java files with the JUnit library and then run it.  (All in Linux.  Adapt for any other OSes.  Also using JUnit 4+)  This took me far longer to figure out than I care to admit. [Note: this is only when all files are in the default package.  More on running with packages to come in the future.]</p>
+<p><em>Get this output:</em></p>
 
+<p>I put some <code class="highlighter-rouge">code</code> in my text.</p>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2014/01/30/compiling-and-running-java-with-junit-from-the/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+<p>##Code blocks:</p>
 
+<p><em>Type this:</em> (with 4 spaces at the beginning of the line)</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">.   This is a block
+        with multiple lines of code.
+        Ta-da!</code></pre></figure>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">Changing Media Names in Linux</div>
-      <div class="subtitle">2013 June 25</div>
-      <p>Unlike in Windows/Mac, you can’t always change the names/labels/mount points from within the file explorer.  The best/most consistent way to do this is (from my experience) for external/USB devices is through the command line.  The most straightforward instructions I have found are <a href="https://help.ubuntu.com/community/RenameUSBDrive">on the Ubuntu website</a>.</p>
+<p><em>Get this output:</em></p>
 
-<p>For internal drives/partitions, I have found GParted works well.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">This is a block
+    with multiple lines of code.
+    Ta-da!</code></pre></figure>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2013/06/25/changing-media-names-in-linux/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+<p>Multi-line code: For a lot of Markdown editors, this does the same this as the 4-spaces approach. On Tumblr, though, it shows up like the single-tick code, but split over multiple lines.</p>
 
+<p><em>Type this:</em></p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="sb">```</span>This is code written
+on multiple lines<span class="sb">```</span></code></pre></figure>
 
-  <paper-card class="custom"
-          >
-    <div class="card-content">
-      <div class="title">How to format code snippets with HTML on Tumblr</div>
-      <div class="subtitle">2013 June 21</div>
-      <p>There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.</p>
+<p><em>Get this output:</em></p>
 
+<p><code class="highlighter-rouge">This is code written on multiple lines</code></p>
 
-    </div>
-    <div class="card-actions">
-      <a href="/jekyll-polymer/2013/06/21/how-to-format-code-snippets-with-html-on-tumblr/"><paper-button>Read More</paper-button></a>
-    </div>
-  </paper-card>
+  </div>
 
+  <hr/>
 
+  <div class="share section">
+    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/" rel="nofollow" target="_blank" title="Share on Facebook">
+      <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
+    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/" rel="nofollow" target="_blank" title="Share on Google+">
+      <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/&title=Updated: Including code in your Tumblr posts (the easy way!)&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+      <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
+    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/&title=Updated: Including code in your Tumblr posts (the easy way!)" rel="nofollow" target="_blank" title="Share on Reddit">
+      <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
+    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+      <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
+    <a href="https://twitter.com/intent/tweet?text=Updated: Including code in your Tumblr posts (the easy way!)&url=http://juliaebert.com/2014/08/07/updated-including-code-in-your-tumblr-posts-the/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+      <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
+  </div>
+
+  <div class="section">
+    
+    <a href="/jekyll-polymer/2014/08/07/making-your-linux-command-line-prompt-look-shiny/"><paper-button raised class="accent">
+      <iron-icon icon="arrow-back"></iron-icon> Previous Post
+    </paper-button></a>
+    
+
+    
+      <a href="/jekyll-polymer/2014/08/13/because-your-placeholder-images-arent-adorable/"><paper-button raised class="accent">
+        Next Post <iron-icon icon="arrow-forward"></iron-icon>
+      </paper-button></a>
+    
+  </div>
+
+  
+    <div class="section">
+    <div id="disqus_thread"></div>
 </div>
 
-<!-- Page navigation links -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'juliaebert';
 
-<my-pagination>
-  <!-- Left Arrow -->
-  
-  <my-page-link href="/jekyll-polymer/page5">
-    <iron-icon icon="chevron-left"></iron-icon>
-  </my-page-link>
-  
-
-  <!-- Page Numbers -->
-  
-    
-    <my-page-link href="/jekyll-polymer/">1</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page2">2</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page3">3</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page4">4</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page5">5</my-page-link>
-    
-  
-    
-    <my-page-link active>6</my-page-link>
-    
-  
-    
-    <my-page-link href="/jekyll-polymer/page7">7</my-page-link>
-    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   
 
-  <!-- Right Arrow -->
-  
-  <my-page-link href="/jekyll-polymer/page7"><iron-icon icon="chevron-right"></iron-icon></my-page-link>
-  
-</my-pagination>
-
+</div>
 </div>
 
     </paper-scroll-header-panel>
