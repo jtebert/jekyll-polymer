@@ -317,7 +317,6 @@ function compile(data){
     options.searchInput.addEventListener('keyup', function(e){
       var key = e.which;
       var query = e.target.value;
-      console.log(query);
       if( isWhitelistedKey(key) && isValidQuery(query) ) {
         emptyResultsContainer();
         render( repository.search(query) );
