@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>How to 'Send Mail As' with Gmail's recent update</title>
-    <meta name="description" content="It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let...">
+    <title>The simple terminal way to see your IP address</title>
+    <meta name="description" content="If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:curl icanhazip.com">
 
-    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/">
+    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -22,6 +22,7 @@
     <link rel="manifest" href="/jekyll-polymer/manifest.json">
 
     <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
     <meta name="msapplication-TileColor" content="#FF5722">
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -129,66 +130,51 @@
 <div id="post">
 
   
-  <a href="/jekyll-polymer/images/posts/personal/2014-08-24-gmail.png" data-lightbox="image-1" data-title="">
-    <img class="materialboxed" src="/jekyll-polymer/images/posts/personal/2014-08-24-gmail.png">
-  </a>
-  
 
-  <h1 class="paper-font-display1">How to 'Send Mail As' with Gmail's recent update</h1>
-  <h4 class="paper-font-subhead" id="date">Aug 24, 2014</h4>
+  <h1 class="paper-font-display1">The simple terminal way to see your IP address</h1>
+  <h4 class="paper-font-subhead" id="date">Mar 5, 2014</h4>
 
   <div id="post-content">
-    <p>It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let you automatically use its SMTP servers. If that last sentence didn’t make sense, don’t worry. I’ll walk you through how to set it up step by step. To start out, I assume that you already have email forwarding set up so that your custom email (say, me@example.com) gets sent to your gmail (which we’ll call example@gmail.com).</p>
+    <p>If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl icanhazip.com</code></pre></figure>
 
 <!--more-->
 
-<ol>
-  <li>You must have 2-step authentication set up for you Google account. If not, when you try to log in later, you’ll get an authentication failure, and then an email about a suspicious log in attempt.</li>
-  <li>Once you have 2-step authentication set up, you need a specific app password that you’ll use for setting up the email sending.From any Google page, click on your user picture in upper right corner and select Account. From the Account page, select the Security tab. In the Password box, click Settings next to App Passwords. On the dropdown menu that says Select app, choose Other (custom name). Type in any name you like (I went with Gmail SMTP) and click Generate. Copy the new password.</li>
-  <li>Now we can actually set this up! From your Gmail page, click the cog icon on the right side and select Settings. Go to the Accounts and Imports tab. In the Send mail as section, click Add another email address you own. In the window that pops up, put in the email address you want to send as (me@example.com) and click Next Step. (Go ahead and change the name and alias settings however you want.) On the next page, enter the information as follows:
-    <ul>
-      <li><strong>SMTP Server:</strong> smtp.gmail.com</li>
-      <li><strong>Port:</strong> 465</li>
-      <li><strong>Username:</strong> Your full gmail address, like example@gmail.com</li>
-      <li><strong>Password:</strong> The password you generated and copied in Step 2</li>
-      <li><strong>Secured Connection ussing SSL</strong> (Change the radio button to select this option)</li>
-    </ul>
+<p>The curl command will show the contents of a url in the command line.  (It’s pronounced “see URL”, not like the sport, though if you’re like me you can still wish there was actual curling involved.)</p>
 
-    <p>Then click Add Account. An email should show up in your inbox, which you can click to verify the email address. Now, if you go to Accounts and Import in your settings, you should see the new email address.
-That’s more of a pain than it used to be, and more than it should be, but it is still possible to send email from Gmail using your own custom email address.</p>
-  </li>
-</ol>
+<p>The URL that it is requesting, icanhazip.com, is a spectacularly simple page that gives your IP address in plain text on the page.</p>
 
-<p>Source: <a href="https://productforums.google.com/forum/#!topic/gmail/kx8Yn8RvzeI">A helpful post on Google Product Forums</a></p>
+<p>When you do this, all you see is your IP address magically appearing in your terminal window.</p>
 
   </div>
 
   <hr/>
 
   <div class="share section">
-    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/" rel="nofollow" target="_blank" title="Share on Facebook">
       <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
-    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/" rel="nofollow" target="_blank" title="Share on Google+">
+    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/" rel="nofollow" target="_blank" title="Share on Google+">
       <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&title=How to 'Send Mail As' with Gmail's recent update&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/&title=The simple terminal way to see your IP address&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
       <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
-    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&title=How to 'Send Mail As' with Gmail's recent update" rel="nofollow" target="_blank" title="Share on Reddit">
+    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/&title=The simple terminal way to see your IP address" rel="nofollow" target="_blank" title="Share on Reddit">
       <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
-    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
       <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
-    <a href="https://twitter.com/intent/tweet?text=How to 'Send Mail As' with Gmail's recent update&url=http://juliaebert.com/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+    <a href="https://twitter.com/intent/tweet?text=The simple terminal way to see your IP address&url=http://juliaebert.com/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
       <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
   </div>
 
   <div class="section">
     
-    <a href="/jekyll-polymer/2014/08/13/because-your-placeholder-images-arent-adorable/"><paper-button raised class="accent">
+    <a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/jekyll-polymer/2014/09/10/how-to-make-drracket-more-pleasant-looking/"><paper-button raised class="accent">
+      <a href="/jekyll-polymer/2014/05/13/managing-scientific-papers-for-free/"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     

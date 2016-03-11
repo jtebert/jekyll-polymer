@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Jekyll Polymer Theme" />
 
-    <title>The simple terminal way to see your IP address</title>
-    <meta name="description" content="If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:curl icanhazip.com">
+    <title>How to format code snippets with HTML on Tumblr</title>
+    <meta name="description" content="There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatt...">
 
-    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/">
+    <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -22,6 +22,7 @@
     <link rel="manifest" href="/jekyll-polymer/manifest.json">
 
     <!-- Tile color for Win8 -->
+    <!-- TODO: Change to match final color scheme -->
     <meta name="msapplication-TileColor" content="#FF5722">
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -130,50 +131,52 @@
 
   
 
-  <h1 class="paper-font-display1">The simple terminal way to see your IP address</h1>
-  <h4 class="paper-font-subhead" id="date">Mar 4, 2014</h4>
+  <h1 class="paper-font-display1">How to format code snippets with HTML on Tumblr</h1>
+  <h4 class="paper-font-subhead" id="date">Jun 22, 2013</h4>
 
   <div id="post-content">
-    <p>If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl icanhazip.com</code></pre></figure>
+    <p>There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.</p>
 
 <!--more-->
 
-<p>The curl command will show the contents of a url in the command line.  (It’s pronounced “see URL”, not like the sport, though if you’re like me you can still wish there was actual curling involved.)</p>
+<p>In the post editor, go to edit HTML.   Where you want to insert the code use</p>
 
-<p>The URL that it is requesting, icanhazip.com, is a spectacularly simple page that gives your IP address in plain text on the page.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;&lt;code&gt;</span>$CODE<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span></code></pre></figure>
 
-<p>When you do this, all you see is your IP address magically appearing in your terminal window.</p>
+<p>Where <code class="highlighter-rouge">$CODE</code> is whatever code you want to be formatted.</p>
+
+<p><code class="highlighter-rouge">&lt;code&gt;</code> makes it monospaced and marked as code.</p>
+
+<p><code class="highlighter-rouge">&lt;pre&gt;</code> saves any formatting you use, such as whitespace (as in, preformatted) and demarcates it by putting it in a box.  Don’t use this for in line code because it always puts it on a new line.</p>
 
   </div>
 
   <hr/>
 
   <div class="share section">
-    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/" rel="nofollow" target="_blank" title="Share on Facebook">
+    <a href="https://facebook.com/sharer.php?u=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/" rel="nofollow" target="_blank" title="Share on Facebook">
       <paper-icon-button icon="fa:facebook"></paper-icon-button></a>
-    <a href="https://plus.google.com/share?url=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/" rel="nofollow" target="_blank" title="Share on Google+">
+    <a href="https://plus.google.com/share?url=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/" rel="nofollow" target="_blank" title="Share on Google+">
       <paper-icon-button icon="fa:google-plus"></paper-icon-button></a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/&title=The simple terminal way to see your IP address&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/&title=How to format code snippets with HTML on Tumblr&summary=&source=http://juliaebert.com" rel="nofollow" target="_blank" title="Share on LinkedIn">
       <paper-icon-button icon="fa:linkedin"></paper-icon-button></a>
-    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/&title=The simple terminal way to see your IP address" rel="nofollow" target="_blank" title="Share on Reddit">
+    <a href="http://www.reddit.com/submit?url=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/&title=How to format code snippets with HTML on Tumblr" rel="nofollow" target="_blank" title="Share on Reddit">
       <paper-icon-button icon="fa:reddit"></paper-icon-button></a>
-    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
+    <a href="http://www.tumblr.com/share/link?url=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/&name={[ page.title }}&description=" rel="nofollow" target="_blank" title="Share on Tumblr">
       <paper-icon-button icon="fa:tumblr"></paper-icon-button></a>
-    <a href="https://twitter.com/intent/tweet?text=The simple terminal way to see your IP address&url=http://juliaebert.com/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
+    <a href="https://twitter.com/intent/tweet?text=How to format code snippets with HTML on Tumblr&url=http://juliaebert.com/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">
       <paper-icon-button icon="fa:twitter"></paper-icon-button></a>
   </div>
 
   <div class="section">
     
-    <a href="/jekyll-polymer/2014/02/26/a-simple-bash-script-to-compile-java-with/"><paper-button raised class="accent">
+    <a href="/jekyll-polymer/2013/03/15/how-to-make-a-bash-command/"><paper-button raised class="accent">
       <iron-icon icon="arrow-back"></iron-icon> Previous Post
     </paper-button></a>
     
 
     
-      <a href="/jekyll-polymer/2014/05/13/managing-scientific-papers-for-free/"><paper-button raised class="accent">
+      <a href="/jekyll-polymer/2013/06/25/changing-media-names-in-linux/"><paper-button raised class="accent">
         Next Post <iron-icon icon="arrow-forward"></iron-icon>
       </paper-button></a>
     

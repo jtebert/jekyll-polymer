@@ -103,8 +103,8 @@
 "title"    : "How to &#39;Send Mail As&#39; with Gmail&#39;s recent update",
 "category" : "",
 "tags"     : "gmail, smtp, email, send mail as",
-"url"      : "/jekyll-polymer/2014/08/24/how-to-send-mail-as-with-gmails-recent-update/",
-"date"     : "2014 August 24",
+"url"      : "/jekyll-polymer/2014/08/25/how-to-send-mail-as-with-gmails-recent-update/",
+"date"     : "2014 August 25",
 "content"  : "It used to be super easy to set Gmail to send mail as another email address. It recently (as in, this month) became a lot harder, since Gmail now doesn’t let you automatically use its SMTP servers. If that last sentence didn’t make sense, don’t worry. I’ll walk you through how to set it up step by step. To start out, I assume that you already have email forwarding set up so that your custom email (say, me@example.com) gets sent to your gmail (which we’ll call example@gmail.com).  You must have 2-step authentication set up for you Google account. If not, when you try to log in later, you’ll get an authentication failure, and then an email about a suspicious log in attempt.  Once you have 2-step authentication set up, you need a specific app password that you’ll use for setting up the email sending.From any Google page, click on your user picture in upper right corner and select Account. From the Account page, select the Security tab. In the Password box, click Settings next to App Passwords. On the dropdown menu that says Select app, choose Other (custom name). Type in any name you like (I went with Gmail SMTP) and click Generate. Copy the new password.  Now we can actually set this up! From your Gmail page, click the cog icon on the right side and select Settings. Go to the Accounts and Imports tab. In the Send mail as section, click Add another email address you own. In the window that pops up, put in the email address you want to send as (me@example.com) and click Next Step. (Go ahead and change the name and alias settings however you want.) On the next page, enter the information as follows:          SMTP Server: smtp.gmail.com      Port: 465      Username: Your full gmail address, like example@gmail.com      Password: The password you generated and copied in Step 2      Secured Connection ussing SSL (Change the radio button to select this option)        Then click Add Account. An email should show up in your inbox, which you can click to verify the email address. Now, if you go to Accounts and Import in your settings, you should see the new email address.That’s more of a pain than it used to be, and more than it should be, but it is still possible to send email from Gmail using your own custom email address.  Source: A helpful post on Google Product Forums"
 } ,
 
@@ -220,8 +220,8 @@
 "title"    : "The simple terminal way to see your IP address",
 "category" : "",
 "tags"     : "terminal, IP address",
-"url"      : "/jekyll-polymer/2014/03/04/the-simple-terminal-way-to-see-your-ip-address/",
-"date"     : "2014 March 4",
+"url"      : "/jekyll-polymer/2014/03/05/the-simple-terminal-way-to-see-your-ip-address/",
+"date"     : "2014 March 5",
 "content"  : "If you need to know your IP address, my brother taught me what is probably the simplest way to do so straight from the command line:curl icanhazip.comThe curl command will show the contents of a url in the command line.  (It’s pronounced “see URL”, not like the sport, though if you’re like me you can still wish there was actual curling involved.)The URL that it is requesting, icanhazip.com, is a spectacularly simple page that gives your IP address in plain text on the page.When you do this, all you see is your IP address magically appearing in your terminal window."
 } ,
 
@@ -265,8 +265,8 @@
 "title"    : "How to format code snippets with HTML on Tumblr",
 "category" : "",
 "tags"     : "html, code, formatting, tumblr",
-"url"      : "/jekyll-polymer/2013/06/21/how-to-format-code-snippets-with-html-on-tumblr/",
-"date"     : "2013 June 21",
+"url"      : "/jekyll-polymer/2013/06/22/how-to-format-code-snippets-with-html-on-tumblr/",
+"date"     : "2013 June 22",
 "content"  : "There are extensions and such out there for this, but they don’t show up in the dashboard, as best I can tell.  And at this point, I’m concerned with formatting individual lines of code to show up differently from the rest of the text.  There are probably multiple ways to be this, but this is my current method.In the post editor, go to edit HTML.   Where you want to insert the code use&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;$CODE&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;Where $CODE is whatever code you want to be formatted.&amp;lt;code&amp;gt; makes it monospaced and marked as code.&amp;lt;pre&amp;gt; saves any formatting you use, such as whitespace (as in, preformatted) and demarcates it by putting it in a box.  Don’t use this for in line code because it always puts it on a new line."
 } ,
 
