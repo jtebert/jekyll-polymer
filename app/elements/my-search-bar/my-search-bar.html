@@ -184,8 +184,8 @@
                     searchOverlay.style.display = 'none';
                 }
                 if (this.opened) {
-                    document.querySelector('#middleBar').style.display = 'none';
-                    document.querySelector('#bottomBar').style.display = 'none';
+                    document.querySelector('#middleBar').style.visibility = 'hidden';
+                    document.querySelector('#bottomBar').style.visibility = 'hidden';
                 }
             },
 
@@ -197,8 +197,8 @@
 
             hide: function() {
                 // Re-show bar contents before removing search box
-                document.querySelector('#middleBar').style.display = 'block';
-                document.querySelector('#bottomBar').style.display = 'block';
+                document.querySelector('#middleBar').style.visibility = 'visible';
+                document.querySelector('#bottomBar').style.visibility = 'visible';
                 this.playAnimation('exit');
                 this.opened = false;
             },
