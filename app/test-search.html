@@ -1,5 +1,5 @@
 ---
-permalink: /test/
+permalink: /test-search/
 ---
 
 <!doctype html>
@@ -10,7 +10,7 @@ permalink: /test/
 <body>
 <input type="search" id="searchInput">
 <div id="resultsContainer"></div>
-<script src="../bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+<script src="../scripts/jekyll-search.js" type="text/javascript"></script>
 <script type="text/javascript">
     SimpleJekyllSearch({
         searchInput: document.querySelector('#searchInput'),
@@ -18,7 +18,7 @@ permalink: /test/
         json: '../search.json',
         noResultsText: '<p>No posts found</p>',
         limit: 20,
-        fuzzy: true
+        fuzzy: false
     });
 </script>
 </body>
