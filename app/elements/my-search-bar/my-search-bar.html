@@ -8,6 +8,14 @@
 
     <style>
 
+        #searchOverlay {
+            display: none;
+            width: 100%;
+        }
+        #searchOverlay[opened] {
+            //display: block;
+        }
+
         #search {
             display: -webkit-box;
             display: -webkit-flex;
@@ -34,9 +42,7 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             z-index: 100;
-        }
 
-        #search[opened] {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -45,26 +51,19 @@
             padding: 0 16px;
             background-color: var(--primary-color);
             margin-left: 0;
+            //background-color: red;
         }
 
-        #search[opened] input[is=iron-input] {
-            padding: 8px;
-            display: block;
-        }
-
-        #search #backIcon {
-            display: none;
-        }
-        #search #searchIcon {
-            display: block;
+        #backIcon, #searchIcon {
+            display: inline-block;
         }
 
         input[is=iron-input] {
+            display: inline-block;
             background-color: inherit;
             border: none;
             font-size: 20px;
             outline: none;
-            padding: 0 !important;
             color: inherit;
             -webkit-box-flex: 1;
             -webkit-flex: 1 0 0;
@@ -72,12 +71,9 @@
             -ms-flex: 1 0 0;
             -o-flex: 1 0 0;
             flex: 1 0 0;
-            display: none;
-            -webkit-appearance: none;
         }
 
         #resultsContainer {
-            display: none;
             @apply(--paper-font-body1);
             color: var(--primary-text-color);
             width: 100%;
@@ -95,18 +91,19 @@
                 top: 56px;
                 height: calc(100vh - 56px);
             }
-
         }
 
     </style>
 
     <template>
-        <div id="search" opened$="{{opened}}" on-click="toggleSearch">
-            <paper-icon-button icon="search" id="searchIcon"></paper-icon-button>
-            <paper-icon-button icon="arrow-back" id="backIcon"></paper-icon-button>
-            <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
+        <paper-icon-button icon="search" id="searchIcon" on-click="toggleSearch" opened$="{{opened}}"></paper-icon-button>
+        <div id="searchOverlay" opened$="{{opened}}">
+            <div id="search">
+                <paper-icon-button icon="arrow-back" id="backIcon" on-click="toggleSearch"></paper-icon-button>
+                <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
+            </div>
+            <div class="list" id="resultsContainer"></div>
         </div>
-        <div class="list" opened$="{{opened}}" id="resultsContainer"></div>
     </template>
 
     <script src="../../bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
@@ -140,22 +137,26 @@
                     value: function() {
                         return {
                             'entry': [
-                                {
-                                    name: 'fade-in-animation',
-                                    node: this
+                                {name: 'slide-from-right-animation', node: this.$.resultsContainer},
+                                {// TODO: This is a workaround because 'slide-from-right-animation' is messed up. Figure out/fix
+                                    name: 'transform-animation',
+                                    node: this.$.search,
+                                    transformFrom: 'scale(0,1)',
+                                    transformTo: 'scale(1,1)',
+                                    transformOrigin: 'right'
                                 }
                             ],
-                            'exit': [{
-                                name: 'fade-out-animation',
-                                node: this
-                            }]
+                            'exit': [
+                                {name: 'slide-right-animation', node: this.$.search},
+                                {name: 'slide-right-animation', node: this.$.resultsContainer}
+                            ]
                         };
                     }
                 }
             },
 
             toggleSearch: function(e) {
-                if (e) { // comes first
+                if (e) { // comes first, prevents default enter/refresh behavior
                     e.stopPropagation();
                 }
                 if (e.target === this.$.input) {
@@ -164,10 +165,8 @@
                 if (this.opened) {
                     this.hide();
                 } else {
-                    this.opened = true;
                     this.show();
                 }
-                //this.opened = !this.opened;
                 this.async(function() {
                     this.$.input.focus();
                 });
@@ -178,39 +177,34 @@
             },
 
             _onAnimationFinish: function() {
-                var results = this.$.resultsContainer;
-                var searchIcon = this.$.searchIcon;
-                var backIcon = this.$.backIcon;
-                var middleBar = document.querySelector('#middleBar');
-                var bottomBar = document.querySelector('#bottomBar');
+                // Prevent title text from appearing over search results (kludgy workaround)
+                // TODO: Figure out a better way to deal with title text on top
+                searchOverlay = this.$.searchOverlay;
                 if (!this.opened) {
-                    results.style.display = 'none';
-                    searchIcon.style.display = 'block';
-                    backIcon.style.display = 'none';
-                    middleBar.style.display = 'block';
-                    bottomBar.style.display = 'block';
+                    searchOverlay.style.display = 'none';
                 }
                 if (this.opened) {
-                    results.style.display = 'block';
-                    searchIcon.style.display = 'none';
-                    backIcon.style.display = 'block';
-                    middleBar.style.display = 'none';
-                    bottomBar.style.display = 'none';
+                    document.querySelector('#middleBar').style.display = 'none';
+                    document.querySelector('#bottomBar').style.display = 'none';
                 }
             },
 
             show: function() {
-                var results = this.$.resultsContainer;
-                results.style.display = 'block';
+                this.opened = true;
+                this.$.searchOverlay.style.display = 'block';
                 this.playAnimation('entry');
             },
 
             hide: function() {
+                // Re-show bar contents before removing search box
+                document.querySelector('#middleBar').style.display = 'block';
+                document.querySelector('#bottomBar').style.display = 'block';
                 this.playAnimation('exit');
                 this.opened = false;
             },
 
             ready: function () {
+                // Run the search setup when the component is ready
                 SimpleJekyllSearch({
                     searchInput: this.$.input,
                     resultsContainer: this.$.resultsContainer,
