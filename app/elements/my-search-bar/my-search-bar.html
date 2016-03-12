@@ -7,15 +7,6 @@
 <dom-module id="my-search-bar">
 
     <style>
-
-        #searchOverlay {
-            display: none;
-            width: 100%;
-        }
-        #searchOverlay[opened] {
-            //display: block;
-        }
-
         #search {
             display: -webkit-box;
             display: -webkit-flex;
@@ -51,11 +42,16 @@
             padding: 0 16px;
             background-color: var(--primary-color);
             margin-left: 0;
-            //background-color: red;
         }
 
         #backIcon, #searchIcon {
             display: inline-block;
+        }
+
+
+        #searchOverlay {
+            display: none;
+            width: 100%;
         }
 
         input[is=iron-input] {
@@ -94,7 +90,6 @@
                 height: calc(100vh - 56px);
             }
         }
-
     </style>
 
     <template>
@@ -183,6 +178,10 @@
                 if (!this.opened) {
                     searchOverlay.style.display = 'none';
                 }
+                if (this.opened) {
+                    document.querySelector('#middleBar').style.visibility = 'hidden';
+                    document.querySelector('#bottomBar').style.visibility = 'hidden';
+                }
             },
 
             show: function() {
@@ -192,6 +191,8 @@
             },
 
             hide: function() {
+                document.querySelector('#middleBar').style.visibility = 'visible';
+                document.querySelector('#bottomBar').style.visibility = 'visible';
                 this.playAnimation('exit');
                 this.opened = false;
             },

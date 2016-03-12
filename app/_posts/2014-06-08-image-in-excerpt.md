@@ -1,6 +1,10 @@
 ---
 layout: post
 title:  "Image in excerpt"
+tags:
+    - images
+    - code
+
 ---
 
 <img src="https://www.google.com/logos/doodles/2015/womens-world-cup-2015-us-first-match-5145027185475584-hp.jpg">

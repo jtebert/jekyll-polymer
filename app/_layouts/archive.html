@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<style>
+    body {
+        background-color: #f9f9f9 !important;
+    }
+</style>
+
+<div id="post">
+
+    <h1 class="paper-font-display1">Posts tagged '{{ page.title }}'</h1>
+    <div id="post-content">
+        <div id="archive">
+            {% for post in page.posts %}
+                {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+                {% if currentyear != year %}
+                    <h2>{{ currentyear }}</h2>
+                    {% capture year %}{{currentyear}}{% endcapture %}
+                {% endif %}
+                <p>{{ post.date | date: "%B %-d" }}&nbsp;&nbsp;<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

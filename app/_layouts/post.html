@@ -26,6 +26,11 @@ layout: default
     {{ content }}
   </div>
 
+  {% for tag in page.tags %}
+    {% assign t = tag | slugify %}
+    <x-chip href="{{ site.jekyll-archives.permalinks.tag | prepend: site.baseurl | replace: ':name', t | replace: '//', '/' }}">{{ tag | capitalize }}</x-chip>
+  {% endfor %}
+
   <hr/>
 
   <div class="share section">

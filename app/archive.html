@@ -4,6 +4,37 @@ title: Archive
 permalink: /archive/
 ---
 
+{% comment %}
+Source: https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/
+{% endcomment %}
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+    {% assign ttags = post.tags | join:'|' | append:'|' %}
+    {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+    {% for tag in rawtags %}
+        {% if tag != "" %}
+            {% if tags == "" %}
+                {% assign tags = tag | split:'|' %}
+            {% endif %}
+            {% unless tags contains tag %}
+                {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+<h1>Tags</h1>
+
+{% for tag in tags %}
+    {% assign t = tag | slugify %}
+    <x-chip href="{{ site.jekyll-archives.permalinks.tag | prepend: site.baseurl | replace: ':name', t | replace: '//', '/' }}">{{ tag | capitalize }}</x-chip>
+{% endfor %}
+
+<h1>Posts by Date</h1>
+
 <div id="archive">
 {% for post in site.posts %}
     {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
@@ -11,6 +42,6 @@ permalink: /archive/
         <h2>{{ currentyear }}</h2>
         {% capture year %}{{currentyear}}{% endcapture %}
     {% endif %}
-    <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+    <p>{{ post.date | date: "%B %-d" }}&nbsp;&nbsp;<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
 {% endfor %}
 </div>

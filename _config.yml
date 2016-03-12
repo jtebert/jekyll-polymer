@@ -25,8 +25,14 @@ paginate_path: "page:num"
 excerpt_separator: <!--more-->
 
 # Gems
-gems: [jekyll-paginate]
+gems:
+  - jekyll-archives
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/
+
+# Archive settings
+jekyll-archives:
+  enabled: ['tags']
