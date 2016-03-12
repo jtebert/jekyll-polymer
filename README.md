@@ -4,11 +4,13 @@ A Jekyll theme built with Google's Polymer library and following the material de
 
 There are a few custom web components included designed to match Material design.
 
+I created this theme because I couldn't figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn't find any Jekyll blog themes available that used Polymer or followed Google's material design specifications.
+
 ## Features
 
-- Full-text searching with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
+- Full-text search with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
 - Paginated home page
-- Support for images in posts' YAML frontmatter (appears on cards in previews)
+- Support for featured post images (appears on cards in previews)
 - Threaded comments with Disqus
 - Google Analytics integration
 
@@ -19,6 +21,18 @@ There are a few custom web components included designed to match Material design
 - Clone this repository or download it as a .zip file and unzip.
 - Install jekyll (and any other Ruby gems) with `bundle install`. (Prerequisite: must have Ruby installed. You may also have to install bundler with `gem install bundler`.)
 - From the project root folder, run `npm install -g gulp bower && npm install && bower install`. (See the [Polymer Starter Kit installation instructions](https://github.com/PolymerElements/polymer-starter-kit#install-dependencies) for more details or troubleshooting.)
+
+## Structure
+
+- `app/`: All Jekyll content is here. (This is where all the editing happens)
+  - `bower_components`: Content installed via bower ends up here
+  - `elements/`: Custom web components using Polymer
+  - `images/`: User images
+  - 'media/': Other user content (PDFs, videos, etc.) for final product
+  - `scripts/`: Javascript files
+  - `styles/`: Custom CSS
+- `dist/`: Built output from Gulp. (Use to publish static content)
+- `node_modules`: Content installed via npm goes here
 
 ## Deployment
 
@@ -42,6 +56,8 @@ There are a few custom web components included designed to match Material design
 
 ## Future Improvements:
 
+- Improve gulp build
+    - Minimize JS, CSS, HTML
 - Search
     - Ripple effect in search results on click (needs set height)
     - Escape toggles search show

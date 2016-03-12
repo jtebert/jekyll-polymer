@@ -48,6 +48,11 @@ var AUTOPREFIXER_BROWSERS = [
 // Source and destination directories
 var DIST = 'dist';
 var SRC = 'app/_site';
+var NOTSRC = '!app/_site';
+
+var notsrc = function(subpath) {
+  return !subpath ? NOTSRC : path.join(DIST, subpath);
+};
 
 var src = function(subpath) {
   return !subpath ? SRC : path.join(SRC, subpath);
@@ -185,14 +190,16 @@ gulp.task('images', function() {
 gulp.task('copy', function() {
   var app = gulp.src([
     src('*'),
-    '!app/_site/test',
-    '!app/_site/elements',
-    '!app/_site/bower_components',
-    '!app/_site/cache-config.json',
-    '!**/_site/.DS_Store'
+    notsrc('test'),
+    notsrc('elements'),
+    notsrc('bower_components'),
+    notsrc('cache-config.json'),
+    notsrc('.DS_Store')
   ], {
     dot: true
   }).pipe(gulp.dest(dist()));
+
+    var media = gulp.src([src('media/**/*')]).pipe(gulp.dest(dist('media')));
 
   // Copy over only the bower_components we need
   // These are things which cannot be vulcanized
@@ -219,7 +226,7 @@ gulp.task('fonts', function() {
 gulp.task('html', function() {
   return optimizeHtmlTask(
       // TODO: Changed extension from HTML because JS wasn't getting copied over.
-    [src('**/*.html'), '!app/_site/{elements,test,bower_components}/**/*.html'],
+    [src('**/*.html'), notsrc('{elements,test,bower_components}/**/*.html')],
     dist());
 });
 

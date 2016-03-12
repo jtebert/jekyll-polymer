@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="card-wrapper">
+    <paper-card class="custom"
+                {% if page.image %}
+                image="{{ site.baseurl }}/images/{{ page.image }}"
+                {% endif %}>
+        <div class="card-content">
+            <div class="title">{{ page.title }}</div>
+            {{ content }}
+        </div>
+    </paper-card>
+</div>

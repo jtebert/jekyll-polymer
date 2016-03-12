@@ -10,10 +10,13 @@ layout: default
 
 <div id="post">
 
-  {% if page.hero-image %}
+  {% if page.image %}
   <a href="{{ site.baseurl }}/images/posts/{{ page.image }}" data-lightbox="image-1" data-title="{{ page.image-caption }}">
     <img class="materialboxed" src="{{ site.baseurl }}/images/posts/{{ page.image }}">
   </a>
+  {% if page.image-source %}
+  <a href="{{ page.image-source }}">Source</a>
+  {% endif %}
   {% endif %}
 
   <h1 class="paper-font-display1">{{ page.title }}</h1>

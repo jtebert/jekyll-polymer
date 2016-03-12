@@ -3,7 +3,7 @@ layout: post
 title:  "Typography"
 ---
 
-Here are the different features and styles available for posts written in Markdown.
+Here are the different features and styles available for posts written in Markdown. To see how to create them, check out the source markdown file.
 
 <!--more-->
 
@@ -82,19 +82,9 @@ $$
 
 Code embedded in a paragraph looks like `this is code`. Code can also be in blocks with or without line numbers.
 
-## Code blocks (fenced code)
+## Code blocks
 
 Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just `linenos` instead of `linenos=table`, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)
-
-With line numbers (as table):
-
-{% highlight ruby linenos=table %}
-  def print_hi(name)
-    puts "Hi, #{name}"
-  end
-  print_hi('Tom')
-  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
-{% endhighlight %}
 
 Without line numbers:
 
@@ -103,17 +93,17 @@ Without line numbers:
     puts "Hi, #{name}"
   end
   print_hi('Tom')
-  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
+  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling if it goes past the box.
 {% endhighlight %}
 
-With line numbers (inline):
+With line numbers:
 
 {% highlight ruby linenos %}
   def print_hi(name)
     puts "Hi, #{name}"
   end
   print_hi('Tom')
-  #=> prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.
+  #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
 

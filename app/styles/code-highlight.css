@@ -8,7 +8,7 @@
     color: #9E9E9E } /* Comment */
 .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .no {
     color: #03A9F4 } /* Keyword */
-.highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi, {
+.highlight .n, .highlight .nb, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .py, .highlight .nv, .highlight .w, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi {
     color: #009688 } /* Name */
 .highlight .p {
     color: #FF5722 }  /* Punctuation */
