@@ -71,6 +71,7 @@
             -ms-flex: 1 0 0;
             -o-flex: 1 0 0;
             flex: 1 0 0;
+            -webkit-appearance: none;
         }
 
         #resultsContainer {
@@ -84,6 +85,7 @@
             margin-left: 0;
             background-color: var(--primary-background-color);
             overflow-y: auto;
+            z-index:1;
         }
 
         @media (max-width: 639px) {
@@ -177,15 +179,9 @@
             },
 
             _onAnimationFinish: function() {
-                // Prevent title text from appearing over search results (kludgy workaround)
-                // TODO: Figure out a better way to deal with title text on top
                 searchOverlay = this.$.searchOverlay;
                 if (!this.opened) {
                     searchOverlay.style.display = 'none';
-                }
-                if (this.opened) {
-                    document.querySelector('#middleBar').style.visibility = 'hidden';
-                    document.querySelector('#bottomBar').style.visibility = 'hidden';
                 }
             },
 
@@ -196,9 +192,6 @@
             },
 
             hide: function() {
-                // Re-show bar contents before removing search box
-                document.querySelector('#middleBar').style.visibility = 'visible';
-                document.querySelector('#bottomBar').style.visibility = 'visible';
                 this.playAnimation('exit');
                 this.opened = false;
             },
