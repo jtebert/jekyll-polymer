@@ -8,7 +8,7 @@
     <meta name="generator" content="Jekyll Polymer Theme" />
 
     <title>Typography</title>
-    <meta name="description" content="Here are the different features and styles available for posts written in Markdown.">
+    <meta name="description" content="Here are the different features and styles available for posts written in Markdown. To see how to create them, check out the source markdown file.">
 
     <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2015/06/08/typography/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
@@ -88,7 +88,9 @@
           
           <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
           
-          <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
+          
+          <a data-route="contact" href="mailto:julia@juliaebert.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
         </paper-menu>
         <div class="push"></div>
       </div>
@@ -135,7 +137,7 @@
   <h4 class="paper-font-subhead" id="date">Jun 8, 2015</h4>
 
   <div id="post-content">
-    <p>Here are the different features and styles available for posts written in Markdown.</p>
+    <p>Here are the different features and styles available for posts written in Markdown. To see how to create them, check out the source markdown file.</p>
 
 <!--more-->
 
@@ -259,22 +261,9 @@ It’s split over multiple lines.</p>
 
 <p>Code embedded in a paragraph looks like <code class="highlighter-rouge">this is code</code>. Code can also be in blocks with or without line numbers.</p>
 
-<h2 id="code-blocks-fenced-code">Code blocks (fenced code)</h2>
+<h2 id="code-blocks">Code blocks</h2>
 
 <p>Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just <code class="highlighter-rouge">linenos</code> instead of <code class="highlighter-rouge">linenos=table</code>, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)</p>
-
-<p>With line numbers (as table):</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre>  <span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-    <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-  <span class="k">end</span>
-  <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Without line numbers:</p>
 
@@ -282,9 +271,9 @@ It’s split over multiple lines.</p>
     <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
   <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span></code></pre></figure>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling if it goes past the box.</span></code></pre></figure>
 
-<p>With line numbers (inline):</p>
+<p>With line numbers:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -294,7 +283,7 @@ It’s split over multiple lines.</p>
     <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
   <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling and wrapping in code.</span><span class="w">
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 <h1 id="definition-lists">Definition Lists</h1>

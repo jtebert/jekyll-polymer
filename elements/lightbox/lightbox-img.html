@@ -1,0 +1,32 @@
+<dom-module id="lightbox-img">
+
+    <style>
+
+    </style>
+
+    <template>
+        <a href="{{src}}" data-lightbox="{{lightbox}}" data-title="{{caption}}">
+            <img src="{{src}}">
+        </a>
+
+        <!-- For lightbox -->
+        <script type="text/javascript" src="../../scripts/lightbox/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../../scripts/lightbox/js/lightbox.min.js"></script>
+
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'lightbox-img',
+
+            properties: {
+                src: String,
+                caption: String,
+                lightbox: String
+            }
+        });
+
+    </script>
+
+</dom-module>

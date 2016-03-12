@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="my-card-more">
+
+    <style>
+
+        #card-more {
+            display: block;
+            padding: 16px;
+            border-top: 1px solid var(--divider-color, #B6B6B6);;
+            color: var(--secondary-text-color, #727272);
+            text-decoration: none;
+            transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        #card-more > #content {
+            margin-left: 24px;
+        }
+
+    </style>
+
+    <template>
+        <a href="{{href}}" id="card-more">
+            <iron-icon icon="arrow-forward"></iron-icon><span id="content"><content></content></span>
+            <paper-ripple></paper-ripple>
+        </a>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'my-card-more',
+
+            properties: {
+                href: String
+            }
+        });
+
+    </script>
+
+</dom-module>

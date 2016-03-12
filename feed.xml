@@ -6,33 +6,130 @@
 </description>
     <link>http://juliaebert.com/jekyll-polymer/</link>
     <atom:link href="http://juliaebert.com/jekyll-polymer/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 15:16:27 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 15:16:27 +0000</lastBuildDate>
+    <pubDate>Sat, 12 Mar 2016 14:17:27 +0000</pubDate>
+    <lastBuildDate>Sat, 12 Mar 2016 14:17:27 +0000</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>About the Jekyll Polymer Theme</title>
-        <description>&lt;p&gt;This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (&lt;a href=&quot;https://github.com/jtebert/jekyll-polymer&quot;&gt;See the Github repository for details.&lt;/a&gt;)&lt;/p&gt;
+        <description>&lt;p&gt;&lt;em&gt;Taken from the readme file of the project’s &lt;a href=&quot;https://github.com/jtebert/jekyll-polymer&quot;&gt;Github repository&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A Jekyll theme built with Google’s Polymer library and following the material design specifications.&lt;/p&gt;
+
+&lt;p&gt;There are a few custom web components included designed to match Material design.&lt;/p&gt;
 
 &lt;p&gt;I created this theme because I couldn’t figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn’t find any Jekyll blog themes available that used Polymer or followed Google’s material design specifications.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;elements/&lt;/code&gt;: Custom web components using Polymer&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scripts/&lt;/code&gt;: Javascript. Will be minimized when built.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;styles/&lt;/code&gt;: Custom CSS. CSS used here will be minimized when built.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bower_components&lt;/code&gt;: Content installed via bower goes here&lt;/li&gt;
+  &lt;li&gt;Full-text search with &lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search&quot;&gt;simple-jekyll-search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Paginated home page&lt;/li&gt;
+  &lt;li&gt;Support for featured post images (appears on cards in previews)&lt;/li&gt;
+  &lt;li&gt;Threaded comments with Disqus&lt;/li&gt;
+  &lt;li&gt;Google Analytics integration&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation instructions&lt;/h2&gt;
+
+&lt;p&gt;(Instructions are based off of those for the &lt;a href=&quot;https://github.com/PolymerElements/polymer-starter-kit&quot;&gt;Polymer Starter Kit&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone this repository or download it as a .zip file and unzip.&lt;/li&gt;
+  &lt;li&gt;Install jekyll (and any other Ruby gems) with &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;. (Prerequisite: must have Ruby installed. You may also have to install bundler with &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install bundler&lt;/code&gt;.)&lt;/li&gt;
+  &lt;li&gt;From the project root folder, run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g gulp bower &amp;amp;&amp;amp; npm install &amp;amp;&amp;amp; bower install&lt;/code&gt;. (See the &lt;a href=&quot;https://github.com/PolymerElements/polymer-starter-kit#install-dependencies&quot;&gt;Polymer Starter Kit installation instructions&lt;/a&gt; for more details or troubleshooting.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;structure&quot;&gt;Structure&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;app/&lt;/code&gt;: All Jekyll content is here. (This is where all the editing happens)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bower_components&lt;/code&gt;: Content installed via bower ends up here&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;elements/&lt;/code&gt;: Custom web components using Polymer&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;images/&lt;/code&gt;: User images&lt;/li&gt;
+      &lt;li&gt;‘media/’: Other user content (PDFs, videos, etc.) for final product&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scripts/&lt;/code&gt;: Javascript files&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;styles/&lt;/code&gt;: Custom CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dist/&lt;/code&gt;: Built output from Gulp. (Use to publish static content)&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;: Content installed via npm goes here&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;build-instructions&quot;&gt;Build Instructions&lt;/h1&gt;
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment&lt;/h2&gt;
 
-&lt;p&gt;This part is pretty brutal right now but gets the job done. Hopefully I’ll get better with gulp and clean this up soon.&lt;/p&gt;
+&lt;h3 id=&quot;servewatch&quot;&gt;Serve/watch&lt;/h3&gt;
 
-&lt;p&gt;For now, just use Jekyll to build and serve. The gulp stuff doesn’t really work yet.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp serve&lt;/code&gt;: Starts a jekyll serve process on the default port (4000 or whatever is specified in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp serve --port 6666&lt;/code&gt;: Start serving on port &lt;code class=&quot;highlighter-rouge&quot;&gt;6666&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp serve:dist&lt;/code&gt;: Build as below, and serve the result from the &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/&lt;/code&gt; directory. (Useful for testing changes to the gulpfile.)&lt;/p&gt;
+
+&lt;h3 id=&quot;build-and-vulcanize&quot;&gt;Build and vulcanize&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt;: Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/&lt;/code&gt; directory. (This can be slow.)&lt;/p&gt;
+
+&lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp deploy-gh-pages&lt;/code&gt;: Deploy the current build to the gh-pages branch of your repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gulp build-deploy-gh-pages&lt;/code&gt;: Rebuild and then deploy. (Equivalent to &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp &amp;amp;&amp;amp; gulp deploy-gh-pages&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;future-improvements&quot;&gt;Future Improvements:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Improve gulp build
+    &lt;ul&gt;
+      &lt;li&gt;Minimize JS, CSS, HTML&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Search
+    &lt;ul&gt;
+      &lt;li&gt;Ripple effect in search results on click (needs set height)&lt;/li&gt;
+      &lt;li&gt;Escape toggles search show&lt;/li&gt;
+      &lt;li&gt;arrow keys/tab moves focus on search results&lt;/li&gt;
+      &lt;li&gt;better animation for search bar leaving/entering&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Navigation drawer
+    &lt;ul&gt;
+      &lt;li&gt;Change hover effect on drawer items (see Google Music)&lt;/li&gt;
+      &lt;li&gt;Make selected/active items in drawer colored&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Page transition animations&lt;/li&gt;
+  &lt;li&gt;Give option of setting card-colorbar color&lt;/li&gt;
+  &lt;li&gt;Add ripple effect to nav drawer menu items&lt;/li&gt;
+  &lt;li&gt;Pagination:
+    &lt;ul&gt;
+      &lt;li&gt;Maybe replace with actual buttons&lt;/li&gt;
+      &lt;li&gt;hover effects like buttons?&lt;/li&gt;
+      &lt;li&gt;Handle if it gets too wide for screen? (limit number of page links)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tags
+    &lt;ul&gt;
+      &lt;li&gt;Show tags with posts&lt;/li&gt;
+      &lt;li&gt;Allow filtering by tag&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add material box or lightbox for images&lt;/li&gt;
+  &lt;li&gt;Add ‘source’ option for YAML frontmatter&lt;/li&gt;
+  &lt;li&gt;increase spacing between list items&lt;/li&gt;
+  &lt;li&gt;Fix things like header-panel to utilize updates to polymer paper elements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;known-issues&quot;&gt;Known issues&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JS and HTML aren’t minimized&lt;/li&gt;
+  &lt;li&gt;Too much space on cards between end of excerpt and read more button&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         <pubDate>Fri, 19 Jun 2015 00:00:00 +0100</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2015/06/19/about-jekyll-polymer-theme/</link>
@@ -122,7 +219,7 @@
     
       <item>
         <title>Typography</title>
-        <description>&lt;p&gt;Here are the different features and styles available for posts written in Markdown.&lt;/p&gt;
+        <description>&lt;p&gt;Here are the different features and styles available for posts written in Markdown. To see how to create them, check out the source markdown file.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -246,22 +343,9 @@ It’s split over multiple lines.&lt;/p&gt;
 
 &lt;p&gt;Code embedded in a paragraph looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;this is code&lt;/code&gt;. Code can also be in blocks with or without line numbers.&lt;/p&gt;
 
-&lt;h2 id=&quot;code-blocks-fenced-code&quot;&gt;Code blocks (fenced code)&lt;/h2&gt;
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code blocks&lt;/h2&gt;
 
 &lt;p&gt;Code blocks have syntax highlighting courtesy of highlight.js. You can specify the code language and whether you want the code block to include line numbers. (You can include line numbers using just &lt;code class=&quot;highlighter-rouge&quot;&gt;linenos&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;linenos=table&lt;/code&gt;, but this puts the line numbers in the same lines as the code so that it becomes impossible to copy and paste.)&lt;/p&gt;
-
-&lt;p&gt;With line numbers (as table):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Without line numbers:&lt;/p&gt;
 
@@ -269,9 +353,9 @@ It’s split over multiple lines.&lt;/p&gt;
     &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling if it goes past the box.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;With line numbers (inline):&lt;/p&gt;
+&lt;p&gt;With line numbers:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -281,7 +365,7 @@ It’s split over multiple lines.&lt;/p&gt;
     &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling and wrapping in code.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;definition-lists&quot;&gt;Definition Lists&lt;/h1&gt;

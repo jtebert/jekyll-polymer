@@ -19441,6 +19441,9 @@ context. You should place this element as a child of `<body>` whenever possible.
     line-height: 24px;
     margin: 0 0 20px 0;
   }
+  li ol, li ul {
+    margin: 0;
+  }
 
   code, pre {
     color: var(--code-text-color);
@@ -19474,6 +19477,10 @@ context. You should place this element as a child of `<body>` whenever possible.
     height: 1px;
     border: 0;
     margin: 0;
+  }
+
+  .content hr {
+    margin: 16px 0;
   }
 
   a {
@@ -19584,6 +19591,7 @@ context. You should place this element as a child of `<body>` whenever possible.
 
   table {
     border-collapse: collapse;
+    margin-bottom: 16px;
   }
 
   table td {
@@ -19596,6 +19604,13 @@ context. You should place this element as a child of `<body>` whenever possible.
 
   table th, table td {
     padding: 8px;
+  }
+
+  .highlight table {
+    margin: 0 !important;
+  }
+  .highlight table td {
+    border: none !important;
   }
 
   .paper-font-subhead {
@@ -19799,6 +19814,9 @@ context. You should place this element as a child of `<body>` whenever possible.
     @apply(--paper-font-body1);
     color: var(--secondary-text-color, #727272);
     margin: -8px 0 16px 0;
+  }
+  paper-card .card-content *:last-child {
+    margin-bottom: 8px;
   }
 
   /** Archive page **/
@@ -20461,6 +20479,7 @@ context. You should place this element as a child of `<body>` whenever possible.
         ul {
             text-align: center;
             padding: 0;
+            margin: 24px 0 36px 0;
         }
 
     </style>
@@ -20798,6 +20817,7 @@ is separate from validation, and `allowed-pattern` does not affect how the input
             -ms-flex: 1 0 0;
             -o-flex: 1 0 0;
             flex: 1 0 0;
+            -webkit-appearance: none;
         }
 
         #resultsContainer {
@@ -20811,6 +20831,7 @@ is separate from validation, and `allowed-pattern` does not affect how the input
             margin-left: 0;
             background-color: var(--primary-background-color);
             overflow-y: auto;
+            z-index:1;
         }
 
         @media (max-width: 639px) {
@@ -21282,15 +21303,9 @@ function isJSON(json){
             },
 
             _onAnimationFinish: function() {
-                // Prevent title text from appearing over search results (kludgy workaround)
-                // TODO: Figure out a better way to deal with title text on top
                 searchOverlay = this.$.searchOverlay;
                 if (!this.opened) {
                     searchOverlay.style.display = 'none';
-                }
-                if (this.opened) {
-                    document.querySelector('#middleBar').style.display = 'none';
-                    document.querySelector('#bottomBar').style.display = 'none';
                 }
             },
 
@@ -21301,9 +21316,6 @@ function isJSON(json){
             },
 
             hide: function() {
-                // Re-show bar contents before removing search box
-                document.querySelector('#middleBar').style.display = 'block';
-                document.querySelector('#bottomBar').style.display = 'block';
                 this.playAnimation('exit');
                 this.opened = false;
             },

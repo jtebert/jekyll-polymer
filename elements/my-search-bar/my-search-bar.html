@@ -1,0 +1,220 @@
+<link rel="import" href="../../bower_components/neon-animation/neon-animation-runner-behavior.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="my-search-bar">
+
+    <style>
+
+        #searchOverlay {
+            display: none;
+            width: 100%;
+        }
+        #searchOverlay[opened] {
+            //display: block;
+        }
+
+        #search {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: -o-flex;
+            display: flex;
+
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+
+            -webkit-box-flex: 1;
+            -webkit-flex: 0 0 auto;
+            -moz-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+            -o-flex: 0 0 auto;
+            flex: 0 0 auto;
+
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            z-index: 100;
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0 16px;
+            background-color: var(--primary-color);
+            margin-left: 0;
+            //background-color: red;
+        }
+
+        #backIcon, #searchIcon {
+            display: inline-block;
+        }
+
+        input[is=iron-input] {
+            display: inline-block;
+            background-color: inherit;
+            border: none;
+            font-size: 20px;
+            outline: none;
+            color: inherit;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 0;
+            -moz-flex: 1 0 0;
+            -ms-flex: 1 0 0;
+            -o-flex: 1 0 0;
+            flex: 1 0 0;
+            -webkit-appearance: none;
+        }
+
+        #resultsContainer {
+            @apply(--paper-font-body1);
+            color: var(--primary-text-color);
+            width: 100%;
+            height: calc(100vh - 64px);
+            position: absolute;
+            top: 64px;
+            left: 0;
+            margin-left: 0;
+            background-color: var(--primary-background-color);
+            overflow-y: auto;
+            z-index:1;
+        }
+
+        @media (max-width: 639px) {
+            #resultsContainer {
+                top: 56px;
+                height: calc(100vh - 56px);
+            }
+        }
+
+    </style>
+
+    <template>
+        <paper-icon-button icon="search" id="searchIcon" on-click="toggleSearch" opened$="{{opened}}"></paper-icon-button>
+        <div id="searchOverlay" opened$="{{opened}}">
+            <div id="search">
+                <paper-icon-button icon="arrow-back" id="backIcon" on-click="toggleSearch"></paper-icon-button>
+                <input is="iron-input" bind-value="{{searchInput}}" type="search" id="input" autocomplete="off">
+            </div>
+            <div class="list" id="resultsContainer"></div>
+        </div>
+    </template>
+
+    <script src="../../bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+    <script>
+        /*jshint multistr: true */
+        // Do search with json file and make results appear
+
+        Polymer({
+            is: 'my-search-bar',
+
+            behaviors: [
+                Polymer.NeonAnimationRunnerBehavior
+            ],
+
+            properties: {
+                opened: {
+                    type: Boolean,
+                    value: false
+                },
+                searchInput: {
+                    type: String,
+                    value: ''
+                },
+                searchjson: {
+                    type: String,
+                    value: 'search.json'
+                },
+
+                animationConfig: {
+                    type: Object,
+                    value: function() {
+                        return {
+                            'entry': [
+                                {name: 'slide-from-right-animation', node: this.$.resultsContainer},
+                                {// TODO: This is a workaround because 'slide-from-right-animation' is messed up. Figure out/fix
+                                    name: 'transform-animation',
+                                    node: this.$.search,
+                                    transformFrom: 'scale(0,1)',
+                                    transformTo: 'scale(1,1)',
+                                    transformOrigin: 'right'
+                                }
+                            ],
+                            'exit': [
+                                {name: 'slide-right-animation', node: this.$.search},
+                                {name: 'slide-right-animation', node: this.$.resultsContainer}
+                            ]
+                        };
+                    }
+                }
+            },
+
+            toggleSearch: function(e) {
+                if (e) { // comes first, prevents default enter/refresh behavior
+                    e.stopPropagation();
+                }
+                if (e.target === this.$.input) {
+                    return;
+                }
+                if (this.opened) {
+                    this.hide();
+                } else {
+                    this.show();
+                }
+                this.async(function() {
+                    this.$.input.focus();
+                });
+            },
+
+            listeners: {
+                'neon-animation-finish': '_onAnimationFinish'
+            },
+
+            _onAnimationFinish: function() {
+                searchOverlay = this.$.searchOverlay;
+                if (!this.opened) {
+                    searchOverlay.style.display = 'none';
+                }
+            },
+
+            show: function() {
+                this.opened = true;
+                this.$.searchOverlay.style.display = 'block';
+                this.playAnimation('entry');
+            },
+
+            hide: function() {
+                this.playAnimation('exit');
+                this.opened = false;
+            },
+
+            ready: function () {
+                // Run the search setup when the component is ready
+                SimpleJekyllSearch({
+                    searchInput: this.$.input,
+                    resultsContainer: this.$.resultsContainer,
+                    json: this.searchjson,
+                    searchResultTemplate:
+                     '<a href="{url}" class="test"><paper-item> \
+                     <paper-item-body two-line> \
+                     <div>{title}</div> \
+                     <div secondary>{date}</div> \
+                     <paper-ripple></paper-ripple>\
+                     </paper-item-body> \
+                     </paper-item></a><hr/>',
+                    noResultsText: '<p>No posts found</p>',
+                    limit: 20,
+                    fuzzy: false
+                });
+            }
+        });
+    </script>
+</dom-module>

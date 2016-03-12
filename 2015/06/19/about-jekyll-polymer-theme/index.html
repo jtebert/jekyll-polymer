@@ -8,7 +8,7 @@
     <meta name="generator" content="Jekyll Polymer Theme" />
 
     <title>About the Jekyll Polymer Theme</title>
-    <meta name="description" content="This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (See the Github repos...">
+    <meta name="description" content="Taken from the readme file of the project’s Github repository)A Jekyll theme built with Google’s Polymer library and following the material design specificat...">
 
     <link rel="canonical" href="http://juliaebert.com/jekyll-polymer/2015/06/19/about-jekyll-polymer-theme/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Polymer Theme" href='http://juliaebert.com/jekyll-polymer/feed.xml' />
@@ -88,7 +88,9 @@
           
           <a href="https://github.com/jtebert"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
           
-          <!--<a data-route="contact" href="/contact/"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>-->
+          
+          <a data-route="contact" href="mailto:julia@juliaebert.com"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
+          
         </paper-menu>
         <div class="push"></div>
       </div>
@@ -135,27 +137,124 @@
   <h4 class="paper-font-subhead" id="date">Jun 19, 2015</h4>
 
   <div id="post-content">
-    <p>This theme was created using the Google’s Polymer 1.0. It’s currently a first draft, so there are still features I plan to add and fix. (<a href="https://github.com/jtebert/jekyll-polymer">See the Github repository for details.</a>)</p>
+    <p><em>Taken from the readme file of the project’s <a href="https://github.com/jtebert/jekyll-polymer">Github repository</a>)</em></p>
+
+<p>A Jekyll theme built with Google’s Polymer library and following the material design specifications.</p>
+
+<p>There are a few custom web components included designed to match Material design.</p>
 
 <p>I created this theme because I couldn’t figure out how to set up a Jekyll project to play nicely with Polymer, and because I didn’t find any Jekyll blog themes available that used Polymer or followed Google’s material design specifications.</p>
 
 <!--more-->
 
-<h1 id="structure">Structure</h1>
+<h2 id="features">Features</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">elements/</code>: Custom web components using Polymer</li>
-  <li><code class="highlighter-rouge">scripts/</code>: Javascript. Will be minimized when built.</li>
-  <li><code class="highlighter-rouge">styles/</code>: Custom CSS. CSS used here will be minimized when built.</li>
-  <li><code class="highlighter-rouge">bower_components</code>: Content installed via bower goes here</li>
+  <li>Full-text search with <a href="https://github.com/christian-fei/Simple-Jekyll-Search">simple-jekyll-search</a></li>
+  <li>Paginated home page</li>
+  <li>Support for featured post images (appears on cards in previews)</li>
+  <li>Threaded comments with Disqus</li>
+  <li>Google Analytics integration</li>
+</ul>
+
+<h2 id="installation-instructions">Installation instructions</h2>
+
+<p>(Instructions are based off of those for the <a href="https://github.com/PolymerElements/polymer-starter-kit">Polymer Starter Kit</a>.)</p>
+
+<ul>
+  <li>Clone this repository or download it as a .zip file and unzip.</li>
+  <li>Install jekyll (and any other Ruby gems) with <code class="highlighter-rouge">bundle install</code>. (Prerequisite: must have Ruby installed. You may also have to install bundler with <code class="highlighter-rouge">gem install bundler</code>.)</li>
+  <li>From the project root folder, run <code class="highlighter-rouge">npm install -g gulp bower &amp;&amp; npm install &amp;&amp; bower install</code>. (See the <a href="https://github.com/PolymerElements/polymer-starter-kit#install-dependencies">Polymer Starter Kit installation instructions</a> for more details or troubleshooting.)</li>
+</ul>
+
+<h2 id="structure">Structure</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">app/</code>: All Jekyll content is here. (This is where all the editing happens)
+    <ul>
+      <li><code class="highlighter-rouge">bower_components</code>: Content installed via bower ends up here</li>
+      <li><code class="highlighter-rouge">elements/</code>: Custom web components using Polymer</li>
+      <li><code class="highlighter-rouge">images/</code>: User images</li>
+      <li>‘media/’: Other user content (PDFs, videos, etc.) for final product</li>
+      <li><code class="highlighter-rouge">scripts/</code>: Javascript files</li>
+      <li><code class="highlighter-rouge">styles/</code>: Custom CSS</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">dist/</code>: Built output from Gulp. (Use to publish static content)</li>
   <li><code class="highlighter-rouge">node_modules</code>: Content installed via npm goes here</li>
 </ul>
 
-<h1 id="build-instructions">Build Instructions</h1>
+<h2 id="deployment">Deployment</h2>
 
-<p>This part is pretty brutal right now but gets the job done. Hopefully I’ll get better with gulp and clean this up soon.</p>
+<h3 id="servewatch">Serve/watch</h3>
 
-<p>For now, just use Jekyll to build and serve. The gulp stuff doesn’t really work yet.</p>
+<p><code class="highlighter-rouge">gulp serve</code>: Starts a jekyll serve process on the default port (4000 or whatever is specified in <code class="highlighter-rouge">_config.yml</code>).</p>
+
+<p><code class="highlighter-rouge">gulp serve --port 6666</code>: Start serving on port <code class="highlighter-rouge">6666</code></p>
+
+<p><code class="highlighter-rouge">gulp serve:dist</code>: Build as below, and serve the result from the <code class="highlighter-rouge">dist/</code> directory. (Useful for testing changes to the gulpfile.)</p>
+
+<h3 id="build-and-vulcanize">Build and vulcanize</h3>
+
+<p><code class="highlighter-rouge">gulp</code>: Builds the files with jekyll, vulcanizes, minimizes, and puts the result in the <code class="highlighter-rouge">dist/</code> directory. (This can be slow.)</p>
+
+<h2 id="deploy">Deploy</h2>
+
+<p><code class="highlighter-rouge">gulp deploy-gh-pages</code>: Deploy the current build to the gh-pages branch of your repository.</p>
+
+<p><code class="highlighter-rouge">gulp build-deploy-gh-pages</code>: Rebuild and then deploy. (Equivalent to <code class="highlighter-rouge">gulp &amp;&amp; gulp deploy-gh-pages</code>)</p>
+
+<h2 id="future-improvements">Future Improvements:</h2>
+
+<ul>
+  <li>Improve gulp build
+    <ul>
+      <li>Minimize JS, CSS, HTML</li>
+    </ul>
+  </li>
+  <li>Search
+    <ul>
+      <li>Ripple effect in search results on click (needs set height)</li>
+      <li>Escape toggles search show</li>
+      <li>arrow keys/tab moves focus on search results</li>
+      <li>better animation for search bar leaving/entering</li>
+    </ul>
+  </li>
+  <li>Navigation drawer
+    <ul>
+      <li>Change hover effect on drawer items (see Google Music)</li>
+      <li>Make selected/active items in drawer colored</li>
+    </ul>
+  </li>
+  <li>Page transition animations</li>
+  <li>Give option of setting card-colorbar color</li>
+  <li>Add ripple effect to nav drawer menu items</li>
+  <li>Pagination:
+    <ul>
+      <li>Maybe replace with actual buttons</li>
+      <li>hover effects like buttons?</li>
+      <li>Handle if it gets too wide for screen? (limit number of page links)</li>
+    </ul>
+  </li>
+  <li>Tags
+    <ul>
+      <li>Show tags with posts</li>
+      <li>Allow filtering by tag</li>
+    </ul>
+  </li>
+  <li>Add material box or lightbox for images</li>
+  <li>Add ‘source’ option for YAML frontmatter</li>
+  <li>increase spacing between list items</li>
+  <li>Fix things like header-panel to utilize updates to polymer paper elements</li>
+</ul>
+
+<h3 id="known-issues">Known issues</h3>
+
+<ul>
+  <li>JS and HTML aren’t minimized</li>
+  <li>Too much space on cards between end of excerpt and read more button</li>
+</ul>
+
 
   </div>
 

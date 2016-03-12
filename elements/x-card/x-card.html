@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+
+<dom-module id="x-card">
+
+    <style>
+        #x-card {
+            width: 700px;
+            max-width: calc(100% - 32px);
+            padding: 0;
+            position: relative;
+            margin: 16px auto;
+            background: #ffffff;
+            overflow: auto;
+        }
+    </style>
+
+    <template>
+        <paper-material id="x-card" elevation="{{elevation}}" class="paper-font-body1">
+            <content></content>
+        </paper-material>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'x-card',
+
+            behaviors: [
+                Polymer.NeonAnimationRunnerBehavior
+            ],
+
+            properties: {
+                elevation: String
+            },
+
+            entryAnimation: {
+                value: 'scale-up-animation'
+            },
+            exitAnimation: {
+                value: 'fade-out-animation'
+            }
+        });
+    </script>
+
+</dom-module>
