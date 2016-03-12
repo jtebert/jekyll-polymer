@@ -1,6 +1,11 @@
 ---
 layout: post
 title:  "Typography"
+tags:
+    - markdown
+    - design
+    - code
+
 ---
 
 Here are the different features and styles available for posts written in Markdown. To see how to create them, check out the source markdown file.
