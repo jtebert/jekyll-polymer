@@ -81,7 +81,7 @@
             margin-left: 0;
             background-color: var(--primary-background-color);
             overflow-y: auto;
-            z-index:1;
+            z-index:100;
         }
 
         @media (max-width: 639px) {
@@ -178,10 +178,6 @@
                 if (!this.opened) {
                     searchOverlay.style.display = 'none';
                 }
-                if (this.opened) {
-                    document.querySelector('#middleBar').style.visibility = 'hidden';
-                    document.querySelector('#bottomBar').style.visibility = 'hidden';
-                }
             },
 
             show: function() {
@@ -191,8 +187,6 @@
             },
 
             hide: function() {
-                document.querySelector('#middleBar').style.visibility = 'visible';
-                document.querySelector('#bottomBar').style.visibility = 'visible';
                 this.playAnimation('exit');
                 this.opened = false;
             },
