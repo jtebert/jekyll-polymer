@@ -32,8 +32,16 @@ paper-menu {
     padding: 0;
 }
 
+#mainToolbar.paper-toolbar-0 {
+    z-index:0 !important;
+}
+
 #middleBar.paper-toolbar {
-    z-index: 0 !important;
+    z-index:-1 !important;
+}
+
+#bottomBar.paper-toolbar {
+    z-index:-1 !important;
 }
 
 my-search-bar {
