@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="x-chip">
+
+    <style>
+
+        a {
+            @apply(--shadow-transition);
+            color: var(--secondary-text-color);
+            display: inline-block;
+            font-size: 13px;
+            line-height: 32px;
+            border-radius: 16px;
+            background-color: var(--divider-color);
+            padding: 0 12px;
+            text-decoration: none;
+            margin: 8px;
+            margin-left: 0;
+        }
+
+        a:hover, a:focus {
+            @apply(--shadow-elevation-2dp);
+            outline: none;
+        }
+    </style>
+
+    <template>
+        <a href="{{href}}"><content></content></a>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'x-chip',
+
+            properties: {
+                href: String
+            }
+        });
+    </script>
+</dom-module>

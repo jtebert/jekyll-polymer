@@ -29,36 +29,36 @@
 
 <p>Elements that can be animated should implement the <code class="highlighter-rouge">Polymer.NeonAnimatableBehavior</code> behavior, or <code class="highlighter-rouge">Polymer.NeonAnimationRunnerBehavior</code> if they’re also responsible for running an animation.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">Polymer</span><span class="p">({</span>
-  <span class="na">is</span><span class="p">:</span> <span class="s1">'my-animatable'</span><span class="p">,</span>
-  <span class="na">behaviors</span><span class="p">:</span> <span class="p">[</span>
-    <span class="nx">Polymer</span><span class="p">.</span><span class="nx">NeonAnimationRunnerBehavior</span>
-  <span class="p">],</span>
-  <span class="na">properties</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">animationConfig</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">{</span>
-          <span class="c1">// provided by neon-animation/animations/scale-down-animation.html</span>
-          <span class="na">name</span><span class="p">:</span> <span class="s1">'scale-down-animation'</span><span class="p">,</span>
-          <span class="na">node</span><span class="p">:</span> <span class="k">this</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="na">listeners</span><span class="p">:</span> <span class="p">{</span>
-    <span class="c1">// this event is fired when the animation finishes</span>
-    <span class="s1">'neon-animation-finish'</span><span class="p">:</span> <span class="s1">'_onNeonAnimationFinish'</span>
-  <span class="p">},</span>
-  <span class="na">animate</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// run scale-down-animation</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">playAnimation</span><span class="p">();</span>
-  <span class="p">},</span>
-  <span class="na">_onNeonAnimationFinish</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'animation done!'</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+Polymer({
+  is: 'my-animatable',
+  behaviors: [
+    Polymer.NeonAnimationRunnerBehavior
+  ],
+  properties: {
+    animationConfig: {
+      value: function() {
+        return {
+          // provided by neon-animation/animations/scale-down-animation.html
+          name: 'scale-down-animation',
+          node: this
+        }
+      }
+    }
+  },
+  listeners: {
+    // this event is fired when the animation finishes
+    'neon-animation-finish': '_onNeonAnimationFinish'
+  },
+  animate: function() {
+    // run scale-down-animation
+    this.playAnimation();
+  },
+  _onNeonAnimationFinish: function() {
+    console.log('animation done!');
+  }
+});
+</code></p>
 
 <p><a href="http://morethanreal.github.io/neon-animation-demo/bower_components/neon-animation/demo/doc/basic.html">Live demo</a></p>
 
@@ -70,69 +70,69 @@
 
 <p>An element might run different animations, for example it might do something different when it enters the view and when it exits from view. You can set the <code class="highlighter-rouge">animationConfig</code> property to a map from an animation type to configuration.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">Polymer</span><span class="p">({</span>
-  <span class="na">is</span><span class="p">:</span> <span class="s1">'my-dialog'</span><span class="p">,</span>
-  <span class="na">behaviors</span><span class="p">:</span> <span class="p">[</span>
-    <span class="nx">Polymer</span><span class="p">.</span><span class="nx">NeonAnimationRunnerBehavior</span>
-  <span class="p">],</span>
-  <span class="na">properties</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">opened</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">type</span><span class="p">:</span> <span class="nb">Boolean</span>
-    <span class="p">},</span>
-    <span class="na">animationConfig</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">{</span>
-          <span class="s1">'entry'</span><span class="p">:</span> <span class="p">{</span>
-            <span class="c1">// provided by neon-animation/animations/scale-up-animation.html</span>
-            <span class="nl">name</span><span class="p">:</span> <span class="s1">'scale-up-animation'</span><span class="p">,</span>
-            <span class="na">node</span><span class="p">:</span> <span class="k">this</span>
-          <span class="p">},</span>
-          <span class="s1">'exit'</span><span class="p">:</span> <span class="p">{</span>
-            <span class="c1">// provided by neon-animation-animations/fade-out-animation.html</span>
-            <span class="nl">name</span><span class="p">:</span> <span class="s1">'fade-out-animation'</span><span class="p">,</span>
-            <span class="na">node</span><span class="p">:</span> <span class="k">this</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="na">listeners</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s1">'neon-animation-finish'</span><span class="p">:</span> <span class="s1">'_onNeonAnimationFinish'</span>
-  <span class="p">},</span>
-  <span class="na">show</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">opened</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'inline-block'</span><span class="p">;</span>
-    <span class="c1">// run scale-up-animation</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">playAnimation</span><span class="p">(</span><span class="s1">'entry'</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="na">hide</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">opened</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="c1">// run fade-out-animation</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">playAnimation</span><span class="p">(</span><span class="s1">'fade-out-animation'</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="na">_onNeonAnimationFinish</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">opened</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'none'</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+Polymer({
+  is: 'my-dialog',
+  behaviors: [
+    Polymer.NeonAnimationRunnerBehavior
+  ],
+  properties: {
+    opened: {
+      type: Boolean
+    },
+    animationConfig: {
+      value: function() {
+        return {
+          'entry': {
+            // provided by neon-animation/animations/scale-up-animation.html
+            name: 'scale-up-animation',
+            node: this
+          },
+          'exit': {
+            // provided by neon-animation-animations/fade-out-animation.html
+            name: 'fade-out-animation',
+            node: this
+          }
+        }
+      }
+    }
+  },
+  listeners: {
+    'neon-animation-finish': '_onNeonAnimationFinish'
+  },
+  show: function() {
+    this.opened = true;
+    this.style.display = 'inline-block';
+    // run scale-up-animation
+    this.playAnimation('entry');
+  },
+  hide: function() {
+    this.opened = false;
+    // run fade-out-animation
+    this.playAnimation('fade-out-animation');
+  },
+  _onNeonAnimationFinish: function() {
+    if (!this.opened) {
+      this.style.display = 'none';
+    }
+  }
+});
+</code></p>
 
 <p><a href="http://morethanreal.github.io/neon-animation-demo/bower_components/neon-animation/demo/doc/types.html">Live demo</a></p>
 
 <p>You can also use the convenience properties <code class="highlighter-rouge">entryAnimation</code> and <code class="highlighter-rouge">exitAnimation</code> to set <code class="highlighter-rouge">entry</code> and <code class="highlighter-rouge">exit</code> animations:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">properties</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nl">entryAnimation</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="s1">'scale-up-animation'</span>
-  <span class="p">},</span>
-  <span class="nx">exitAnimation</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="s1">'fade-out-animation'</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+properties: {
+  entryAnimation: {
+    value: 'scale-up-animation'
+  },
+  exitAnimation: {
+    value: 'fade-out-animation'
+  }
+}
+</code></p>
 
 <p><a name="configuration-properties"></a>
 ### Configuration properties</p>
@@ -160,42 +160,42 @@ All animations should accept the following properties:</p>
 
 <p>Set the animation configuration to an array to combine animations, like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">animationConfig</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="c1">// fade-in-animation is run with a 50ms delay from slide-down-animation</span>
-      <span class="s1">'entry'</span><span class="p">:</span> <span class="p">[{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="s1">'slide-down-animation'</span><span class="p">,</span>
-        <span class="na">node</span><span class="p">:</span> <span class="k">this</span>
-      <span class="p">},</span> <span class="p">{</span>
-        <span class="na">name</span><span class="p">:</span> <span class="s1">'fade-in-animation'</span><span class="p">,</span>
-        <span class="na">node</span><span class="p">:</span> <span class="k">this</span><span class="p">,</span>
-        <span class="na">timing</span><span class="p">:</span> <span class="p">{</span><span class="na">delay</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
-      <span class="p">}]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+animationConfig: {
+  value: function() {
+    return {
+      // fade-in-animation is run with a 50ms delay from slide-down-animation
+      'entry': [{
+        name: 'slide-down-animation',
+        node: this
+      }, {
+        name: 'fade-in-animation',
+        node: this,
+        timing: {delay: 50}
+      }]
+    }
+  }
+}
+</code></p>
 
 <p><a name="configuration-encapsulation"></a>
 ### Running animations encapsulated in children nodes</p>
 
 <p>You can include animations in the configuration that are encapsulated in a child element that implement <code class="highlighter-rouge">Polymer.NeonAnimatableBehavior</code> with the <code class="highlighter-rouge">animatable</code> property.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">animationConfig</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="c1">// run fade-in-animation on this, and the entry animation on this.$.myAnimatable</span>
-      <span class="s1">'entry'</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'fade-in-animation'</span><span class="p">,</span> <span class="na">node</span><span class="p">:</span> <span class="k">this</span><span class="p">},</span>
-        <span class="p">{</span><span class="na">animatable</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">.</span><span class="nx">myAnimatable</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s1">'entry'</span><span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+animationConfig: {
+  value: function() {
+    return {
+      // run fade-in-animation on this, and the entry animation on this.$.myAnimatable
+      'entry': [
+        {name: 'fade-in-animation', node: this},
+        {animatable: this.$.myAnimatable, type: 'entry'}
+      ]
+    }
+  }
+}
+</code></p>
 
 <p><a name="page-transitions"></a>
 ## Page transitions</p>
@@ -211,55 +211,55 @@ All animations should accept the following properties:</p>
 
 <p>In the incoming page:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">properties</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nl">animationConfig</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="c1">// the incoming page defines the 'entry' animation</span>
-        <span class="s1">'entry'</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nl">name</span><span class="p">:</span> <span class="s1">'hero-animation'</span><span class="p">,</span>
-          <span class="na">id</span><span class="p">:</span> <span class="s1">'hero'</span><span class="p">,</span>
-          <span class="na">toPage</span><span class="p">:</span> <span class="k">this</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">sharedElements</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">'hero'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">.</span><span class="nx">hero</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+properties: {
+  animationConfig: {
+    value: function() {
+      return {
+        // the incoming page defines the 'entry' animation
+        'entry': {
+          name: 'hero-animation',
+          id: 'hero',
+          toPage: this
+        }
+      }
+    }
+  },
+  sharedElements: {
+    value: function() {
+      return {
+        'hero': this.$.hero
+      }
+    }
+  }
+}
+</code></p>
 
 <p>In the outgoing page:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">properties</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nl">animationConfig</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="c1">// the outgoing page defines the 'exit' animation</span>
-        <span class="s1">'exit'</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nl">name</span><span class="p">:</span> <span class="s1">'hero-animation'</span><span class="p">,</span>
-          <span class="na">id</span><span class="p">:</span> <span class="s1">'hero'</span><span class="p">,</span>
-          <span class="na">fromPage</span><span class="p">:</span> <span class="k">this</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">sharedElements</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">value</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">'hero'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">.</span><span class="nx">otherHero</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">js
+properties: {
+  animationConfig: {
+    value: function() {
+      return {
+        // the outgoing page defines the 'exit' animation
+        'exit': {
+          name: 'hero-animation',
+          id: 'hero',
+          fromPage: this
+        }
+      }
+    }
+  },
+  sharedElements: {
+    value: function() {
+      return {
+        'hero': this.$.otherHero
+      }
+    }
+  }
+}
+</code></p>
 
 <p><a name="declarative-page"></a>
 ### Declarative page transitions</p>
@@ -268,15 +268,15 @@ All animations should accept the following properties:</p>
 
 <p>For example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animated</span><span class="o">-</span><span class="nx">pages</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"pages"</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"flex"</span> <span class="nx">selected</span><span class="o">=</span><span class="s2">"[[selected]]"</span> <span class="nx">entry</span><span class="o">-</span><span class="nx">animation</span><span class="o">=</span><span class="s2">"slide-from-right-animation"</span> <span class="nx">exit</span><span class="o">-</span><span class="nx">animation</span><span class="o">=</span><span class="s2">"slide-left-animation"</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animatable</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;</span><span class="sr">/neon-animatable</span><span class="err">&gt;
-</span>  <span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animatable</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;</span><span class="sr">/neon-animatable</span><span class="err">&gt;
-</span>  <span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animatable</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;</span><span class="sr">/neon-animatable</span><span class="err">&gt;
-</span>  <span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animatable</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;</span><span class="sr">/neon-animatable</span><span class="err">&gt;
-</span>  <span class="o">&lt;</span><span class="nx">neon</span><span class="o">-</span><span class="nx">animatable</span><span class="o">&gt;</span><span class="mi">5</span><span class="o">&lt;</span><span class="sr">/neon-animatable</span><span class="err">&gt;
-</span><span class="o">&lt;</span><span class="sr">/neon-animated-pages</span><span class="err">&gt;
-</span></code></pre>
-</div>
+<p>```js</p>
+<neon-animated-pages id="pages" class="flex" selected="[[selected]]" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
+  <neon-animatable>1</neon-animatable>
+  <neon-animatable>2</neon-animatable>
+  <neon-animatable>3</neon-animatable>
+  <neon-animatable>4</neon-animatable>
+  <neon-animatable>5</neon-animatable>
+</neon-animated-pages>
+<p>```</p>
 
 <p>The new page will slide in from the right, and the old page slide away to the left.</p>
 

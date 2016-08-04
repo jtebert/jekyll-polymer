@@ -20045,288 +20045,7 @@ context. You should place this element as a child of `<body>` whenever possible.
 
 
 
-</style><dom-module id="x-card" assetpath="x-card/">
-
-    <style>
-        #x-card {
-            width: 700px;
-            max-width: calc(100% - 32px);
-            padding: 0;
-            position: relative;
-            margin: 16px auto;
-            background: #ffffff;
-            overflow: auto;
-        }
-    </style>
-
-    <template>
-        <paper-material id="x-card" elevation="{{elevation}}" class="paper-font-body1">
-            <content></content>
-        </paper-material>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'x-card',
-
-            behaviors: [
-                Polymer.NeonAnimationRunnerBehavior
-            ],
-
-            properties: {
-                elevation: String
-            },
-
-            entryAnimation: {
-                value: 'scale-up-animation'
-            },
-            exitAnimation: {
-                value: 'fade-out-animation'
-            }
-        });
-    </script>
-
-</dom-module><dom-module id="card-image" assetpath="x-card/">
-
-    <style>
-
-        #card-image {
-            border-radius: 2px 2px 0 0;
-            position: relative;
-            height: 0;
-            padding-bottom: calc(100% * 9 / 16); /* Set 16x9 ratio for full-width image */
-            /*max-height: 300px;*/
-            overflow: hidden;
-        }
-
-        .card-image > img {
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /*#child-element {
-            background: yellow;
-        }
-        /* styling elements distributed to content (via ::content) requires */
-        /* selecting the parent of the <content> element for compatibility with */
-        /* shady DOM . This can be :host or a wrapper element. */
-        /*.content-wrapper > ::content {
-            background: orange;
-        }*/
-    </style>
-
-    <template>
-        <div id="card-image"><img src="{{src}}"></div>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'card-image',
-
-            properties: {
-                src: String
-            }
-        });
-
-    </script>
-
-</dom-module><dom-module id="my-card-title" assetpath="x-card/">
-
-    <style>
-
-        #card-title {
-            padding: 16px;
-            overflow: auto;
-        }
-
-        :host([title]) #card-title {
-            padding-top: 24px;
-        }
-
-        #card-title > h1 {
-            margin: 0;
-        }
-
-        #card-title > h2 {
-            color: var(--secondary-text-color, #727272);
-            margin: 0;
-            font-size: 14px;
-        }
-    </style>
-
-    <template>
-        <div id="card-title">
-            <h1 class="paper-font-headline">{{title}}</h1>
-            <h2 class="paper-font-subhead">{{subtitle}}</h2>
-        </div>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'my-card-title',
-
-            properties: {
-                title: String
-            }
-        });
-
-    </script>
-
-</dom-module><dom-module id="card-content" assetpath="x-card/">
-
-    <style>
-        #card-content {
-            margin: 16px;
-            margin-top: 0;
-        }
-
-        #card-content ::content p {
-            margin-top: 0;
-
-        }
-
-    </style>
-
-    <template>
-        <div id="card-content"><content></content></div>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'card-content'
-        });
-
-    </script>
-
-</dom-module><dom-module id="my-card-more" assetpath="x-card/">
-
-    <style>
-
-        #card-more {
-            display: block;
-            padding: 16px;
-            border-top: 1px solid var(--divider-color, #B6B6B6);;
-            color: var(--secondary-text-color, #727272);
-            text-decoration: none;
-            transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-            position: relative;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        #card-more > #content {
-            margin-left: 24px;
-        }
-
-    </style>
-
-    <template>
-        <a href="{{href}}" id="card-more">
-            <iron-icon icon="arrow-forward"></iron-icon><span id="content"><content></content></span>
-            <paper-ripple></paper-ripple>
-        </a>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'my-card-more',
-
-            properties: {
-                href: String
-            }
-        });
-
-    </script>
-
-</dom-module><dom-module id="my-card-colorbar-link" assetpath="x-card/">
-
-    <style>
-
-        :host {
-            display: block;
-            border-radius: 2px 2px 0 0;
-            background-color: var(--accent-color);
-            padding: 16px;
-            padding-top: 24px;
-            color: #fff;
-            position: relative;
-        }
-
-        #wrapper:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        #icon {
-            position: absolute;
-            top: 20px;
-            left: 16px;
-        }
-
-        #content {
-            display: block;
-            float: left;
-            margin-left: 48px;
-            top: 24px;
-        }
-
-    </style>
-
-    <template>
-        <div class="paper-font-headline" id="wrapper">
-            <div id="icon"><iron-icon icon="arrow-forward"></iron-icon></div>
-            <div id="content"><content></content></div>
-        </div>
-    </template>
-
-    <script>
-
-        Polymer({
-            is: 'my-card-colorbar-link',
-
-            properties: {
-                color: String
-            }
-        });
-
-    </script>
-
-</dom-module><dom-module id="my-card-colorbar" assetpath="x-card/">
-
-    <style>
-        :host {
-            display: block;
-            border-radius: 2px 2px 0 0;
-            background-color: var(--accent-color);
-            padding: 16px;
-            color: #fff;
-        }
-    </style>
-
-    <template>
-        <span class="paper-font-headline" id="content"><content></content></span>
-    </template>
-
-    <script>
-        Polymer({
-            is: 'my-card-colorbar',
-
-            properties: {
-                color: String
-            }
-        });
-    </script>
-
-</dom-module><dom-module id="nav-image" assetpath="nav-drawer/">
+</style><dom-module id="nav-image" assetpath="nav-drawer/">
 
     <style>
 
@@ -20753,15 +20472,6 @@ is separate from validation, and `allowed-pattern` does not affect how the input
 <dom-module id="my-search-bar" assetpath="my-search-bar/">
 
     <style>
-
-        #searchOverlay {
-            display: none;
-            width: 100%;
-        }
-        #searchOverlay[opened] {
-            //display: block;
-        }
-
         #search {
             display: -webkit-box;
             display: -webkit-flex;
@@ -20797,11 +20507,16 @@ is separate from validation, and `allowed-pattern` does not affect how the input
             padding: 0 16px;
             background-color: var(--primary-color);
             margin-left: 0;
-            //background-color: red;
         }
 
         #backIcon, #searchIcon {
             display: inline-block;
+        }
+
+
+        #searchOverlay {
+            display: none;
+            width: 100%;
         }
 
         input[is=iron-input] {
@@ -20831,7 +20546,7 @@ is separate from validation, and `allowed-pattern` does not affect how the input
             margin-left: 0;
             background-color: var(--primary-background-color);
             overflow-y: auto;
-            z-index:1;
+            z-index:100;
         }
 
         @media (max-width: 639px) {
@@ -20840,7 +20555,6 @@ is separate from validation, and `allowed-pattern` does not affect how the input
                 height: calc(100vh - 56px);
             }
         }
-
     </style>
 
     <template>
@@ -21338,6 +21052,44 @@ function isJSON(json){
                     limit: 20,
                     fuzzy: false
                 });
+            }
+        });
+    </script>
+</dom-module><dom-module id="x-chip" assetpath="x-chip/">
+
+    <style>
+
+        a {
+            @apply(--shadow-transition);
+            color: var(--secondary-text-color);
+            display: inline-block;
+            font-size: 13px;
+            line-height: 32px;
+            border-radius: 16px;
+            background-color: var(--divider-color);
+            padding: 0 12px;
+            text-decoration: none;
+            margin: 8px;
+            margin-left: 0;
+        }
+
+        a:hover, a:focus {
+            @apply(--shadow-elevation-2dp);
+            outline: none;
+        }
+    </style>
+
+    <template>
+        <a href="{{href}}"><content></content></a>
+    </template>
+
+    <script>
+
+        Polymer({
+            is: 'x-chip',
+
+            properties: {
+                href: String
             }
         });
     </script>
