@@ -85,3 +85,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 
 - JS and HTML aren't minimized
 - Too much space on cards between end of excerpt and read more button
+
+## License
+
+[MIT License](license.md)
