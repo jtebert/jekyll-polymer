@@ -28,7 +28,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
   - `bower_components`: Content installed via bower ends up here
   - `elements/`: Custom web components using Polymer
   - `images/`: User images
-  - 'media/': Other user content (PDFs, videos, etc.) for final product
+  - `media/`: Other user content (PDFs, videos, etc.) for final product
   - `scripts/`: Javascript files
   - `styles/`: Custom CSS
 - `dist/`: Built output from Gulp. (Use to publish static content)
