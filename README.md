@@ -10,9 +10,11 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 
 - Full-text search with [simple-jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search)
 - Paginated home page
-- Support for featured post images (appears on cards in previews)
+- Support for featured post images (appear on cards in previews)
 - Threaded comments with Disqus
 - Google Analytics integration
+- One-command deployment to Github Pages
+- Tagged posts
 
 ## Installation instructions
 
@@ -59,7 +61,6 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 - Improve gulp build
     - Minimize JS, CSS, HTML
 - Search
-    - Ripple effect in search results on click (needs set height)
     - Escape toggles search show
     - arrow keys/tab moves focus on search results
     - better animation for search bar leaving/entering
@@ -74,8 +75,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
     - hover effects like buttons?
     - Handle if it gets too wide for screen? (limit number of page links)
 - Tags
-    - Show tags with posts
-    - Allow filtering by tag
+    - Allow filtering by tag (have list of all tags)
 - Add material box or lightbox for images
 - Add 'source' option for YAML frontmatter
 - increase spacing between list items
