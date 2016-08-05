@@ -1,6 +1,6 @@
 ##[DEMO](http://juliaebert.com/jekyll-polymer)
 
-A Jekyll theme built with Google's Polymer library and following the material design specifications.
+A [Jekyll](https://jekyllrb.com/) theme built with [Google's Polymer library](https://www.polymer-project.org/1.0/) and following the material design specifications.
 
 There are a few custom web components included designed to match Material design.
 
