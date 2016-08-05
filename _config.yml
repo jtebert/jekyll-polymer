@@ -11,8 +11,10 @@ author: Julia Ebert
 author_website: http://juliaebert.com
 email: julia@juliaebert.com
 
-baseurl: "/jekyll-polymer" # the subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
-url: "http://juliaebert.com" # the base hostname & protocol for your site
+baseurl: "/jekyll-polymer"  # Subpath of your site, e.g. /blog. For deploying to github pages, this should match your repo name
+                            # Currently `gulp serve:dist` does not work with a baseurl specified. For this purpose,
+                            # temporarily comment out this parameter
+url: "http://juliaebert.com"  # Base hostname & protocol for your site
 
 twitter_username: ''
 github_username:  jtebert

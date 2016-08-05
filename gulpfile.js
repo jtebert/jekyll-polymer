@@ -238,6 +238,12 @@ gulp.task('vulcanize', function() {
       inlineCss: true,
       inlineScripts: true
     }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      minifyJS: true,
+      minifyCSS: true
+    }))
     .pipe(gulp.dest(dist('elements')))
     .pipe($.size({title: 'vulcanize'}));
 });
