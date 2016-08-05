@@ -44,7 +44,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 
 `gulp serve --port 6666`: Start serving on port `6666`
 
-`gulp serve:dist`: Build as below, and serve the result from the `dist/` directory. (Useful for testing changes to the gulpfile.)
+`gulp serve:dist`: Build as below, and serve the result from the `dist/` directory. (Useful for testing changes to the gulpfile. Currently does not work with a Jekyll baseurl configured.)
 
 ### Build and vulcanize
 
