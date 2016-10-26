@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jekyll Polymer Theme</title>
-    <description>This is a material design theme for Polymer using Google&#39;s Polymer library. It&#39;s still an early draft, so be nice.
+    <description>This is a material design theme for Polymer using Google's Polymer library. It's still an early draft, so be nice.
 </description>
     <link>http://juliaebert.com/jekyll-polymer/</link>
     <atom:link href="http://juliaebert.com/jekyll-polymer/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Aug 2016 15:10:00 +0100</pubDate>
-    <lastBuildDate>Thu, 04 Aug 2016 15:10:00 +0100</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Wed, 26 Oct 2016 10:08:18 -0400</pubDate>
+    <lastBuildDate>Wed, 26 Oct 2016 10:08:18 -0400</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>About the Jekyll Polymer Theme</title>
@@ -131,7 +131,7 @@
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Fri, 19 Jun 2015 00:00:00 +0100</pubDate>
+        <pubDate>Fri, 19 Jun 2015 00:00:00 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2015/06/19/about-jekyll-polymer-theme/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/2015/06/19/about-jekyll-polymer-theme/</guid>
         
@@ -158,7 +158,7 @@
 
 &lt;p&gt;Occaecat magna Intelligentsia, laborum synth before they sold out Helvetica nulla kale chips eu next level DIY trust fund. Forage pour-over scenester ut meggings. Food truck eu labore 90’s, deserunt messenger bag next level paleo PBR&amp;amp;B pork belly. Jean shorts DIY before they sold out direct trade, vegan tote bag culpa mixtape nesciunt slow-carb listicle ennui put a bird on it Brooklyn. Ut cronut lumbersexual, letterpress stumptown delectus seitan reprehenderit Bushwick messenger bag incididunt street art polaroid lomo hella. Do voluptate pork belly, fanny pack direct trade tote bag nihil. Mumblecore aesthetic Tumblr VHS master cleanse Portland.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 17 Jun 2015 00:00:00 +0100</pubDate>
+        <pubDate>Wed, 17 Jun 2015 00:00:00 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2015/06/17/hipsum/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/2015/06/17/hipsum/</guid>
         
@@ -180,13 +180,13 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom. You really suck.&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom. You really suck.' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 10 Jun 2015 15:03:06 +0100</pubDate>
+        <pubDate>Wed, 10 Jun 2015 10:03:06 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/jekyll/update/2015/06/10/featured-image/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/jekyll/update/2015/06/10/featured-image/</guid>
         
@@ -214,13 +214,13 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 08 Jun 2015 22:27:27 +0100</pubDate>
+        <pubDate>Mon, 08 Jun 2015 17:27:27 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2015/06/08/welcome-to-jekyll/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/2015/06/08/welcome-to-jekyll/</guid>
         
@@ -347,9 +347,9 @@ It’s split over multiple lines.&lt;/p&gt;
   &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Make sure you include MathJax into your publications to render mathematical expression correctly. Your page/template should include something like:&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
 
@@ -366,8 +366,8 @@ It’s split over multiple lines.&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT. This is a long line to test scrolling if it goes past the box.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT. This is a long line to test scrolling if it goes past the box.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;With line numbers:&lt;/p&gt;
 
@@ -378,8 +378,8 @@ It’s split over multiple lines.&lt;/p&gt;
 5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;definition-lists&quot;&gt;Definition Lists&lt;/h1&gt;
@@ -432,7 +432,7 @@ It’s split over multiple lines.&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Mon, 08 Jun 2015 00:00:00 +0100</pubDate>
+        <pubDate>Mon, 08 Jun 2015 00:00:00 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2015/06/08/typography/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/2015/06/08/typography/</guid>
         
@@ -460,13 +460,13 @@ It’s split over multiple lines.&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 08 Jun 2014 00:00:00 +0100</pubDate>
+        <pubDate>Sun, 08 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://juliaebert.com/jekyll-polymer/2014/06/08/image-in-excerpt/</link>
         <guid isPermaLink="true">http://juliaebert.com/jekyll-polymer/2014/06/08/image-in-excerpt/</guid>
         
