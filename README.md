@@ -21,7 +21,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 (Instructions are based off of those for the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit).)
 
 - Clone this repository or download it as a .zip file and unzip.
-- Install jekyll (and any other Ruby gems) with `bundle install`. (Prerequisite: must have Ruby installed. You may also have to install bundler with `gem install bundler`.)
+- Install jekyll (and any other Ruby gems) with `bundle install`. (Prerequisite: must have Ruby installed; in Ubuntu/Debian, use `sudo apt-get install ruby-dev`. You may also have to install bundler with `gem install bundler`.)
 - From the project root folder, run `npm install -g gulp bower && npm install && bower install`. (See the [Polymer Starter Kit installation instructions](https://github.com/PolymerElements/polymer-starter-kit#install-dependencies) for more details or troubleshooting.)
 
 ## Structure
