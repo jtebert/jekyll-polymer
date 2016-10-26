@@ -5,12 +5,10 @@ permalink: /about/
 image: "material-bg-5.png"
 ---
 
-I am a neuroscience researcher, aspiring roboticist and bioengineer, amateur designer, occasional curler, and avid baker.
+Jekyll Polymer is a template to build a static blog website using Google's Polymer libraries with Jekyll. It currently uses Polymer 1.x, but I plan to update it to Jekyll 2.x in the near future.
 
-I am currently completing a MRes in bioengineering at Imperial College London as a Marshall Scholar. I previously graduated from Northeastern University with a BS in behavioral neuroscience and a minor in computer science. <!--In the fall, I will begin a PhD in computer science at Harvard University.-->
+ This template provides numerous features to make it a full-featured mobile-first blogging template. It has full-text search, tag support and tagged archive, threaded comments with Disqus, and an RSS feed. All while doing its best to adhere to the ever-changing target of Google's material design specifications! Check out some of the posts and other pages in this demo to see the features and styling of the posts.
 
-I fully expect any given person to ignore at least 50% of what I post here. If you're interested in what I'm up to in the UK, chances are that you probably don't about how to install the font libraries for LabView in Linux or the role of big data in current biology research.
+I have been working on this in my spare time, and I appreciate any feedback or requests to improve the project better. You can see more about this project on its [Github repository](https://github.com/jtebert/jekyll-polymer).
 
-Find out more about me on my website: [juliaebert.com](http://juliaebert.com).
-
-If you have any questions, comments, suggestions, or particularly delicious recipes, [send me an email](mailto:julia@juliaebert.com).
+If you want to see what else I'm up to, check out my website: [juliaebert.com](http://juliaebert.com).
