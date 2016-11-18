@@ -1,0 +1,25 @@
+<!-- Author -->
+{% assign page_author = site.data.authors[page.author] %}
+{% assign post_author = site.data.authors[post.author] %}
+<div class="author">
+    {% if post_author %}
+        {% assign author = post_author %}
+    {% elsif page_author %}
+        {% assign author = page_author %}
+    {% endif %}
+    {% if author %}
+        <span><img src="{{ author.email | to_gravatar }}" alt="A photo of {{ author.name }}"/></span>
+        <a href="{{ author.web }}">{{ author.name }}</a>
+    {% endif %}
+    {% if page.date or post.date %}
+        <span class="paper-font-subhead" id="date">
+            {% if author %}, {% endif %}
+            {% if post.date %}
+                {{ post.date | date: "%B %-d, %Y" }}
+            {% elsif page.date %}
+                {{ page.date | date: "%B %-d, %Y" }}
+            {% endif %}
+        </span>
+    {% endif %}
+</div>
+{% assign author = false %}

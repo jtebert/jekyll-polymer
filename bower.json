@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.4",
+    "polymer": "Polymer/polymer#^1.7.0",
     "fontawesome-iconset": "diego-d5000/fontawesome-iconset#~4.3.0",
     "iron-elements": "polymerelements/iron-elements#^1.0.8",
     "paper-elements": "polymerelements/paper-elements#^1.0.7",

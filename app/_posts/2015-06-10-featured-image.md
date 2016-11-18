@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Image in front matter (featured image)"
+author: julia_ebert
 date:   2015-06-10 14:03:06
 categories: jekyll update
 image: "goat.jpg"

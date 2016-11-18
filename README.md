@@ -14,7 +14,8 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
 - Threaded comments with Disqus
 - Google Analytics integration
 - One-command deployment to Github Pages
-- Tagged posts
+- Tagged posts with archive by tag
+- Authorship with Gravatar icons
 
 ## Installation instructions
 
@@ -33,6 +34,7 @@ I created this theme because I couldn't figure out how to set up a Jekyll projec
   - `media/`: Other user content (PDFs, videos, etc.) for final product
   - `scripts/`: Javascript files
   - `styles/`: Custom CSS
+  - `_data/authors.yml`: List of authors for posts and pages 
 - `dist/`: Built output from Gulp. (Use to publish static content)
 - `node_modules`: Content installed via npm goes here
 

@@ -13,7 +13,8 @@ layout: default
           {% endif %}>
     <div class="card-content">
       <div class="title">{{ post.title }}</div>
-      <div class="subtitle">{{ post.date | date: '%Y %B %-d' }}</div>
+      {% include author-byline.html %}
+      <!--<div class="subtitle">{{ post.date | date: '%Y %B %-d' }}</div>-->
       {{ post.excerpt }}
     </div>
     <div class="card-actions">
