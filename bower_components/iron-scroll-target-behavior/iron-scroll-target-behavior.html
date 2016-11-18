@@ -29,25 +29,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       /**
        * Specifies the element that will handle the scroll event
-       * on the behalf of the current element. This is typically a reference to an `Element`,
+       * on the behalf of the current element. This is typically a reference to an element,
        * but there are a few more posibilities:
        *
        * ### Elements id
        *
        *```html
-       * <div id="scrollable-element" style="overflow-y: auto;">
+       * <div id="scrollable-element" style="overflow: auto;">
        *  <x-element scroll-target="scrollable-element">
-       *    Content
+       *    <!-- Content-->
        *  </x-element>
        * </div>
        *```
-       * In this case, `scrollTarget` will point to the outer div element. Alternatively,
-       * you can set the property programatically:
+       * In this case, the `scrollTarget` will point to the outer div element.
+       *
+       * ### Document scrolling
+       *
+       * For document scrolling, you can use the reserved word `document`:
+       *
+       *```html
+       * <x-element scroll-target="document">
+       *   <!-- Content -->
+       * </x-element>
+       *```
+       *
+       * ### Elements reference
        *
        *```js
        * appHeader.scrollTarget = document.querySelector('#scrollable-element');
        *```
-       * 
+       *
        * @type {HTMLElement}
        */
       scrollTarget: {
@@ -62,43 +73,42 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       '_scrollTargetChanged(scrollTarget, isAttached)'
     ],
 
+    /**
+     * True if the event listener should be installed.
+     */
+    _shouldHaveListener: true,
+
     _scrollTargetChanged: function(scrollTarget, isAttached) {
-      // Remove lister to the current scroll target
+      var eventTarget;
+
       if (this._oldScrollTarget) {
-        if (this._oldScrollTarget === this._doc) {
-          window.removeEventListener('scroll', this._boundScrollHandler);
-        } else if (this._oldScrollTarget.removeEventListener) {
-          this._oldScrollTarget.removeEventListener('scroll', this._boundScrollHandler);
-        }
+        this._toggleScrollListener(false, this._oldScrollTarget);
         this._oldScrollTarget = null;
       }
-      if (isAttached) {
-        // Support element id references
-        if (typeof scrollTarget === 'string') {
+      if (!isAttached) {
+        return;
+      }
+      // Support element id references
+      if (scrollTarget === 'document') {
 
-          var ownerRoot = Polymer.dom(this).getOwnerRoot();
-          this.scrollTarget = (ownerRoot && ownerRoot.$) ?
-              ownerRoot.$[scrollTarget] : Polymer.dom(this.ownerDocument).querySelector('#' + scrollTarget);
+        this.scrollTarget = this._doc;
 
-        } else if (this._scrollHandler) {
+      } else if (typeof scrollTarget === 'string') {
 
-          this._boundScrollHandler = this._boundScrollHandler || this._scrollHandler.bind(this);
-          // Add a new listener
-          if (scrollTarget === this._doc) {
-            window.addEventListener('scroll', this._boundScrollHandler);
-            if (this._scrollTop !== 0 || this._scrollLeft !== 0) {
-              this._scrollHandler();
-            }
-          } else if (scrollTarget && scrollTarget.addEventListener) {
-            scrollTarget.addEventListener('scroll', this._boundScrollHandler);
-          }
-          this._oldScrollTarget = scrollTarget;
-        }
+        this.scrollTarget = this.domHost ? this.domHost.$[scrollTarget] :
+            Polymer.dom(this.ownerDocument).querySelector('#' + scrollTarget);
+
+      } else if (this._isValidScrollTarget()) {
+
+        this._boundScrollHandler = this._boundScrollHandler || this._scrollHandler.bind(this);
+        this._oldScrollTarget = scrollTarget;
+        this._toggleScrollListener(this._shouldHaveListener, scrollTarget);
+
       }
     },
 
     /**
-     * Runs on every scroll event. Consumer of this behavior may want to override this method.
+     * Runs on every scroll event. Consumer of this behavior may override this method.
      *
      * @protected
      */
@@ -177,15 +187,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      * Scrolls the content to a particular place.
      *
      * @method scroll
-     * @param {number} top The top position
      * @param {number} left The left position
+     * @param {number} top The top position
      */
-    scroll: function(top, left) {
+    scroll: function(left, top) {
        if (this.scrollTarget === this._doc) {
-        window.scrollTo(top, left);
+        window.scrollTo(left, top);
       } else if (this._isValidScrollTarget()) {
-        this.scrollTarget.scrollTop = top;
         this.scrollTarget.scrollLeft = left;
+        this.scrollTarget.scrollTop = top;
       }
     },
 
@@ -220,7 +230,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      */
     _isValidScrollTarget: function() {
       return this.scrollTarget instanceof HTMLElement;
+    },
+
+    _toggleScrollListener: function(yes, scrollTarget) {
+      if (!this._boundScrollHandler) {
+        return;
+      }
+      var eventTarget = scrollTarget === this._doc ? window : scrollTarget;
+
+      if (yes) {
+        eventTarget.addEventListener('scroll', this._boundScrollHandler);
+      } else {
+        eventTarget.removeEventListener('scroll', this._boundScrollHandler);
+      }
+    },
+
+    /**
+     * Enables or disables the scroll event listener.
+     *
+     * @param {boolean} yes True to add the event, False to remove it.
+     */
+    toggleScrollListener: function(yes) {
+      this._shouldHaveListener = yes;
+      this._toggleScrollListener(yes, this.scrollTarget);
     }
+
   };
 
 </script>

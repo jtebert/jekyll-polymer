@@ -108,7 +108,7 @@
   <span class="na">hide</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">opened</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
     <span class="c1">// run fade-out-animation</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">playAnimation</span><span class="p">(</span><span class="s1">'fade-out-animation'</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">playAnimation</span><span class="p">(</span><span class="s1">'exit'</span><span class="p">);</span>
   <span class="p">},</span>
   <span class="na">_onNeonAnimationFinish</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">opened</span><span class="p">)</span> <span class="p">{</span>
@@ -297,9 +297,7 @@ All animations should accept the following properties:</p>
   <li><code class="highlighter-rouge">slide-left-animation</code> Animates transform from <code class="highlighter-rouge">none</code> to <code class="highlighter-rouge">translateX(-100%)</code>;</li>
   <li><code class="highlighter-rouge">slide-right-animation</code> Animates transform from <code class="highlighter-rouge">none</code> to <code class="highlighter-rouge">translateX(100%)</code>;</li>
   <li><code class="highlighter-rouge">slide-from-left-animation</code> Animates transform from <code class="highlighter-rouge">translateX(-100%)</code> to <code class="highlighter-rouge">none</code>;</li>
-  <li>
-    <p><code class="highlighter-rouge">slide-from-right-animation</code> Animates transform from <code class="highlighter-rouge">translateX(100%)</code> to <code class="highlighter-rouge">none</code>;</p>
-  </li>
+  <li><code class="highlighter-rouge">slide-from-right-animation</code> Animates transform from <code class="highlighter-rouge">translateX(100%)</code> to <code class="highlighter-rouge">none</code>;</li>
   <li><code class="highlighter-rouge">transform-animation</code> Animates a custom transform.</li>
 </ul>
 

@@ -8,7 +8,7 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
 -->
-<html id="html">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>iron-scroll-target-behavior test</title>
@@ -18,6 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="../../web-component-tester/browser.js"></script>
 
   <link rel="import" href="x-scrollable.html">
+  <link rel="import" href="x-nested-scrollable.html">
 
   <style>
     #temporaryScrollingRegion,
@@ -46,9 +47,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </template>
   </test-fixture>
 
+  <test-fixture id="trivialNestedScrollingRegion">
+    <template>
+      <x-nested-scrollable id="nestedScrollingRegion"></x-nested-scrollable>
+    </template>
+  </test-fixture>
+
+
   <test-fixture id="trivialDocumentScroll">
     <template>
-      <x-scrollable scroll-target="html"></x-scrollable>
+      <x-scrollable scroll-target="document"></x-scrollable>
     </template>
   </test-fixture>
 
@@ -84,6 +92,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           xScroll.scrollTarget = 'temporaryScrollingRegion';
           assert.equal(xScroll.scrollTarget, scrollingRegion);
           done();
+        });
+      });
+
+      test('toggleScrollListener', function(done) {
+        flush(function() {
+          xScroll._scrollHandler = sinon.spy();
+          xScroll.scrollTarget = 'temporaryScrollingRegion';
+          xScroll.scroll(0, 100);
+          xScroll.toggleScrollListener(true);
+          setTimeout(function() {
+            assert.isTrue(xScroll._scrollHandler.called, '_scrollHandler should be called');
+            xScroll._scrollHandler.reset();
+            xScroll.toggleScrollListener(false);
+            xScroll.scroll(0, 200);
+            setTimeout(function() {
+              assert.isFalse(xScroll._scrollHandler.called, '_scrollHandler should not be called');
+              done();
+            }, 100);
+          }, 100);
         });
       });
     });
@@ -204,15 +231,80 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('scroll method', function(done) {
         flush(function() {
-          xScrollable.scroll(110, 110);
 
-          assert.equal(xScrollable._scrollTop, 110);
-          assert.equal(xScrollable._scrollLeft, 110);
+          xScrollable.scroll(1, 2);
 
-          xScrollable.scroll(0, 0);
+          assert.equal(xScrollable._scrollLeft, 1);
+          assert.equal(xScrollable._scrollTop, 2);
 
-          assert.equal(xScrollable._scrollTop, 0);
-          assert.equal(xScrollable._scrollLeft, 0);
+          xScrollable.scroll(3, 4);
+
+          assert.equal(xScrollable._scrollLeft, 3);
+          assert.equal(xScrollable._scrollTop, 4);
+
+          done();
+        });
+      });
+    });
+
+    suite('nested scrolling region', function() {
+      var xScrollingRegion;
+      var xScrollable;
+
+      setup(function() {
+        var nestedScrollingRegion = fixture('trivialNestedScrollingRegion');
+        xScrollable = nestedScrollingRegion.$.xScrollable;
+        xScrollingRegion = nestedScrollingRegion.$.xRegion;
+      });
+
+      teardown(function() {
+        xScrollable._scrollTop = 0;
+        xScrollable._scrollLeft = 0;
+      });
+
+      test('scrollTarget reference', function(done) {
+        flush(function() {
+          assert.equal(xScrollable.scrollTarget, xScrollingRegion);
+          done();
+        });
+      });
+
+      test('setters', function(done) {
+        flush(function() {
+          xScrollable._scrollTop = 10;
+          xScrollable._scrollLeft = 20;
+
+          assert.equal(xScrollingRegion.scrollTop, 10);
+          assert.equal(xScrollingRegion.scrollLeft, 20);
+
+          done();
+        });
+      });
+
+      test('getters', function(done) {
+        flush(function() {
+          xScrollable._scrollTop = 10;
+          xScrollable._scrollLeft = 20;
+
+          assert.equal(xScrollable._scrollTop, 10, '_scrollTop');
+          assert.equal(xScrollable._scrollLeft, 20, '_scrollLeft');
+
+          done();
+        });
+      });
+
+      test('scroll method', function(done) {
+        flush(function() {
+
+          xScrollable.scroll(1, 2);
+
+          assert.equal(xScrollable._scrollLeft, 1);
+          assert.equal(xScrollable._scrollTop, 2);
+
+          xScrollable.scroll(3, 4);
+
+          assert.equal(xScrollable._scrollLeft, 3);
+          assert.equal(xScrollable._scrollTop, 4);
 
           done();
         });
