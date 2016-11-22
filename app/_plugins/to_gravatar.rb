@@ -5,8 +5,10 @@ require 'digest/md5'
 
 module Jekyll
   module GravatarFilter
-    def to_gravatar(input, size=135)
-      "//www.gravatar.com/avatar/#{hash(input)}?s=#{size}"
+    def to_gravatar(input, size=32)
+        def_img = Jekyll.configuration({})['url'] + Jekyll.configuration({})['baseurl'] + '/images/default-gravatar.png'
+
+      "//www.gravatar.com/avatar/#{hash(input)}?s=#{size}&default=" + def_img
     end
 
     private :hash
