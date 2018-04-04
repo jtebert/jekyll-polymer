@@ -11,3 +11,5 @@ CNAME
 /.tmp
 npm-debug.log
 /excluded-posts
+.bundle
+vendor
