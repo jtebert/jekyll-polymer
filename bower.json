@@ -1,8 +1,9 @@
 {
-  "name": "jekyll-polymer-theme",
-  "version": "0.1.0",
+  "name": "jekyll-polymer",
+  "version": "2.0.0",
   "authors": [
-    "Julia Ebert <julia@juliaebert.com>"
+    "Julia Ebert <julia@juliaebert.com>",
+    "Sam Carecho <digiwise@gmail.com>"
   ],
   "license": "MIT",
   "homepage": "juliaebert.com",
@@ -14,10 +15,29 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.7.0",
-    "fontawesome-iconset": "diego-d5000/fontawesome-iconset#~4.3.0",
-    "iron-elements": "polymerelements/iron-elements#^1.0.8",
-    "paper-elements": "polymerelements/paper-elements#^1.0.7",
-    "simple-jekyll-search": "^1.1.1"
-  }
+    "app-layout": "PolymerElements/app-layout#^2.0.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.0",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^2.0.0",
+    "iron-media-query": "PolymerElements/iron-media-query#^2.0.0",
+    "iron-selector": "PolymerElements/iron-selector#^2.0.0",
+    "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0",
+    "polymer": "Polymer/polymer#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.1.0",
+    "simple-jekyll-search": "^1.6.3",
+    "iron-icons": "^2.1.1",
+    "iron-pages": "^2.1.0",
+    "iron-collapse": "^2.2.0",
+    "paper-button": "^2.1.0",
+    "paper-item": "^2.1.0",
+    "paper-toast": "^2.1.0",
+    "paper-checkbox": "^2.0.3",
+    "paper-card": "PolymerElements/paper-card#^2.1.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0"
+  },
+  "private": true
 }
