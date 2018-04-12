@@ -3,78 +3,90 @@
 
 {% include head.html %}
 
-<body unresolved class="fullbleed layout vertical">
+<body>
 <span id="browser-sync-binding"></span>
-<template is="dom-bind" id="app">
+<!--<template is="dom-bind" id="app">-->
 
-  <paper-drawer-panel id="paperDrawerPanel">
-    <!-- Drawer Scroll Header Panel -->
-    <paper-scroll-header-panel drawer fixed>
-      <div class="wrapper"> <!-- necessary to push copyright to bottom -->
-        <!-- Drawer Toolbar -->
+  <app-drawer-layout fullbleed narrow>
+    <!-- Drawer content -->
+    <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
+      <app-toolbar>
         <nav-image src="{{ site.baseurl }}/images/material-bg-10.png" id="menu-img"></nav-image>
-
-        <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
-          <a href="{{ site.baseurl }}/"><iron-icon icon="home"></iron-icon><span>Home</span></a>
-          <a href="{{ site.baseurl }}/about"><iron-icon icon="social:person"></iron-icon><span>About</span></a>
-          <a href="{{ site.baseurl }}/archive"><iron-icon icon="history"></iron-icon><span>Archive</span></a>
-          <a data-route="contact" href="{{ site.baseurl }}/feed.xml"><iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span></a>
-        </paper-menu>
-
-        <my-nav-subheader>Elsewhere</my-nav-subheader>
-        <paper-menu class="list" on-iron-select="onMenuSelect">
-          {% if site.author_website %}
-          <a href="{{ site.author_website }}"><iron-icon icon="av:web"></iron-icon><span>My Website</span></a>
-          {% endif %}
-          {% if site.github_username %}
-          <a href="https://github.com/{{ site.github_username }}"><iron-icon icon="fa:github"></iron-icon><span>My Github</span></a>
-          {% endif %}
-          {% if site.email %}
-          <a data-route="contact" href="mailto:{{ site.email }}"><iron-icon icon="mail"></iron-icon><span>Contact</span></a>
-          {% endif %}
-        </paper-menu>
-        <div class="push"></div>
-      </div>
+      </app-toolbar>
+      <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+        <a name="home" href="[[rootPath]]">
+          <iron-icon icon="home"></iron-icon><span>Home</span>
+        </a>
+        <a name="about" href="[[rootPath]]/about">
+          <iron-icon icon="social:person"></iron-icon><span>About</span>
+        </a>
+        <a name="archive" href="[[rootPath]]/archive" >
+          <iron-icon icon="history"></iron-icon><span>Archive</span>
+        </a>
+        <a data-route="contact" href="[[rootPath]]/feed.xml">
+          <iron-icon icon="fa:rss"></iron-icon><span>RSS Feed</span>
+        </a>
+      </iron-selector>
+      <my-nav-subheader>Elsewhere</my-nav-subheader>
+      <paper-listbox selected="{{selected}}" attr-for-selected="name">
+        {% if site.author_website %}
+        <a name="author" href="{{ site.author_website }}">
+          <iron-icon icon="av:web"></iron-icon><span>My Website</span>
+        </a>
+        {% endif %}
+        {% if site.github_username %}
+        <a name="author" href="https://github.com/{{ site.github_username }}">
+          <iron-icon icon="fa:github"></iron-icon><span>My Github</span
+        ></a>
+        {% endif %}
+        {% if site.email %}
+        <a name="author" data-route="contact" href="mailto:{{ site.email }}">
+          <iron-icon icon="mail"></iron-icon><span>Contact</span>
+        </a>
+        {% endif %}
+      </paper-listbox>
+      <div class="push"></div>
       <div id="copyright-info">&copy; {{ site.time | date: '%Y' }}, {{ site.author }}</div>
-    </paper-scroll-header-panel>
+    </app-drawer>
 
     <!-- Main Area -->
-    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
-      <!-- Main Toolbar -->
-      <paper-toolbar id="mainToolbar" class="tall">
-        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+    <app-header-layout has-scrolling-region>
+      <app-header slot="header" condenses reveals effects="waterfall">
+        <app-toolbar id="mainToolbar">
+          <paper-icon-button id="paperToggle" icon="my-icons:menu" drawer-toggle></paper-icon-button>
+          <span class="space"></span>
 
-        <span class="space"></span>
-
-        <!-- Toolbar icons -->\
-        <div class="top top-container">
+          <!-- Toolbar icons -->\
+          <div class="top top-container">
           <my-search-bar class="top" id="search-input" searchjson="{{ site.baseurl }}/search.json"></my-search-bar>
-        </div>
+          </div>
 
-        <!-- Application name -->
-        <div class="middle middle-container">
+          <!-- Application name -->
+          <div class="middle middle-container">
           <div class="app-name">{{ site.title }}</div>
-        </div>
+          </div>
 
-        <!-- Application sub title -->
-        <div class="bottom bottom-container">
-          <!--<div class="bottom-title">{{ site.subtitle }}</div>-->
+          <!-- Application sub title -->
+          <div class="bottom bottom-container">
           <div class="bottom-title">{{ site.subtitle }}</div>
-        </div>
-      </paper-toolbar>
+          </div>
+        </app-toolbar>
+      </app-header>
 
-      <!-- Main Content -->
-      <div class="content">{{ content }}</div>
+    <!--<paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>-->
 
-    </paper-scroll-header-panel>
-  </paper-drawer-panel>
+      <!--&lt;!&ndash; Main Content &ndash;&gt;-->
+      <!--<div class="content">{{ content }}</div>-->
+
+    <!--</paper-scroll-header-panel>-->
+    </app-header-layout>
+  </app-drawer-layout>
 
   <paper-toast id="toast">
     <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
   </paper-toast>
 
-</template>
+<!--</template>-->
 
 <!-- MathJax -->
 <script type="text/javascript"

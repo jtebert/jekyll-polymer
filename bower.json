@@ -25,6 +25,7 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.1.0",
     "iron-icons": "PolymerElements/iron-icons#^2.1.1",
     "iron-pages": "PolymerElements/iron-pages#^2.1.0",
+    "iron-input": "PolymerElements/iron-input#^2.1.2",
     "iron-collapse": "PolymerElements/iron-collapse#^2.2.0",
     "paper-button": "PolymerElements/paper-button#^2.1.0",
     "paper-item": "PolymerElements/paper-item#^2.1.0",
